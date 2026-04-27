@@ -277,15 +277,12 @@ export default function ContentAuditPost() {
 
       {/* Hero Image */}
       <div className="mx-auto max-w-[860px] px-5 sm:px-8">
-        <div className="overflow-hidden rounded-[28px] bg-[#eef5ff]">
-          <div className="flex h-[280px] items-center justify-center sm:h-[380px]">
-            <div className="flex flex-col items-center gap-4 text-center">
-              <div className="grid h-20 w-20 place-items-center rounded-2xl bg-[#7c3aed]/10">
-                <Gauge className="h-10 w-10 text-[#7c3aed]" />
-              </div>
-              <p className="text-sm font-bold text-[#94a3b8]">Content Analytics Dashboard</p>
-            </div>
-          </div>
+        <div className="overflow-hidden rounded-[28px]">
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/NXGboSFzGQESepeZ.webp"
+            alt="Content audit dashboard showing analytics, keyword rankings and audit score on a laptop screen"
+            className="w-full object-cover"
+          />
         </div>
       </div>
 
