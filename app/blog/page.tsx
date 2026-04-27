@@ -36,6 +36,7 @@ type Post = {
   title: string
   excerpt: string
   slug: string
+  image: string
 }
 
 const posts: Post[] = [
@@ -47,6 +48,7 @@ const posts: Post[] = [
     excerpt:
       'Most content audits never get finished. They start as a good idea, balloon into a weeks-long spreadsheet project, and quietly get abandoned. This guide shows you how to complete a focused, actionable content audit in 90 minutes — using RankPilot\'s AI tools to do the heavy lifting.',
     slug: 'content-audit-90-minutes-ai-tools',
+    image: '/manus-storage/blog-img-content-audit_742341cf.webp',
   },
   {
     category: 'AI Tools',
@@ -56,6 +58,7 @@ const posts: Post[] = [
     excerpt:
       'SEO has become more competitive than ever in 2026, with millions of websites fighting for the same top search positions. Small and medium businesses are struggling to keep up with the constant algorithm updates, technical requirements, and content demands that modern search engines require.',
     slug: '7-ways-businesses-benefit-seo-automation-ai',
+    image: '/manus-storage/blog-img-seo-automation_f6dd08a5.jpg',
   },
   {
     category: 'Marketing',
@@ -65,6 +68,7 @@ const posts: Post[] = [
     excerpt:
       'In 2026, digital marketing has become more complex than ever. According to recent industry reports, a significant percentage of marketers report increased difficulty managing campaigns, thanks to evolving AI algorithms and stricter privacy rules.',
     slug: '5-digital-marketing-challenges-2026',
+    image: '/manus-storage/blog-img-digital-marketing_ffba48d3.jpg',
   },
   {
     category: 'AI Tools',
@@ -74,6 +78,7 @@ const posts: Post[] = [
     excerpt:
       'Remember when SEO audits meant drowning in spreadsheets for hours? Those days are fading fast. AI is here to automate the grunt work, and SEO pros aren\'t just dabbling. Most are already hooked on AI-powered tools and showing no signs of slowing down in 2026.',
     slug: 'ai-tools-seo-audits-2026',
+    image: '/manus-storage/blog-img-ai-audit_8f02e2fb.jpg',
   },
   {
     category: 'Local SEO',
@@ -83,6 +88,7 @@ const posts: Post[] = [
     excerpt:
       'Your Google Business Profile is often the first place customers see your business online. It shows your hours, reviews, location, and key info that can influence whether someone clicks or keeps scrolling.',
     slug: 'ai-tools-google-my-business-optimization',
+    image: '/manus-storage/blog-img-gbp_40506108.jpg',
   },
   {
     category: 'GEO/AIO',
@@ -92,6 +98,7 @@ const posts: Post[] = [
     excerpt:
       'Search is still doing the same core job it always has. Helping people find useful information. But the interface between searcher and answer is changing fast — and GEO is how you stay visible.',
     slug: 'generative-engine-optimization-explained',
+    image: '/manus-storage/blog-img-geo_70a73b3c.png',
   },
   {
     category: 'GEO/AIO',
@@ -101,6 +108,7 @@ const posts: Post[] = [
     excerpt:
       'SEO dashboards are telling a strange story lately. Impressions are rising. Clicks are falling. CTR is trending down. Rankings often look stable or improved, yet organic traffic feels softer and performance questions start piling up.',
     slug: 'ai-overviews-zero-click-reality',
+    image: '/manus-storage/blog-img-zero-click_87d4b28d.jpg',
   },
   {
     category: 'Google Search Console',
@@ -110,6 +118,7 @@ const posts: Post[] = [
     excerpt:
       'Google Keyword Planner is a free tool inside Google Ads that helps you discover new keyword ideas, estimate search volume, and understand seasonal demand — all without spending a cent.',
     slug: 'google-keyword-planner-smarter-research',
+    image: '/manus-storage/blog-img-keyword-planner_555bc669.jpg',
   },
   {
     category: 'GEO/AIO',
@@ -119,6 +128,7 @@ const posts: Post[] = [
     excerpt:
       "Google's AI Overviews are changing how content gets seen and used. Instead of linking out to a single source, these summaries pull structured answers from multiple pages and piece together a complete response directly in the search result.",
     slug: 'content-formats-google-ai-overviews',
+    image: '/manus-storage/blog-img-proven-formats_e89bc370.jpg',
   },
 ]
 
@@ -237,23 +247,23 @@ function BlogCard({ post }: { post: Post }) {
       variants={reveal}
       className="group flex flex-col overflow-hidden rounded-[28px] bg-white shadow-[0_18px_55px_rgba(16,24,40,0.07)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(29,99,255,0.13)]"
     >
-      {/* Image placeholder area */}
-      <div className="relative h-[200px] overflow-hidden bg-[#eef5ff]">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{ background: `radial-gradient(circle at 30% 50%, ${accent}, transparent 70%)` }}
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="h-16 w-16 rounded-2xl opacity-20" style={{ background: accent }} />
+      {/* Featured image — clickable to article */}
+      <Link href={`/blog/${post.slug}`} className="block">
+        <div className="relative h-[200px] overflow-hidden bg-[#eef5ff]">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          {/* Category badge */}
+          <span
+            className="absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-bold text-white"
+            style={{ background: accent }}
+          >
+            {post.category}
+          </span>
         </div>
-        {/* Category badge */}
-        <span
-          className="absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-bold text-white"
-          style={{ background: accent }}
-        >
-          {post.category}
-        </span>
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-6">
@@ -267,9 +277,11 @@ function BlogCard({ post }: { post: Post }) {
             {post.readTime}
           </span>
         </div>
-        <h2 className="font-display mb-3 text-xl font-black leading-snug tracking-tight text-[#071225] transition-colors duration-200 group-hover:text-[#2457f5]">
-          {post.title}
-        </h2>
+        <Link href={`/blog/${post.slug}`} className="block">
+          <h2 className="font-display mb-3 text-xl font-black leading-snug tracking-tight text-[#071225] transition-colors duration-200 hover:text-[#2457f5]">
+            {post.title}
+          </h2>
+        </Link>
         <p className="mb-5 flex-1 text-base leading-7 text-[#667085] line-clamp-3">
           {post.excerpt}
         </p>
