@@ -88,12 +88,13 @@ type Integration = {
 const ASSET_BASE = '/assets/reference/'
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Benefits', href: '#benefits' },
+  { label: 'Features', href: '#solutions' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Use Cases', href: '#benefits' },
   { label: 'Pricing', href: '#pricing' },
-  { label: 'Questions', href: '#questions' },
   { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '#home' },
+  { label: 'Contact', href: '#trial' },
 ]
 
 const features: Feature[] = [
@@ -318,10 +319,16 @@ function Header() {
           <button
             type="button"
             onClick={() => smoothScrollTo('#trial')}
-            className="inline-flex items-center gap-2 rounded-full bg-[#101828] px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_30px_rgba(16,24,40,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1d63ff]"
+            className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-[#f4f8ff] hover:text-[#1d63ff]"
           >
-            <Play className="h-4 w-4" />
-            Get a Demo
+            Log In
+          </button>
+          <button
+            type="button"
+            onClick={() => smoothScrollTo('#trial')}
+            className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_30px_rgba(29,99,255,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b52e7]"
+          >
+            Get Started
           </button>
         </div>
         <button
@@ -364,8 +371,11 @@ function Header() {
               </button>
             )
           )) ?? null}
+          <button type="button" onClick={() => smoothScrollTo('#trial')} className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]">
+            Log In
+          </button>
           <button type="button" onClick={() => smoothScrollTo('#trial')} className="rounded-2xl bg-[#1d63ff] px-5 py-4 text-left font-extrabold text-white">
-            Get a Demo
+            Get Started
           </button>
         </div>
       </motion.div>
