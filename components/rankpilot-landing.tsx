@@ -353,7 +353,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-[#fbfaf4] pb-16 pt-32 sm:pb-20 sm:pt-36">
+    <section id="home" className="relative overflow-hidden bg-[#fbfaf4] pb-28 pt-32 sm:pb-36 sm:pt-36">
       <div className="absolute -left-28 -top-44 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,245,205,0.95)_0%,rgba(255,245,205,0.55)_42%,transparent_68%)]" />
       <div className="absolute left-0 top-0 h-full w-[56%] bg-[radial-gradient(circle_at_32%_52%,rgba(231,242,255,0.95)_0%,rgba(231,242,255,0.7)_36%,transparent_67%)]" />
       <div className="absolute right-[20%] top-0 h-[360px] w-[520px] rounded-b-full bg-[linear-gradient(115deg,rgba(234,243,255,0.96),rgba(234,243,255,0.2)_72%)]" />
