@@ -419,21 +419,7 @@ export default function HowItWorksPage() {
             <p className="mx-auto mt-7 max-w-2xl text-xl leading-8 text-[#667085]">
               RankPilot is built around a single, end-to-end workflow. Every tool connects to the next — so you never have to export a spreadsheet, switch tabs, or lose context between research and creation.
             </p>
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-8 py-4 text-base font-extrabold text-white shadow-[0_14px_35px_rgba(29,99,255,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b52e7]"
-              >
-                Start Free 14-Day Trial
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link
-                href="/#solutions"
-                className="inline-flex items-center gap-2 rounded-full border border-[#d6dce8] bg-white px-8 py-4 text-base font-extrabold text-[#25324b] shadow-[0_10px_30px_rgba(16,24,40,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#1d63ff] hover:text-[#1d63ff]"
-              >
-                See All Features
-              </Link>
-            </div>
+
           </motion.div>
 
           {/* Phase tab navigator */}
