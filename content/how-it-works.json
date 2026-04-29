@@ -1,0 +1,170 @@
+{
+  "seo": {
+    "title": "How It Works — RankPilot",
+    "description": "RankPilot is built around a single, end-to-end workflow. Every tool connects to the next — so you never have to export a spreadsheet, switch tabs, or lose context between research and creation."
+  },
+  "hero": {
+    "badge": "The Full Workflow",
+    "headline": "From Keyword to Published Article",
+    "headlineAccent": "— In One Platform",
+    "subheadline": "RankPilot is built around a single, end-to-end workflow. Every tool connects to the next — so you never have to export a spreadsheet, switch tabs, or lose context between research and creation."
+  },
+  "phases": [
+    { "id": "01", "label": "Research & Analyze" },
+    { "id": "02", "label": "Plan & Strategize" },
+    { "id": "03", "label": "Create & Optimize" }
+  ],
+  "research": {
+    "phaseId": "01",
+    "phaseLabel": "Research & Analyze",
+    "title": "Understand your market before you write a single word",
+    "desc": "RankPilot's research layer gives you a complete picture of your keyword landscape, your competitors, and your existing content — all before you plan or create anything.",
+    "tools": [
+      {
+        "title": "Auto Complete",
+        "desc": "Seed any keyword and instantly surface hundreds of Google Autocomplete variations — including question-based keywords (how, what, why, when, where) for featured snippet and voice search targeting."
+      },
+      {
+        "title": "Competitor Analyzer",
+        "desc": "Enter any competitor URL and get a full breakdown of their content structure, heading hierarchy, word count, internal/external links, and keyword targeting. Understand what makes their page rank so you can build something better."
+      },
+      {
+        "title": "Position Tracker",
+        "desc": "Track competitor keyword rankings over time and build a Threat Leaderboard scored by ranking position. Know exactly which competitors are gaining ground on your most valuable keywords."
+      },
+      {
+        "title": "GSC Analyzer",
+        "desc": "Upload your Google Search Console export and instantly surface near-jump keywords (positions 11–30), high-impression/low-CTR pages, and zero-click opportunities. Turn raw GSC data into a prioritized action list."
+      },
+      {
+        "title": "Keyword Insights",
+        "desc": "Upload keyword exports from Semrush, Ahrefs, or SE Ranking. RankPilot auto-detects the format, scores each keyword by opportunity, clusters them into semantic groups, and identifies content gaps."
+      },
+      {
+        "title": "Site Scanner",
+        "desc": "Scan any sitemap for thin content and metadata issues. The Thin Content Scanner flags underperforming pages by depth and topical coverage. The Metadata Scan audits every title and description for SEO quality."
+      },
+      {
+        "title": "Header Extractor",
+        "desc": "Paste up to 20 URLs and extract every H1–H6 heading from each page simultaneously. Filter by heading level. Essential for bulk SERP analysis and understanding how top-ranking pages structure their content."
+      },
+      {
+        "title": "Keyword Auditor",
+        "desc": "Analyze any live URL or pasted HTML for keyword density, placement, and on-page SEO factors. Get specific recommendations for meta titles, descriptions, headings, and body content."
+      }
+    ]
+  },
+  "plan": {
+    "phaseId": "02",
+    "phaseLabel": "Plan & Strategize",
+    "title": "Turn research into a structured content roadmap",
+    "desc": "The planning layer bridges the gap between raw data and execution. Organize your keyword research into topic clusters, generate targeted article ideas, and schedule your content pipeline.",
+    "tools": [
+      {
+        "title": "Article Ideas Generator",
+        "desc": "Enter a seed keyword and generate targeted article ideas with suggested titles, target keywords, and content angles. Filter by content type: How-to Guides, Listicles, FAQs, Local Guides, Service Pages, and more. Configurable count and custom AI instructions."
+      },
+      {
+        "title": "Topic Clusters",
+        "desc": "Build pillar + supporting article cluster maps that visualize your topical authority coverage. Each cluster tracks how many articles are published, in draft, or still unwritten — with a coverage percentage so you can see gaps at a glance."
+      },
+      {
+        "title": "Content Calendar",
+        "desc": "Schedule and manage your content pipeline with a full calendar view. Assign priority levels (High, Medium, Low), filter by project and status, and track overdue tasks. Quick Views for Today, This Week, and Completed tasks keep your team aligned."
+      }
+    ]
+  },
+  "create": {
+    "phaseId": "03",
+    "phaseLabel": "Create & Optimize",
+    "title": "Generate, refine, and grade content that actually ranks",
+    "desc": "The content layer is where research and planning become published articles. Every piece is shaped by your project's Brand Voice, ICP, and Citation Library — and verified for accuracy before it goes live.",
+    "tools": [
+      {
+        "title": "AI Article Generator",
+        "desc": "A 3-step wizard: Configure your article (keyword, audience, tone, word count, AI model, internal links), review and edit the AI-generated outline, then generate the full article. The outline review step ensures you control the structure before a word is written."
+      },
+      {
+        "title": "Outline Builder",
+        "desc": "Generate a structured article outline from any topic, or paste an existing outline and have RankPilot enhance it. The Research First toggle pulls in live SERP data before building the structure."
+      },
+      {
+        "title": "Content Grader",
+        "desc": "Paste any article and receive a GEO (Generative Engine Optimization) score across four dimensions: E-E-A-T Trust (30 pts), Accuracy (25 pts), AIO Answer Readiness (20 pts), and Readability & UX (10 pts). Know exactly where to improve before publishing."
+      },
+      {
+        "title": "Article Manager",
+        "desc": "A searchable, filterable library of every article across all your projects. Filter by project, status (draft/published/completed), or keyword. Track word counts, dates, and archive articles you no longer need."
+      }
+    ]
+  },
+  "wizard": {
+    "badge": "Inside the Generate Wizard",
+    "title": "You Review the Outline Before a Word Is Written",
+    "desc": "Unlike tools that dump a wall of AI text, RankPilot's 3-step Generate wizard puts you in control of the structure before the article is written. The result is content that matches your intent — not the AI's interpretation of it.",
+    "steps": [
+      {
+        "num": "1",
+        "title": "Configure",
+        "desc": "Set your target keyword, location, audience, tone, word count, AI model, secondary keywords, and internal linking preferences. Toggle People Also Ask, statistics with citation placeholders, and more."
+      },
+      {
+        "num": "2",
+        "title": "Review Outline",
+        "desc": "Before a single paragraph is written, RankPilot generates a full structured outline for your review. Edit headings, reorder sections, add notes — you control the structure."
+      },
+      {
+        "num": "3",
+        "title": "Generate Article",
+        "desc": "With your approved outline as the blueprint, RankPilot generates the full article — complete with internal links, People Also Ask, and statistics flagged for citation. Ready to grade and publish."
+      }
+    ]
+  },
+  "projectConfig": {
+    "badge": "Project Configuration",
+    "title": "Every Project Has Its Own Brain",
+    "desc": "Each RankPilot project is configured with its own Brand Voice, Ideal Customer Profile, Citation Library, CTAs, and Cross Check reference document. This is what makes every article sound like it was written by someone who deeply understands the niche — because the AI is given that context before it writes a single word.",
+    "items": [
+      {
+        "title": "Brand Voice",
+        "desc": "Define your writing tone, perspective (1st/2nd/3rd person), sentence style, and words to avoid. Create multiple named voice profiles per project — each article can use a different voice."
+      },
+      {
+        "title": "Ideal Customer Profile (ICP)",
+        "desc": "Define who the content is written for: their pain points, goals, objections, and buying triggers. ICP influences what the content addresses; Brand Voice controls how it sounds. They work together."
+      },
+      {
+        "title": "Sitemaps & Internal Linking",
+        "desc": "Add your site's sitemaps and RankPilot automatically inserts contextually relevant internal links during article generation. Supports multiple sitemaps per project and manual URL entry."
+      },
+      {
+        "title": "Cross Check",
+        "desc": "Upload a reference document containing proprietary data, facts, or domain-specific information. After an article is generated, Cross Check verifies its factual accuracy against your source material — without influencing the creative output."
+      }
+    ]
+  },
+  "workflow": {
+    "badge": "The Complete Workflow at a Glance",
+    "title": "10 Steps from Zero to Published",
+    "steps": [
+      "Run Auto Complete on a seed keyword to surface hundreds of variations",
+      "Upload your keyword export to Keyword Insights for scoring and clustering",
+      "Analyze top-ranking competitor pages with the Competitor Analyzer",
+      "Check your GSC export for near-jump and quick-win opportunities",
+      "Generate article ideas and organize them into Topic Clusters",
+      "Schedule your pipeline in the Content Calendar",
+      "Configure your project's Brand Voice, ICP, Sitemaps, and Cross Check document",
+      "Run the Generate wizard: configure → review outline → generate article",
+      "Grade the finished article with the Content Grader before publishing",
+      "Track rankings and repeat for the next cluster"
+    ]
+  },
+  "cta": {
+    "title": "Ready to Run the Full Workflow?",
+    "desc": "Start your free 14-day trial and run the complete RankPilot workflow on your own site — no credit card required.",
+    "primaryText": "Start Free Trial — No Card Required",
+    "primaryHref": "/",
+    "secondaryText": "View Pricing",
+    "secondaryHref": "/#pricing"
+  }
+}

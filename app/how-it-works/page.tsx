@@ -11,6 +11,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import content from '@/content/how-it-works.json'
 import {
   ArrowRight,
   BarChart2,
@@ -61,161 +62,26 @@ const navItems = [
   { label: 'Contact', href: '/' },
 ]
 
-// ─── Data ─────────────────────────────────────────────────────────────────────
+// ─── Data (from JSON content file) ───────────────────────────────────────────
 
-const phases = [
-  { id: '01', label: 'Research & Analyze', color: '#1d63ff' },
-  { id: '02', label: 'Plan & Strategize', color: '#7c3aed' },
-  { id: '03', label: 'Create & Optimize', color: '#059669' },
-]
+const phaseColors = ['#1d63ff', '#7c3aed', '#059669']
+const phases = content.phases.map((p, i) => ({ ...p, color: phaseColors[i] ?? '#1d63ff' }))
 
-const researchTools = [
-  {
-    icon: Search,
-    title: 'Auto Complete',
-    desc: 'Seed any keyword and instantly surface hundreds of Google Autocomplete variations — including question-based keywords (how, what, why, when, where) for featured snippet and voice search targeting.',
-  },
-  {
-    icon: Globe,
-    title: 'Competitor Analyzer',
-    desc: 'Enter any competitor URL and get a full breakdown of their content structure, heading hierarchy, word count, internal/external links, and keyword targeting. Understand what makes their page rank so you can build something better.',
-  },
-  {
-    icon: LineChart,
-    title: 'Position Tracker',
-    desc: 'Track competitor keyword rankings over time and build a Threat Leaderboard scored by ranking position. Know exactly which competitors are gaining ground on your most valuable keywords.',
-  },
-  {
-    icon: BarChart2,
-    title: 'GSC Analyzer',
-    desc: 'Upload your Google Search Console export and instantly surface near-jump keywords (positions 11–30), high-impression/low-CTR pages, and zero-click opportunities. Turn raw GSC data into a prioritized action list.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Keyword Insights',
-    desc: 'Upload keyword exports from Semrush, Ahrefs, or SE Ranking. RankPilot auto-detects the format, scores each keyword by opportunity, clusters them into semantic groups, and identifies content gaps.',
-  },
-  {
-    icon: FileSearch,
-    title: 'Site Scanner',
-    desc: 'Scan any sitemap for thin content and metadata issues. The Thin Content Scanner flags underperforming pages by depth and topical coverage. The Metadata Scan audits every title and description for SEO quality.',
-  },
-  {
-    icon: Layers,
-    title: 'Header Extractor',
-    desc: 'Paste up to 20 URLs and extract every H1–H6 heading from each page simultaneously. Filter by heading level. Essential for bulk SERP analysis and understanding how top-ranking pages structure their content.',
-  },
-  {
-    icon: Target,
-    title: 'Keyword Auditor',
-    desc: 'Analyze any live URL or pasted HTML for keyword density, placement, and on-page SEO factors. Get specific recommendations for meta titles, descriptions, headings, and body content.',
-  },
-]
+// Icon maps — icons cannot be stored in JSON, mapped by index
+const researchIcons = [Search, Globe, LineChart, BarChart2, TrendingUp, FileSearch, Layers, Target]
+const planIcons = [Brain, Network, CalendarDays]
+const createIcons = [Wand2, LayoutTemplate, Star, BookOpen]
+const wizardIcons = [ClipboardList, PenLine, Sparkles]
+const wizardColors = ['#1d63ff', '#7c3aed', '#059669']
+const configIcons = [Users, Target, Globe, FileText]
+const configColors = ['#1d63ff', '#7c3aed', '#0891b2', '#059669']
 
-const planTools = [
-  {
-    icon: Brain,
-    title: 'Article Ideas Generator',
-    desc: 'Enter a seed keyword and generate targeted article ideas with suggested titles, target keywords, and content angles. Filter by content type: How-to Guides, Listicles, FAQs, Local Guides, Service Pages, and more. Configurable count and custom AI instructions.',
-  },
-  {
-    icon: Network,
-    title: 'Topic Clusters',
-    desc: 'Build pillar + supporting article cluster maps that visualize your topical authority coverage. Each cluster tracks how many articles are published, in draft, or still unwritten — with a coverage percentage so you can see gaps at a glance.',
-  },
-  {
-    icon: CalendarDays,
-    title: 'Content Calendar',
-    desc: 'Schedule and manage your content pipeline with a full calendar view. Assign priority levels (High, Medium, Low), filter by project and status, and track overdue tasks. Quick Views for Today, This Week, and Completed tasks keep your team aligned.',
-  },
-]
-
-const createTools = [
-  {
-    icon: Wand2,
-    title: 'AI Article Generator',
-    desc: 'A 3-step wizard: Configure your article (keyword, audience, tone, word count, AI model, internal links), review and edit the AI-generated outline, then generate the full article. The outline review step ensures you control the structure before a word is written.',
-  },
-  {
-    icon: LayoutTemplate,
-    title: 'Outline Builder',
-    desc: 'Generate a structured article outline from any topic, or paste an existing outline and have RankPilot enhance it. The Research First toggle pulls in live SERP data before building the structure.',
-  },
-  {
-    icon: Star,
-    title: 'Content Grader',
-    desc: 'Paste any article and receive a GEO (Generative Engine Optimization) score across four dimensions: E-E-A-T Trust (30 pts), Accuracy (25 pts), AIO Answer Readiness (20 pts), and Readability & UX (10 pts). Know exactly where to improve before publishing.',
-  },
-  {
-    icon: BookOpen,
-    title: 'Article Manager',
-    desc: 'A searchable, filterable library of every article across all your projects. Filter by project, status (draft/published/completed), or keyword. Track word counts, dates, and archive articles you no longer need.',
-  },
-]
-
-const wizardSteps = [
-  {
-    num: '1',
-    title: 'Configure',
-    desc: 'Set your target keyword, location, audience, tone, word count, AI model, secondary keywords, and internal linking preferences. Toggle People Also Ask, statistics with citation placeholders, and more.',
-    icon: ClipboardList,
-    color: '#1d63ff',
-  },
-  {
-    num: '2',
-    title: 'Review Outline',
-    desc: 'Before a single paragraph is written, RankPilot generates a full structured outline for your review. Edit headings, reorder sections, add notes — you control the structure.',
-    icon: PenLine,
-    color: '#7c3aed',
-  },
-  {
-    num: '3',
-    title: 'Generate Article',
-    desc: 'With your approved outline as the blueprint, RankPilot generates the full article — complete with internal links, People Also Ask, and statistics flagged for citation. Ready to grade and publish.',
-    icon: Sparkles,
-    color: '#059669',
-  },
-]
-
-const projectConfig = [
-  {
-    icon: Users,
-    title: 'Brand Voice',
-    desc: 'Define your writing tone, perspective (1st/2nd/3rd person), sentence style, and words to avoid. Create multiple named voice profiles per project — each article can use a different voice.',
-    color: '#1d63ff',
-  },
-  {
-    icon: Target,
-    title: 'Ideal Customer Profile (ICP)',
-    desc: 'Define who the content is written for: their pain points, goals, objections, and buying triggers. ICP influences what the content addresses; Brand Voice controls how it sounds. They work together.',
-    color: '#7c3aed',
-  },
-  {
-    icon: Globe,
-    title: 'Sitemaps & Internal Linking',
-    desc: 'Add your site\'s sitemaps and RankPilot automatically inserts contextually relevant internal links during article generation. Supports multiple sitemaps per project and manual URL entry.',
-    color: '#0891b2',
-  },
-  {
-    icon: FileText,
-    title: 'Cross Check',
-    desc: 'Upload a reference document containing proprietary data, facts, or domain-specific information. After an article is generated, Cross Check verifies its factual accuracy against your source material — without influencing the creative output.',
-    color: '#059669',
-  },
-]
-
-const workflowSteps = [
-  'Run Auto Complete on a seed keyword to surface hundreds of variations',
-  'Upload your keyword export to Keyword Insights for scoring and clustering',
-  'Analyze top-ranking competitor pages with the Competitor Analyzer',
-  'Check your GSC export for near-jump and quick-win opportunities',
-  'Generate article ideas and organize them into Topic Clusters',
-  'Schedule your pipeline in the Content Calendar',
-  'Configure your project\'s Brand Voice, ICP, Sitemaps, and Cross Check document',
-  'Run the Generate wizard: configure → review outline → generate article',
-  'Grade the finished article with the Content Grader before publishing',
-  'Track rankings and repeat for the next cluster',
-]
+const researchTools = content.research.tools.map((t, i) => ({ ...t, icon: researchIcons[i] ?? Search }))
+const planTools = content.plan.tools.map((t, i) => ({ ...t, icon: planIcons[i] ?? Brain }))
+const createTools = content.create.tools.map((t, i) => ({ ...t, icon: createIcons[i] ?? Wand2 }))
+const wizardSteps = content.wizard.steps.map((s, i) => ({ ...s, icon: wizardIcons[i] ?? Sparkles, color: wizardColors[i] ?? '#1d63ff' }))
+const projectConfig = content.projectConfig.items.map((item, i) => ({ ...item, icon: configIcons[i] ?? Users, color: configColors[i] ?? '#1d63ff' }))
+const workflowSteps = content.workflow.steps
 
 // ─── Shared components ────────────────────────────────────────────────────────
 
@@ -410,14 +276,14 @@ export default function HowItWorksPage() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#1d63ff] shadow-[0_10px_35px_rgba(16,24,40,0.07)]">
               <Zap className="h-4 w-4" />
-              The Full Workflow
+              {content.hero.badge}
             </div>
             <h1 className="font-display mx-auto max-w-4xl text-5xl font-black tracking-[-0.04em] text-[#071225] sm:text-6xl lg:text-[72px] lg:leading-[1.0]">
-              From Keyword to Published Article{' '}
-              <span className="text-[#1d63ff]">— In One Platform</span>
+              {content.hero.headline}{' '}
+              <span className="text-[#1d63ff]">{content.hero.headlineAccent}</span>
             </h1>
             <p className="mx-auto mt-7 max-w-2xl text-xl leading-8 text-[#667085]">
-              RankPilot is built around a single, end-to-end workflow. Every tool connects to the next — so you never have to export a spreadsheet, switch tabs, or lose context between research and creation.
+              {content.hero.subheadline}
             </p>
 
           </motion.div>
@@ -466,10 +332,10 @@ export default function HowItWorksPage() {
       <section id="phase-01" className="scroll-mt-28 bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <PhaseHeading
-            phaseId="01"
-            phaseLabel="Research & Analyze"
-            title="Understand your market before you write a single word"
-            desc="RankPilot's research layer gives you a complete picture of your keyword landscape, your competitors, and your existing content — all before you plan or create anything."
+            phaseId={content.research.phaseId}
+            phaseLabel={content.research.phaseLabel}
+            title={content.research.title}
+            desc={content.research.desc}
             color="#1d63ff"
           />
           <motion.div
@@ -490,10 +356,10 @@ export default function HowItWorksPage() {
       <section id="phase-02" className="scroll-mt-28 bg-[#fbfaf4] py-24 sm:py-32">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <PhaseHeading
-            phaseId="02"
-            phaseLabel="Plan & Strategize"
-            title="Turn research into a structured content roadmap"
-            desc="The planning layer bridges the gap between raw data and execution. Organize your keyword research into topic clusters, generate targeted article ideas, and schedule your content pipeline."
+            phaseId={content.plan.phaseId}
+            phaseLabel={content.plan.phaseLabel}
+            title={content.plan.title}
+            desc={content.plan.desc}
             color="#7c3aed"
           />
           <motion.div
@@ -514,10 +380,10 @@ export default function HowItWorksPage() {
       <section id="phase-03" className="scroll-mt-28 bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
           <PhaseHeading
-            phaseId="03"
-            phaseLabel="Create & Optimize"
-            title="Generate, refine, and grade content that actually ranks"
-            desc="The content layer is where research and planning become published articles. Every piece is shaped by your project's Brand Voice, ICP, and Citation Library — and verified for accuracy before it goes live."
+            phaseId={content.create.phaseId}
+            phaseLabel={content.create.phaseLabel}
+            title={content.create.title}
+            desc={content.create.desc}
             color="#059669"
           />
           <motion.div
@@ -547,13 +413,13 @@ export default function HowItWorksPage() {
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#1d63ff] shadow-[0_10px_35px_rgba(16,24,40,0.07)]">
               <Sparkles className="h-4 w-4" />
-              Inside the Generate Wizard
+              {content.wizard.badge}
             </div>
             <h2 className="font-display text-4xl font-black tracking-[-0.04em] text-[#071225] sm:text-5xl">
-              You Review the Outline Before a Word Is Written
+              {content.wizard.title}
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-[#667085]">
-              Unlike tools that dump a wall of AI text, RankPilot&apos;s 3-step Generate wizard puts you in control of the structure before the article is written. The result is content that matches your intent — not the AI&apos;s interpretation of it.
+              {content.wizard.desc}
             </p>
           </motion.div>
 
@@ -609,13 +475,13 @@ export default function HowItWorksPage() {
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#f4f8ff] px-4 py-2 text-sm font-bold text-[#1d63ff]">
               <Layers className="h-4 w-4" />
-              Project Configuration
+              {content.projectConfig.badge}
             </div>
             <h2 className="font-display max-w-2xl text-4xl font-black tracking-[-0.04em] text-[#071225] sm:text-5xl">
-              Every Project Has Its Own Brain
+              {content.projectConfig.title}
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#667085]">
-              Each RankPilot project is configured with its own Brand Voice, Ideal Customer Profile, Citation Library, CTAs, and Cross Check reference document. This is what makes every article sound like it was written by someone who deeply understands the niche — because the AI is given that context before it writes a single word.
+              {content.projectConfig.desc}
             </p>
           </motion.div>
 
@@ -661,10 +527,10 @@ export default function HowItWorksPage() {
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-[#1d63ff] shadow-[0_10px_35px_rgba(16,24,40,0.07)]">
               <CheckCircle2 className="h-4 w-4" />
-              The Complete Workflow at a Glance
+              {content.workflow.badge}
             </div>
             <h2 className="font-display text-4xl font-black tracking-[-0.04em] text-[#071225] sm:text-5xl">
-              10 Steps from Zero to Published
+              {content.workflow.title}
             </h2>
           </motion.div>
 
@@ -702,24 +568,24 @@ export default function HowItWorksPage() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <h2 className="font-display mb-5 text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl">
-              Ready to Run the Full Workflow?
+              {content.cta.title}
             </h2>
             <p className="mb-10 text-xl leading-8 text-white/75">
-              Start your free 14-day trial and run the complete RankPilot workflow on your own site — no credit card required.
+              {content.cta.desc}
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href="/"
+                href={content.cta.primaryHref}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-extrabold text-[#1d63ff] shadow-[0_14px_35px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(0,0,0,0.2)]"
               >
-                Start Free Trial — No Card Required
+                {content.cta.primaryText}
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/#pricing"
+                href={content.cta.secondaryHref}
                 className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-base font-extrabold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/60 hover:bg-white/10"
               >
-                View Pricing
+                {content.cta.secondaryText}
               </Link>
             </div>
           </motion.div>
