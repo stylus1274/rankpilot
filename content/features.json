@@ -1,0 +1,74 @@
+{
+  "seo": {
+    "title": "Features — RankPilot | Every SEO & Content Tool You Need",
+    "description": "RankPilot packs over a dozen specialized SEO and content tools into one cohesive platform. Keyword research, AI article generation, content grading, position tracking, and more."
+  },
+  "hero": {
+    "badge": "Complete Feature Overview",
+    "headline": "Every Tool You Need to",
+    "headlineAccent": "Dominate Search",
+    "subheadline": "RankPilot packs over a dozen specialized SEO and content tools into one cohesive platform. Here is a detailed look at everything included in your subscription."
+  },
+  "research": {
+    "eyebrow": "SEO Research Tools",
+    "title": "Deep Research, Actionable Insights",
+    "desc": "Eight specialized tools that help you understand your market, track your competition, and find the highest-value opportunities for your content.",
+    "tools": [
+      { "title": "Keyword Research", "desc": "Discover high-value keywords with volume, difficulty, CPC, and trend data. Filter by intent type, explore question-based keywords, and export results for your content strategy." },
+      { "title": "Keyword Auditor", "desc": "Analyze any URL for keyword density, placement, and on-page SEO factors. Get a comprehensive score with specific recommendations for meta titles, descriptions, headings, and body content." },
+      { "title": "Competitor Analyzer", "desc": "Break down any competitor URL to reveal word count, read time, heading structure, internal and external links, target keywords, and content quality metrics." },
+      { "title": "Position Tracker", "desc": "Monitor your keyword rankings over time with a threat leaderboard that scores competitors. Track position distribution across Top 3, Top 5, and Top 10 results." },
+      { "title": "GSC Analyzer", "desc": "Connect your Google Search Console to unlock near-jump keywords, zero-click pages, cannibalization detection, and keyword clustering — all from your real search data." },
+      { "title": "Keyword Insights", "desc": "Upload keyword exports from any tool. RankPilot scores each keyword by opportunity, groups them into clusters, and provides prioritized action recommendations." },
+      { "title": "Thin Content Scanner", "desc": "Identify pages with weak depth, missing structure, or low topical coverage. Get specific recommendations to strengthen existing content instead of always creating new pages." },
+      { "title": "Header Extractor", "desc": "Pull the complete heading structure from any URL to understand content hierarchy. Use this to plan better outlines and identify structural gaps in competitor content." }
+    ]
+  },
+  "planning": {
+    "eyebrow": "Planning & Strategy",
+    "title": "Turn Data Into a Content Roadmap",
+    "desc": "Bridge the gap between research and execution. These tools help you organize your findings into a structured content plan that your team can follow.",
+    "tools": [
+      { "title": "Content Ideas", "desc": "Generate and save content ideas based on your keyword research. Each idea includes a suggested title, target keyword, and content angle to keep your pipeline full." },
+      { "title": "Topic Clusters", "desc": "Organize keywords and content ideas into strategic topic clusters. Visualize the relationship between pillar content and supporting articles to build topical authority." },
+      { "title": "Editorial Calendar", "desc": "Plan and schedule your content production with a visual calendar. Track article status from idea to draft to published, and keep your team aligned on deadlines." }
+    ]
+  },
+  "creation": {
+    "eyebrow": "Content Creation & Optimization",
+    "title": "Create Content That Ranks and Converts",
+    "desc": "From AI-powered article generation to content grading, these tools ensure every piece of content you publish is optimized for both search engines and your target audience.",
+    "tools": [
+      { "title": "AI Article Generator", "desc": "Generate fully optimized, long-form articles using AI that understands your brand voice, ideal customer profile, and citation requirements. Configure word count, tone, internal linking, and AEO formatting." },
+      { "title": "Outline Builder", "desc": "Create detailed article outlines from scratch or enhance existing ones. The AI suggests heading structures, key points, and content flow based on top-ranking competitors." },
+      { "title": "Content Grader", "desc": "Score any piece of content against SEO best practices. Get detailed feedback on keyword usage, readability, structure, and optimization opportunities before publishing." },
+      { "title": "Article Manager", "desc": "Organize all your generated content in one place. Search, filter by project, view word counts, and manage article status. Each article includes an ICP compliance check." }
+    ]
+  },
+  "brand": {
+    "eyebrow": "Project & Brand Management",
+    "title": "Your Brand, Your Rules",
+    "desc": "RankPilot's project system lets you manage multiple clients or brands with unique voice settings, audience profiles, and content standards for each one.",
+    "tools": [
+      { "title": "Brand Voice Configuration", "desc": "Define your writing style, tone, and personality. Every article generated will match your brand's unique voice consistently across all content." },
+      { "title": "Ideal Customer Profiles", "desc": "Set up detailed ICPs so generated content speaks directly to your target audience. Define demographics, pain points, goals, and preferred communication style." },
+      { "title": "Citation Library", "desc": "Upload trusted sources and reference documents. The AI will incorporate relevant citations from your approved sources, ensuring factual accuracy and credibility." },
+      { "title": "Custom CTAs & Cross-Check", "desc": "Define call-to-action templates and reference documents for fact-checking. Every article can be validated against your approved content before publishing." }
+    ]
+  },
+  "comparison": {
+    "title": "One Platform vs. Four Separate Tools",
+    "desc": "Most SEO workflows require stitching together Semrush, Jasper, Frase, and a spreadsheet. RankPilot replaces all of them with a single, connected workflow."
+  },
+  "whyUs": [
+    { "title": "No Tool Switching", "desc": "Research, plan, generate, grade, and track — all in one platform. No copy-pasting between tabs." },
+    { "title": "Built for Real SEO Workflows", "desc": "Every feature was designed around how SEO professionals actually work, not how AI companies think they work." },
+    { "title": "Unique to RankPilot", "desc": "Cross Check, Negative Keywords, ICP, and internal linking via sitemap are features you won't find anywhere else." }
+  ],
+  "cta": {
+    "title": "Ready to See It in Action?",
+    "desc": "Start your free trial and explore every tool with your own data. No credit card required.",
+    "buttonText": "Start Your Free Trial",
+    "buttonHref": "/#pricing"
+  }
+}
