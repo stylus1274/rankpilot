@@ -35,6 +35,7 @@ import {
   X,
   Zap,
 } from 'lucide-react'
+import homepageContent from '@/content/homepage.json'
 
 type IconComponent = typeof Sparkles
 
@@ -87,6 +88,12 @@ type Integration = {
 
 const ASSET_BASE = '/assets/reference/'
 
+// Icon maps — icons can't be stored in JSON, so we map by feature/step index
+const featureIcons: IconComponent[] = [Bot, Cloud, MousePointer2, BarChart3, Users2, TimerReset]
+const stepIcons: IconComponent[] = [Fingerprint, MessageSquare, CalendarDays, PieChart]
+const benefitIcons: IconComponent[] = [Layers3, Clock3, Smartphone, ShieldCheck, Sparkles]
+const planIcons: IconComponent[] = [Rocket, Zap, LockKeyhole]
+
 const navItems = [
   { label: 'Features', href: '#solutions' },
   { label: 'How It Works', href: '#how-it-works' },
@@ -97,116 +104,43 @@ const navItems = [
   { label: 'Contact', href: '#trial' },
 ]
 
-const features: Feature[] = [
-  { title: 'AI-power generated apps', icon: Bot, image: 'features1.webp', tone: 'from-blue-50 to-white' },
-  { title: 'Build-in Integrations', icon: Cloud, image: 'features2.webp', tone: 'from-sky-50 to-white' },
-  { title: 'User-inter face design', icon: MousePointer2, image: 'features3.webp', tone: 'from-indigo-50 to-white' },
-  { title: 'Track Your Success', icon: BarChart3, image: 'features4.webp', tone: 'from-cyan-50 to-white' },
-  { title: 'Real-time Collaborations', icon: Users2, image: 'features5.webp', tone: 'from-blue-50 to-white' },
-  { title: 'Track Your Productivity', icon: TimerReset, image: 'features6.webp', tone: 'from-slate-50 to-white' },
-]
+// Build typed data from JSON
+const features: Feature[] = homepageContent.features.items.map((item, i) => ({
+  title: item.title,
+  icon: featureIcons[i] ?? Sparkles,
+  image: item.image,
+  tone: ['from-blue-50 to-white', 'from-sky-50 to-white', 'from-indigo-50 to-white', 'from-cyan-50 to-white', 'from-blue-50 to-white', 'from-slate-50 to-white'][i] ?? 'from-blue-50 to-white',
+}))
 
-const steps: WorkStep[] = [
-  { title: 'Create Your Account & Unlock Possibilities', icon: Fingerprint },
-  { title: 'Seamless Real-Time Collaboration', icon: MessageSquare },
-  { title: 'Track Progress & Stay Organized', icon: CalendarDays },
-  { title: 'Analyze & Optimize for Growth', icon: PieChart },
-]
+const steps: WorkStep[] = homepageContent.howItWorks.steps.map((step, i) => ({
+  title: step.title,
+  icon: stepIcons[i] ?? Check,
+}))
 
-const benefitTabs: BenefitTab[] = [
-  {
-    label: 'Smart task organization',
-    title: 'Tame the Chaos with Smart Task Organization',
-    text: 'Organizing your work has never been easier smart task structuring, you can break projects into subtasks assign priorities, set deadlines use custom.',
-    image: 'image-tab1.webp',
-    icon: Layers3,
-  },
-  {
-    label: 'Built-in time tracking',
-    title: 'Seamless Built-In Time Management',
-    text: 'Track project effort, daily focus, and team capacity from one uncluttered dashboard built for momentum.',
-    image: 'image-tab2.webp',
-    icon: Clock3,
-  },
-  {
-    label: 'Mobile-optimize access',
-    title: 'Fully Mobile-Optimized SaaS Platform',
-    text: 'Stay productive wherever you are with our fully mobile-optimized platform. Access your projects, track progress, and collaborate.',
-    image: 'image-tab3-mobile.webp',
-    icon: Smartphone,
-  },
-  {
-    label: 'Secure and reliable',
-    title: 'Enterprise-Grade Security You Can Trust',
-    text: 'Organizing your work has never been easier smart task structuring, you can break projects into subtasks assign priorities, set deadlines use custom.',
-    image: 'image-tab4.webp',
-    icon: ShieldCheck,
-  },
-  {
-    label: 'User-friendly design',
-    title: 'Experience a Truly User-Friendly Interface',
-    text: 'A calm, readable workspace keeps priorities clear and helps every team member move from planning to execution faster.',
-    image: 'image-tab5.webp',
-    icon: Sparkles,
-  },
-]
+const benefitTabs: BenefitTab[] = homepageContent.benefits.tabs.map((tab, i) => ({
+  label: tab.label,
+  title: tab.title,
+  text: tab.text,
+  image: tab.image,
+  icon: benefitIcons[i] ?? Layers3,
+}))
 
-const plans: PricingPlan[] = [
-  {
-    name: 'Starter',
-    monthly: 13,
-    yearly: 113,
-    icon: Rocket,
-    features: ['Up to 3 Task Projects', '5 Team Members includes', 'Basic Task Management', 'Real-Time Collaboration', 'Calendar View & email support'],
-  },
-  {
-    name: 'Professional',
-    monthly: 48,
-    yearly: 468,
-    featured: true,
-    icon: Zap,
-    features: ['Unlimited Projects & Tasks', 'Unlimited (8) Team Members', 'Advanced Task Organization', 'Time Tracking File Attachments', 'Integration with Slack, Google Drive'],
-  },
-  {
-    name: 'Enterprise',
-    monthly: 96,
-    yearly: 969,
-    icon: LockKeyhole,
-    features: ['All Professional Features', 'Custom Workflows & Permissions', 'Dedicated Account Manager', 'Advanced Security & Compliance', 'Single Sign-On (SSO)'],
-  },
-]
+const plans: PricingPlan[] = homepageContent.pricing.plans.map((plan, i) => ({
+  name: plan.name,
+  monthly: plan.monthly,
+  yearly: plan.yearly,
+  featured: plan.featured,
+  icon: planIcons[i] ?? PackageCheck,
+  features: plan.features,
+}))
 
-const testimonials: Testimonial[] = [
-  { name: 'Sarah Linda', title: 'Operations Lead', avatar: 'avatar-image3.webp', quote: '"We\'ve tried multiple tools, but this one hits the sweet spot between simplicity and powerful features team\'s."' },
-  { name: 'James Bond', title: 'Product Manager', avatar: 'avatar-image8.webp', quote: '"I love how easy it is to organize tasks, assign roles, and track progress. It helps me stay of everything without ."' },
-  { name: 'Priya Donald', title: 'Growth Director', avatar: 'avatar-image7.webp', quote: '"The integration options and the clean interface make this to best task manage tool we\'ve used so far recommend!"' },
-  { name: 'Elena Rossi', title: 'Agency Founder', avatar: 'avatar-image6.webp', quote: '"After testing countless apps, this one finally balances ease of use with the depth our team needs."' },
-  { name: 'Anna Carter', title: 'Team Strategist', avatar: 'avatar-image9.webp', quote: '"It\'s rare to find a tool that\'s both intuitive and packed with everything a growing team requires."' },
-  { name: 'Maria Lopez', title: 'Delivery Manager', avatar: 'avatar-image2.webp', quote: '"From setup to daily use, it delivers exactly what we need — clean, smart, and incredibly efficient."' },
-]
+const testimonials: Testimonial[] = homepageContent.testimonials.items
 
-const faqs: Faq[] = [
-  { q: '1. How is this different from other task management tools?', a: 'Our tool blends modern design with advanced workflow automation, intuitive scheduling, and real-time team insights — giving you control without complexity.', link: 'real-time team insights' },
-  { q: '2. Do I need technical skills to use this platform?', a: 'Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations — all in a clean, intuitive interface.', link: 'seamless integrations' },
-  { q: '3. Can I invite team members to my workspace?', a: 'Yes — you can easily invite teammates to collaborate in real time, assign roles, share updates, and manage projects together — all within one unified workspace.', link: 'manage projects together' },
-  { q: '4. What happens if I reach the limit of my plan?', a: 'When you reach your plan\'s limit, you\'ll still keep full access to your existing data, but advanced features, extra seats, and premium automation will pause until you upgrade or adjust your workspace.', link: 'premium automation' },
-  { q: '5. Do you offer a trial for premium features?', a: 'Yes — you can explore all premium tools free for a limited time, including advanced reporting, custom workflows, and priority support access — no credit card required.', link: 'priority support access' },
-]
+const faqs: Faq[] = homepageContent.faq.items
 
-const integrations: Integration[] = [
-  { name: 'Dropbox', image: 'logo-dropbox.webp' },
-  { name: 'Pinterest', image: 'logo-pinterest.webp' },
-  { name: 'Discord', image: 'logo-discord.webp' },
-  { name: 'Telegram', image: 'logo-telegram.webp' },
-  { name: 'Mailchimp', image: 'mailchimp.webp' },
-  { name: 'Shopify', image: 'shopify.webp' },
-  { name: 'Zoom', image: 'zoom.webp' },
-  { name: 'MC360', image: 'mc360.webp' },
-  { name: 'Team', image: 'logo-team.webp' },
-  { name: 'Disqus', image: 'disqus.webp' },
-  { name: 'Notion', image: 'notion.webp' },
-  { name: 'Linksters', image: 'linksters.webp' },
-]
+const integrations: Integration[] = homepageContent.integrations.items
+
+const content = homepageContent
 
 const reveal = {
   hidden: { opacity: 0, y: 36 },
@@ -384,6 +318,7 @@ function Header() {
 }
 
 function Hero() {
+  const { hero } = content
   return (
     <section id="home" className="relative overflow-hidden bg-[#fbfaf4] pb-28 pt-32 sm:pb-36 sm:pt-36">
       <div className="absolute -left-28 -top-44 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,245,205,0.95)_0%,rgba(255,245,205,0.55)_42%,transparent_68%)]" />
@@ -394,14 +329,14 @@ function Hero() {
         <motion.div initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: 'easeOut' }} className="mx-auto max-w-5xl">
           <div className="mx-auto mb-7 inline-flex items-center gap-2 rounded-full border border-[#bdd7ff] bg-[#edf6ff]/80 px-5 py-2 text-sm font-bold text-[#1d63ff] shadow-[0_10px_30px_rgba(29,99,255,0.08)] backdrop-blur-sm">
             <Zap className="h-4 w-4" />
-            <span>AI-Powered SEO Content Platform</span>
+            <span>{hero.badge}</span>
           </div>
           <h1 className="mx-auto max-w-4xl font-display text-5xl font-black tracking-[-0.055em] text-[#1a2233] sm:text-6xl lg:text-[68px] lg:leading-[0.97]">
-            Research, Plan, and Create
-            <span className="mt-1 block text-[#2457f5]">Content That Ranks</span>
+            {hero.headline}
+            <span className="mt-1 block text-[#2457f5]">{hero.headlineAccent}</span>
           </h1>
           <p className="mx-auto mt-7 max-w-3xl text-xl leading-8 text-[#4b5568] sm:text-2xl sm:leading-9">
-            RankPilot combines keyword research, competitor analysis, content planning, and AI-powered article generation into one seamless workflow. Stop juggling tools and start ranking.
+            {hero.subheadline}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <button
@@ -409,7 +344,7 @@ function Hero() {
               onClick={() => smoothScrollTo('#pricing')}
               className="inline-flex min-w-[290px] items-center justify-center gap-4 rounded-lg bg-[#2457f5] px-8 py-4 text-lg font-extrabold text-white shadow-[0_18px_40px_rgba(29,99,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b52e7] sm:min-w-0"
             >
-              Start Free 14-Day Trial
+              {hero.ctaPrimary}
               <ArrowRight className="h-5 w-5" />
             </button>
             <button
@@ -417,10 +352,10 @@ function Hero() {
               onClick={() => smoothScrollTo('#solutions')}
               className="inline-flex min-w-[220px] items-center justify-center rounded-lg border border-[#d6dce8] bg-white/70 px-8 py-4 text-lg font-extrabold text-[#3b4658] shadow-[0_14px_30px_rgba(16,24,40,0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2457f5] hover:text-[#2457f5] sm:min-w-0"
             >
-              See How It Works
+              {hero.ctaSecondary}
             </button>
           </div>
-          <p className="mt-5 text-base font-medium text-[#566179]">No credit card required · 14-day free trial · Cancel anytime</p>
+          <p className="mt-5 text-base font-medium text-[#566179]">{hero.trustLine}</p>
         </motion.div>
         <HeroVisual />
       </div>
@@ -430,10 +365,11 @@ function Hero() {
 
 
 function FeaturesSection() {
+  const { features: featuresContent } = content
   return (
     <section id="solutions" className="bg-white py-24">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <SectionHeading eyebrow="Solutions" title="Powerful Features to Boost Your Productivity" text="Stay ahead with features built for performance grow SaaS and productivity." />
+        <SectionHeading eyebrow={featuresContent.eyebrow} title={featuresContent.title} text={featuresContent.subtitle} />
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -469,12 +405,13 @@ function FeaturesSection() {
 }
 
 function HowItWorks() {
+  const { howItWorks } = content
   return (
     <section className="overflow-hidden bg-[#edf6ff] py-24">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <SectionHeading eyebrow="How it works" title="No Setup Hassle — Just Start Working" text="No complex setup or training required — our platform is ready to use right out of the box." center={false} />
+            <SectionHeading eyebrow={howItWorks.eyebrow} title={howItWorks.title} text={howItWorks.subtitle} center={false} />
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="mt-9 grid gap-4">
               {steps?.map?.((step: WorkStep, index: number) => {
                 const Icon = step?.icon ?? Check
@@ -500,6 +437,7 @@ function HowItWorks() {
 
 function BenefitsSection() {
   const [active, setActive] = useState(0)
+  const { benefits } = content
   const safeActive = active >= 0 && active < (benefitTabs?.length ?? 0) ? active : 0
   const current = benefitTabs?.[safeActive] ?? benefitTabs?.[0]
   const CurrentIcon = current?.icon ?? Layers3
@@ -507,7 +445,7 @@ function BenefitsSection() {
   return (
     <section id="benefits" className="bg-white py-24">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <SectionHeading eyebrow="Benefits" title="What Makes Our Users Stick With Us" text="Our clients love how effortless task management becomes with our platform." />
+        <SectionHeading eyebrow={benefits.eyebrow} title={benefits.title} text={benefits.subtitle} />
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           {benefitTabs?.map?.((tab: BenefitTab, index: number) => {
             const Icon = tab?.icon ?? Check
@@ -526,12 +464,12 @@ function BenefitsSection() {
             <h2 className="font-display text-4xl font-black tracking-[-0.04em] text-[#071225] sm:text-5xl">{current?.title ?? ''}</h2>
             <p className="mt-5 text-lg leading-8 text-[#667085]">{current?.text ?? ''}</p>
             <ul className="mt-7 grid gap-3 text-[#25324b]">
-              {['Transforming Complexity Into Clarity', 'Unlock Efficiency, Scale Faster, and Work Smarter']?.map?.((item: string) => (
+              {benefits.bulletPoints?.map?.((item: string) => (
                 <li key={item} className="flex items-center gap-3 font-bold"><Check className="h-5 w-5 text-[#1d63ff]" />{item}</li>
               )) ?? null}
             </ul>
             <button type="button" onClick={() => smoothScrollTo('#pricing')} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#101828] px-7 py-4 font-extrabold text-white shadow-[0_16px_35px_rgba(16,24,40,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d63ff]">
-              Get 14th-day Free Trial <ArrowRight className="h-5 w-5" />
+              {benefits.ctaButton} <ArrowRight className="h-5 w-5" />
             </button>
           </div>
           <div className="rounded-[28px] bg-white p-3 shadow-[0_22px_60px_rgba(29,99,255,0.12)]">
@@ -547,10 +485,11 @@ function BenefitsSection() {
 
 function PricingSection() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly')
+  const { pricing } = content
   return (
     <section id="pricing" className="bg-[#edf6ff] py-24">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <SectionHeading eyebrow="Pricing" title="Transparent Pricing Plan" text="We offer flexible pricing plans designed to fit teams of all sizes — from solo" />
+        <SectionHeading eyebrow={pricing.eyebrow} title={pricing.title} text={pricing.subtitle} />
         <div className="mx-auto mt-10 flex w-fit rounded-full bg-white p-2 shadow-[0_14px_40px_rgba(16,24,40,0.08)]">
           {(['monthly', 'yearly'] as const)?.map?.((mode: 'monthly' | 'yearly') => (
             <button key={mode} type="button" onClick={() => setBilling(mode)} className={`rounded-full px-6 py-3 text-sm font-extrabold capitalize transition-all duration-300 ${billing === mode ? 'bg-[#1d63ff] text-white' : 'text-[#25324b] hover:bg-[#edf6ff]'}`}>
@@ -587,10 +526,11 @@ function PricingSection() {
 }
 
 function TestimonialsSection() {
+  const { testimonials: testimonialsContent } = content
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <SectionHeading eyebrow="Testimonials" title="Clients Testimonials" text="Our users are at the heart of everything we do and their feedback says it all." />
+        <SectionHeading eyebrow={testimonialsContent.eyebrow} title={testimonialsContent.title} text={testimonialsContent.subtitle} />
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials?.map?.((item: Testimonial) => (
             <motion.article key={item?.name ?? item?.avatar} variants={reveal} className="rounded-[28px] bg-[#edf6ff] p-6 shadow-[0_18px_55px_rgba(16,24,40,0.07)] transition-all duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-[0_26px_70px_rgba(29,99,255,0.12)]">
@@ -615,10 +555,11 @@ function TestimonialsSection() {
 
 function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0)
+  const { faq } = content
   return (
     <section id="questions" className="bg-[#edf6ff] py-24">
       <div className="mx-auto max-w-[1000px] px-5 sm:px-8">
-        <SectionHeading eyebrow="Questions" title="Still Curious? Find Your Answers Below" />
+        <SectionHeading eyebrow={faq.eyebrow} title={faq.title} />
         <div className="mt-12 grid gap-4">
           {faqs?.map?.((faq: Faq, index: number) => {
             const isOpen = openIndex === index
@@ -643,10 +584,11 @@ function FaqSection() {
 }
 
 function IntegrationsSection() {
+  const { integrations: integrationsContent } = content
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <SectionHeading eyebrow="Integrations" title="Seamless Integrations" text="Our platform seamlessly integrates with the tools your team already knows" />
+        <SectionHeading eyebrow={integrationsContent.eyebrow} title={integrationsContent.title} text={integrationsContent.subtitle} />
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
           {integrations?.map?.((integration: Integration) => (
             <motion.div key={integration?.name ?? integration?.image} variants={reveal} className="group rounded-[22px] bg-[#edf6ff] p-5 shadow-[0_14px_35px_rgba(16,24,40,0.06)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_22px_55px_rgba(29,99,255,0.12)]">
@@ -662,19 +604,20 @@ function IntegrationsSection() {
 }
 
 function TrialSection() {
+  const { cta } = content
   return (
     <section id="trial" className="bg-white px-5 py-10 sm:px-8">
       <motion.div variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.6 }} className="mx-auto max-w-[1200px] overflow-hidden rounded-[38px] bg-[#1d63ff] p-8 text-center shadow-[0_30px_90px_rgba(29,99,255,0.25)] sm:p-14">
         <div className="mx-auto mb-6 grid h-16 w-16 place-items-center rounded-3xl bg-white text-[#1d63ff] shadow-[0_18px_45px_rgba(16,24,40,0.12)]">
           <FileText className="h-7 w-7" />
         </div>
-        <h2 className="mx-auto max-w-3xl font-display text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl lg:text-[58px] lg:leading-[1.03]">Take the First Step to Better Task Management</h2>
-        <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/80">Sign up today and unlock a powerful suite of tools designed to help you organize tasks</p>
+        <h2 className="mx-auto max-w-3xl font-display text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl lg:text-[58px] lg:leading-[1.03]">{cta.title}</h2>
+        <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/80">{cta.subtitle}</p>
         <button type="button" onClick={() => smoothScrollTo('#pricing')} className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-extrabold text-[#1d63ff] shadow-[0_18px_45px_rgba(16,24,40,0.12)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#101828] hover:text-white">
-          Get Started With Us <ArrowRight className="h-5 w-5" />
+          {cta.button} <ArrowRight className="h-5 w-5" />
         </button>
         <div className="mt-9 flex flex-wrap justify-center gap-4 text-sm font-bold text-white/80">
-          {['Special Discounts & Offers', 'Webinars & Workshops', 'User Spotlights']?.map?.((item: string) => <span key={item} className="inline-flex items-center gap-2"><Check className="h-4 w-4" />{item}</span>) ?? null}
+          {cta.trustItems?.map?.((item: string) => <span key={item} className="inline-flex items-center gap-2"><Check className="h-4 w-4" />{item}</span>) ?? null}
         </div>
       </motion.div>
     </section>

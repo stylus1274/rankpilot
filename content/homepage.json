@@ -1,0 +1,231 @@
+{
+  "seo": {
+    "title": "RankPilot — AI-Powered SEO Content Platform",
+    "description": "RankPilot combines keyword research, competitor analysis, content planning, and AI-powered article generation into one seamless workflow. Stop juggling tools and start ranking.",
+    "ogImage": "https://rankpilot.cc/og-image.png"
+  },
+  "hero": {
+    "badge": "AI-Powered SEO Content Platform",
+    "headline": "Research, Plan, and Create",
+    "headlineAccent": "Content That Ranks",
+    "subheadline": "RankPilot combines keyword research, competitor analysis, content planning, and AI-powered article generation into one seamless workflow. Stop juggling tools and start ranking.",
+    "ctaPrimary": "Start Free 14-Day Trial",
+    "ctaSecondary": "See How It Works",
+    "trustLine": "No credit card required · 14-day free trial · Cancel anytime"
+  },
+  "features": {
+    "eyebrow": "Solutions",
+    "title": "Powerful Features to Boost Your Productivity",
+    "subtitle": "Stay ahead with features built for performance grow SaaS and productivity.",
+    "items": [
+      { "title": "AI-power generated apps", "image": "features1.webp" },
+      { "title": "Build-in Integrations", "image": "features2.webp" },
+      { "title": "User-inter face design", "image": "features3.webp" },
+      { "title": "Track Your Success", "image": "features4.webp" },
+      { "title": "Real-time Collaborations", "image": "features5.webp" },
+      { "title": "Track Your Productivity", "image": "features6.webp" }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "No Setup Hassle — Just Start Working",
+    "subtitle": "No complex setup or training required — our platform is ready to use right out of the box.",
+    "steps": [
+      { "title": "Create Your Account & Unlock Possibilities" },
+      { "title": "Seamless Real-Time Collaboration" },
+      { "title": "Track Progress & Stay Organized" },
+      { "title": "Analyze & Optimize for Growth" }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Benefits",
+    "title": "What Makes Our Users Stick With Us",
+    "subtitle": "Our clients love how effortless task management becomes with our platform.",
+    "ctaButton": "Get 14th-day Free Trial",
+    "bulletPoints": [
+      "Transforming Complexity Into Clarity",
+      "Unlock Efficiency, Scale Faster, and Work Smarter"
+    ],
+    "tabs": [
+      {
+        "label": "Smart task organization",
+        "title": "Tame the Chaos with Smart Task Organization",
+        "text": "Organizing your work has never been easier smart task structuring, you can break projects into subtasks assign priorities, set deadlines use custom.",
+        "image": "image-tab1.webp"
+      },
+      {
+        "label": "Built-in time tracking",
+        "title": "Seamless Built-In Time Management",
+        "text": "Track project effort, daily focus, and team capacity from one uncluttered dashboard built for momentum.",
+        "image": "image-tab2.webp"
+      },
+      {
+        "label": "Mobile-optimize access",
+        "title": "Fully Mobile-Optimized SaaS Platform",
+        "text": "Stay productive wherever you are with our fully mobile-optimized platform. Access your projects, track progress, and collaborate.",
+        "image": "image-tab3-mobile.webp"
+      },
+      {
+        "label": "Secure and reliable",
+        "title": "Enterprise-Grade Security You Can Trust",
+        "text": "Organizing your work has never been easier smart task structuring, you can break projects into subtasks assign priorities, set deadlines use custom.",
+        "image": "image-tab4.webp"
+      },
+      {
+        "label": "User-friendly design",
+        "title": "Experience a Truly User-Friendly Interface",
+        "text": "A calm, readable workspace keeps priorities clear and helps every team member move from planning to execution faster.",
+        "image": "image-tab5.webp"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Transparent Pricing Plan",
+    "subtitle": "We offer flexible pricing plans designed to fit teams of all sizes — from solo",
+    "plans": [
+      {
+        "name": "Starter",
+        "monthly": 13,
+        "yearly": 113,
+        "featured": false,
+        "features": [
+          "Up to 3 Task Projects",
+          "5 Team Members includes",
+          "Basic Task Management",
+          "Real-Time Collaboration",
+          "Calendar View & email support"
+        ]
+      },
+      {
+        "name": "Professional",
+        "monthly": 48,
+        "yearly": 468,
+        "featured": true,
+        "features": [
+          "Unlimited Projects & Tasks",
+          "Unlimited (8) Team Members",
+          "Advanced Task Organization",
+          "Time Tracking File Attachments",
+          "Integration with Slack, Google Drive"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "monthly": 96,
+        "yearly": 969,
+        "featured": false,
+        "features": [
+          "All Professional Features",
+          "Custom Workflows & Permissions",
+          "Dedicated Account Manager",
+          "Advanced Security & Compliance",
+          "Single Sign-On (SSO)"
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Clients Testimonials",
+    "subtitle": "Our users are at the heart of everything we do and their feedback says it all.",
+    "items": [
+      {
+        "name": "Sarah Linda",
+        "title": "Operations Lead",
+        "avatar": "avatar-image3.webp",
+        "quote": "\"We've tried multiple tools, but this one hits the sweet spot between simplicity and powerful features team's.\""
+      },
+      {
+        "name": "James Bond",
+        "title": "Product Manager",
+        "avatar": "avatar-image8.webp",
+        "quote": "\"I love how easy it is to organize tasks, assign roles, and track progress. It helps me stay of everything without .\""
+      },
+      {
+        "name": "Priya Donald",
+        "title": "Growth Director",
+        "avatar": "avatar-image7.webp",
+        "quote": "\"The integration options and the clean interface make this to best task manage tool we've used so far recommend!\""
+      },
+      {
+        "name": "Elena Rossi",
+        "title": "Agency Founder",
+        "avatar": "avatar-image6.webp",
+        "quote": "\"After testing countless apps, this one finally balances ease of use with the depth our team needs.\""
+      },
+      {
+        "name": "Anna Carter",
+        "title": "Team Strategist",
+        "avatar": "avatar-image9.webp",
+        "quote": "\"It's rare to find a tool that's both intuitive and packed with everything a growing team requires.\""
+      },
+      {
+        "name": "Maria Lopez",
+        "title": "Delivery Manager",
+        "avatar": "avatar-image2.webp",
+        "quote": "\"From setup to daily use, it delivers exactly what we need — clean, smart, and incredibly efficient.\""
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Still Curious? Find Your Answers Below",
+    "items": [
+      {
+        "q": "1. How is this different from other task management tools?",
+        "a": "Our tool blends modern design with advanced workflow automation, intuitive scheduling, and real-time team insights — giving you control without complexity.",
+        "link": "real-time team insights"
+      },
+      {
+        "q": "2. Do I need technical skills to use this platform?",
+        "a": "Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations — all in a clean, intuitive interface.",
+        "link": "seamless integrations"
+      },
+      {
+        "q": "3. Can I invite team members to my workspace?",
+        "a": "Yes — you can easily invite teammates to collaborate in real time, assign roles, share updates, and manage projects together — all within one unified workspace.",
+        "link": "manage projects together"
+      },
+      {
+        "q": "4. What happens if I reach the limit of my plan?",
+        "a": "When you reach your plan's limit, you'll still keep full access to your existing data, but advanced features, extra seats, and premium automation will pause until you upgrade or adjust your workspace.",
+        "link": "premium automation"
+      },
+      {
+        "q": "5. Do you offer a trial for premium features?",
+        "a": "Yes — you can explore all premium tools free for a limited time, including advanced reporting, custom workflows, and priority support access — no credit card required.",
+        "link": "priority support access"
+      }
+    ]
+  },
+  "integrations": {
+    "eyebrow": "Integrations",
+    "title": "Seamless Integrations",
+    "subtitle": "Our platform seamlessly integrates with the tools your team already knows",
+    "items": [
+      { "name": "Dropbox", "image": "logo-dropbox.webp" },
+      { "name": "Pinterest", "image": "logo-pinterest.webp" },
+      { "name": "Discord", "image": "logo-discord.webp" },
+      { "name": "Telegram", "image": "logo-telegram.webp" },
+      { "name": "Mailchimp", "image": "mailchimp.webp" },
+      { "name": "Shopify", "image": "shopify.webp" },
+      { "name": "Zoom", "image": "zoom.webp" },
+      { "name": "MC360", "image": "mc360.webp" },
+      { "name": "Team", "image": "logo-team.webp" },
+      { "name": "Disqus", "image": "disqus.webp" },
+      { "name": "Notion", "image": "notion.webp" },
+      { "name": "Linksters", "image": "linksters.webp" }
+    ]
+  },
+  "cta": {
+    "title": "Take the First Step to Better Task Management",
+    "subtitle": "Sign up today and unlock a powerful suite of tools designed to help you organize tasks",
+    "button": "Get Started With Us",
+    "trustItems": [
+      "Special Discounts & Offers",
+      "Webinars & Resources",
+      "Priority Support Access"
+    ]
+  }
+}
