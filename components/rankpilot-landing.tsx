@@ -96,7 +96,7 @@ const planIcons: IconComponent[] = [Rocket, Zap, LockKeyhole]
 
 const navItems = [
   { label: 'Features', href: '#solutions' },
-  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'How It Works', href: '/how-it-works' },
   { label: 'Use Cases', href: '#benefits' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Blog', href: '/blog' },
