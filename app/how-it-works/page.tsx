@@ -53,7 +53,7 @@ const stagger = {
 
 // ─── Nav ─────────────────────────────────────────────────────────────────────
 const navItems = [
-  { label: 'Features', href: '/#solutions' },
+  { label: 'Features', href: '/features' },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Use Cases', href: '/#benefits' },
   { label: 'Pricing', href: '/#pricing' },
