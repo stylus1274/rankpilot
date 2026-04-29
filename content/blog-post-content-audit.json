@@ -1,0 +1,199 @@
+{
+  "seo": {
+    "title": "How to Do a Content Audit in 90 Minutes Using AI Tools — RankPilot",
+    "description": "Learn how to run a complete content audit in 90 minutes using RankPilot's AI tools. Includes a step-by-step framework for identifying quick wins, fixing cannibalization, and building a priority action list.",
+    "ogImage": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/NXGboSFzGQESepeZ.webp"
+  },
+  "meta": {
+    "category": "Content Strategy",
+    "date": "April 11, 2026",
+    "readTime": "12 min read",
+    "slug": "content-audit-90-minutes-ai-tools"
+  },
+  "hero": {
+    "title": "How to Do a Content Audit in 90 Minutes Using AI Tools",
+    "featuredImage": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/NXGboSFzGQESepeZ.webp",
+    "featuredImageAlt": "Content audit dashboard showing analytics, keyword rankings and audit score on a laptop screen"
+  },
+  "intro": {
+    "lead": "Most content audits never get finished. They start as a good idea, balloon into a weeks-long spreadsheet project, and quietly get abandoned somewhere around page 47 of a URL export. The result? Hundreds of underperforming posts that continue dragging down your domain authority while you keep publishing new content that faces an uphill battle from the start.",
+    "body": "There is a better way. This guide walks you through a focused, repeatable 90-minute content audit framework — one that uses RankPilot's AI tools to eliminate the most time-consuming parts of the process. By the end, you will have a prioritized action list you can act on this week, not a spreadsheet you will revisit in six months."
+  },
+  "stats": [
+    { "value": "+68%", "label": "Positions 4–10 after update", "sub": "avg. traffic lift in 90 days" },
+    { "value": "+41%", "label": "Positions 11–20 after update", "sub": "avg. traffic lift in 90 days" },
+    { "value": "+8%", "label": "New post, competitive keyword", "sub": "avg. traffic growth in 90 days" }
+  ],
+  "sections": [
+    {
+      "id": "what-is-content-audit",
+      "heading": "What Is a Content Audit (and Why You Need One in 2026)",
+      "paragraphs": [
+        "A content audit is a systematic review of every published page on your site — evaluating each one for performance, quality, and strategic value. The goal is not to judge your past writing. The goal is to identify which posts are worth improving, which should be merged, and which are actively hurting your site by diluting topical authority.",
+        "In 2026, this matters more than ever. Google's quality signals have raised the bar significantly. Thin content, outdated statistics, and keyword cannibalization — where two of your own posts compete for the same search term — are no longer just missed opportunities. They are active ranking liabilities. A well-executed content audit addresses all three.",
+        "The business case is straightforward: improving an existing post that already has impressions and some ranking history is almost always faster and higher-ROI than publishing a brand new post targeting the same keyword from scratch. Posts already ranking at position 4–10 that receive a targeted update see an average traffic lift of 68% within 90 days. Posts at position 11–20 — the classic page-two trap — average a 41% lift after an update. Compare that to a new post targeting a competitive keyword, which averages just 8% traffic growth in the same window. The math strongly favors the audit-first approach."
+      ]
+    },
+    {
+      "id": "before-you-start",
+      "heading": "Before You Start: What You Need",
+      "paragraphs": [
+        "The 90-minute audit requires four things: a RankPilot account (a free 14-day trial is available with no credit card required), Google Search Console connected to your site, your CMS login, and 90 uninterrupted minutes. That is it. No additional tools, no complex setup, no agency required.",
+        "If you do not yet have RankPilot connected to your Google Search Console, that connection takes about five minutes to set up inside the platform. Once it is live, RankPilot begins pulling your site's keyword and performance data automatically."
+      ]
+    },
+    {
+      "id": "step-1",
+      "heading": "Step 1 — Export Your Content Inventory (10 minutes)",
+      "paragraphs": [
+        "Start by pulling a complete list of every published URL on your site. Inside RankPilot, the GSC Analyzer imports your sitemap and organizes all URLs automatically — no manual export required. You will see each URL alongside its title, publish date, and word count in a single organized view.",
+        "If you are not yet using RankPilot, the manual fallback is to export your Performance report from Google Search Console (set the date range to the last 90 days and export all pages) or run a quick crawl using Screaming Frog. The key columns you need are: URL, page title, publish date, last updated date, and word count. Everything else comes in the next step."
+      ]
+    },
+    {
+      "id": "step-2",
+      "heading": "Step 2 — Pull Performance Data with RankPilot's GSC Analyzer (15 minutes)",
+      "paragraphs": [
+        "This is where RankPilot does the work that used to take hours. The GSC Analyzer pulls your site's full keyword and page performance data from Google Search Console and organizes it into an actionable view — impressions, clicks, average position, and click-through rate for every page, all in one place.",
+        "As you scan through the data, you are looking for three specific patterns: High impressions but low CTR — these are ranking but not getting clicked, which usually means the title tag or meta description needs improvement. Pages sitting at position 8–20 — these are your highest-priority quick win candidates, already on the edge of page one and needing only a targeted push. Pages with zero impressions in the last 90 days — these are candidates for consolidation or removal.",
+        "RankPilot surfaces all three of these patterns automatically in the Quick Win Keywords view, which means you are not hunting through rows of data manually. The tool flags the opportunities and lets you focus on decisions rather than data wrangling."
+      ]
+    },
+    {
+      "id": "step-3",
+      "heading": "Step 3 — Use RankPilot to Score Content Quality and Find Gaps (20 minutes)",
+      "paragraphs": [
+        "Performance data tells you how a post is doing. Quality scoring tells you why. This step uses RankPilot's keyword clustering feature to identify two of the most common and most fixable content problems: topical coverage gaps and keyword cannibalization.",
+        "Topical coverage gaps occur when your post ranks for a keyword but fails to address the full range of subtopics that top-ranking competitors cover. RankPilot's content gap analysis compares your post against the top 10 ranking pages for your target keyword and highlights the specific sections and questions your content is missing. Adding those sections is often enough to move a position-12 post to position 4.",
+        "Keyword cannibalization is the more insidious problem. It happens when two or more pages on your site target the same keyword cluster, causing Google to split ranking signals between them rather than concentrating authority on one strong page. RankPilot's keyword clustering groups your posts by semantic similarity, making cannibalization obvious — posts that belong in the same cluster are flagged together, and the fix becomes a clear decision rather than a guessing game."
+      ]
+    },
+    {
+      "id": "step-4",
+      "heading": "Step 4 — Sort Every Post into Three Buckets (15 minutes)",
+      "paragraphs": [
+        "By this point you have performance data and quality signals for every post. Now you sort. Every post on your site belongs in exactly one of three buckets:"
+      ]
+    },
+    {
+      "id": "step-5",
+      "heading": "Step 5 — Build Your Priority Action List Using Quick Win Keywords (15 minutes)",
+      "paragraphs": [
+        "Your Update bucket likely has more posts than you can address in a week. This step is about ruthless prioritization. Inside RankPilot, the Quick Win Keywords view automatically ranks your update candidates by opportunity score — a composite of current position, search volume, and estimated traffic lift from a single update.",
+        "Work from the top of that list. The posts at the top are the ones where a single focused update — adding a missing section, refreshing statistics, improving the title tag — will produce the fastest and largest traffic gains. Aim to identify your top five to ten priority posts in this step. That is your action list for the next two weeks.",
+        "For each priority post, RankPilot generates a specific update brief: the exact keywords to target, the sections to add or expand, the competitors to reference, and the internal links to add. You are not guessing what to fix. You are executing a precise, data-driven improvement plan."
+      ]
+    },
+    {
+      "id": "step-6",
+      "heading": "Step 6 — Set a Recurring Audit Schedule (5 minutes)",
+      "paragraphs": [
+        "A one-time audit is useful. A recurring audit is a competitive advantage. The final five minutes of your 90-minute session are spent setting up a repeating audit cadence inside RankPilot so that the process runs automatically going forward.",
+        "For most sites, a quarterly audit cadence is sufficient — once every 90 days, RankPilot re-scans your content inventory, refreshes the performance data, and surfaces new quick win opportunities. Sites publishing more than four posts per week may benefit from a monthly cadence. Sites with fewer than 50 published posts can often get away with a bi-annual review.",
+        "The key is consistency. A content audit done once and forgotten is a wasted afternoon. A content audit done quarterly is a systematic process that compounds over time — each cycle improving the baseline that the next cycle builds on."
+      ]
+    },
+    {
+      "id": "key-takeaways",
+      "heading": "Key Takeaways",
+      "paragraphs": []
+    },
+    {
+      "id": "faq",
+      "heading": "Frequently Asked Questions",
+      "paragraphs": []
+    },
+    {
+      "id": "start-today",
+      "heading": "Start Your First Content Audit Today",
+      "paragraphs": [
+        "The 90-minute content audit is not a shortcut. It is a smarter use of the data you already have. Most sites are sitting on dozens of posts that are one targeted update away from a meaningful traffic increase — posts that are already indexed, already have some ranking history, and just need a focused improvement to break through.",
+        "RankPilot makes the process fast enough to actually finish. Start your free 14-day trial and run your first audit today — no credit card required."
+      ]
+    }
+  ],
+  "buckets": [
+    {
+      "label": "Update",
+      "desc": "Posts ranking at position 4–20 with impressions in GSC, but underperforming relative to their potential. These posts have proven keyword relevance and need stronger topical coverage, fresher data, or a better-optimized title and meta description."
+    },
+    {
+      "label": "Consolidate",
+      "desc": "Posts targeting the same keyword cluster as another post on your site. Merge the weaker post into the stronger one, redirect the old URL with a 301, and let the combined authority work for a single, more comprehensive page."
+    },
+    {
+      "label": "Remove",
+      "desc": "Posts with zero impressions for 90+ days, no meaningful backlinks, and no strategic purpose. Before removing, check for backlinks. If a post has inbound links worth preserving, redirect it. If it has nothing, deletion is the cleaner choice."
+    }
+  ],
+  "keyTakeaways": [
+    "Improving existing posts that already rank is almost always faster and higher-ROI than publishing new content.",
+    "Posts at positions 4–20 are your highest-priority quick win candidates — they need only a targeted push to break through.",
+    "Keyword cannibalization is invisible without tooling. RankPilot's clustering makes it obvious.",
+    "Every post belongs in one of three buckets: Update, Consolidate, or Remove.",
+    "A recurring quarterly audit cadence compounds over time and is more valuable than any single audit.",
+    "The entire process takes 90 minutes with RankPilot. Without it, expect 8–12 hours."
+  ],
+  "faqs": [
+    {
+      "q": "How often should I do a content audit?",
+      "a": "For most sites, quarterly is the right cadence. If you publish more than four posts per week, consider monthly. If you have fewer than 50 published posts, bi-annual is sufficient. The goal is to catch underperforming content before it becomes a drag on your domain authority."
+    },
+    {
+      "q": "Do I need RankPilot to do a content audit?",
+      "a": "No — the manual process works, but it takes 8–12 hours instead of 90 minutes. You will need Google Search Console data, a crawl tool like Screaming Frog, and a spreadsheet to replicate what RankPilot does automatically. The 90-minute timeframe in this guide is specifically enabled by RankPilot's automation."
+    },
+    {
+      "q": "What is keyword cannibalization and how do I fix it?",
+      "a": "Keyword cannibalization happens when two or more pages on your site target the same keyword cluster, causing Google to split ranking signals between them. The fix is to consolidate: merge the weaker post into the stronger one, redirect the old URL with a 301, and update internal links to point to the consolidated page."
+    },
+    {
+      "q": "Should I delete underperforming content?",
+      "a": "Only if it has had zero impressions for 90+ days, has no meaningful backlinks, and serves no strategic purpose. Before deleting, always check for inbound links. If a post has links worth preserving, redirect it to the most relevant live page rather than deleting outright."
+    }
+  ],
+  "cta": {
+    "inlineTitle": "Start Your Free 14-Day RankPilot Trial",
+    "inlineSubtitle": "No credit card required. Cancel anytime.",
+    "inlineButton": "Get Started Free",
+    "sidebarTitle": "Ready to audit your content?",
+    "sidebarSubtitle": "Start your free 14-day trial — no credit card required.",
+    "sidebarButton": "Start Free Trial"
+  },
+  "relatedPosts": [
+    {
+      "date": "February 22, 2026",
+      "title": "7 Ways Businesses Benefit from SEO Automation Using AI",
+      "excerpt": "SEO has become more competitive than ever in 2026, with millions of websites fighting for the same top search positions.",
+      "slug": "seo-automation-ai-benefits",
+      "category": "AI Tools"
+    },
+    {
+      "date": "January 23, 2026",
+      "title": "5 Common Digital Marketing Challenges in 2026 and How to Overcome Them",
+      "excerpt": "In 2026, digital marketing has become more complex than ever. A significant percentage of marketers report increased difficulty managing campaigns.",
+      "slug": "digital-marketing-challenges-2026",
+      "category": "Marketing"
+    },
+    {
+      "date": "January 21, 2026",
+      "title": "The Role of AI Tools in SEO Audits: What to Expect in 2026",
+      "excerpt": "Remember when SEO audits meant drowning in spreadsheets for hours? Those days are fading fast.",
+      "slug": "ai-tools-seo-audits-2026",
+      "category": "AI Tools"
+    }
+  ],
+  "tocItems": [
+    { "id": "what-is-content-audit", "label": "What Is a Content Audit (and Why You Need One in 2026)" },
+    { "id": "before-you-start", "label": "Before You Start: What You Need" },
+    { "id": "step-1", "label": "Step 1 — Export Your Content Inventory (10 minutes)" },
+    { "id": "step-2", "label": "Step 2 — Pull Performance Data with RankPilot's GSC Analyzer (15 minutes)" },
+    { "id": "step-3", "label": "Step 3 — Use RankPilot to Score Content Quality and Find Gaps (20 minutes)" },
+    { "id": "step-4", "label": "Step 4 — Sort Every Post into Three Buckets (15 minutes)" },
+    { "id": "step-5", "label": "Step 5 — Build Your Priority Action List Using Quick Win Keywords (15 minutes)" },
+    { "id": "step-6", "label": "Step 6 — Set a Recurring Audit Schedule (5 minutes)" },
+    { "id": "key-takeaways", "label": "Key Takeaways" },
+    { "id": "faq", "label": "Frequently Asked Questions" },
+    { "id": "start-today", "label": "Start Your First Content Audit Today" }
+  ]
+}
