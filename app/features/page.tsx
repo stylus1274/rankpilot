@@ -1,377 +1,571 @@
 "use client"
 
-// Design: Matches RankPilot design system
-// Dark navy (#0a0f1e) hero, white body sections, blue (#1d63ff) accents
-// Fonts: Inter (body), Geist (headings) — same as homepage
-// Layout: Full-width sections, card grids, comparison table
+// ─── Design tokens (matches how-it-works/page.tsx & blog/page.tsx) ────────────
+// Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
+// Primary: #1d63ff / #2457f5   Dark bg: #071225   Body text: #667085
+// Background: #fbfaf4   Cards: white, rounded-[28px], shadow soft-blue
+// Header: fixed white/95 backdrop-blur, pill nav in #f4f8ff
+// Section rhythm: py-24 / py-32, max-w-[1200px] px-5 sm:px-8
+// ─────────────────────────────────────────────────────────────────────────────
 
-import content from "@/content/features.json"
-import Link from "next/link"
-import { useState } from "react"
+import { useState } from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import content from '@/content/features.json'
 import {
-  Search, BarChart2, Eye, TrendingUp, Database, Lightbulb,
-  FileSearch, AlignLeft, Layers, Calendar, Pen, List,
-  Star, BookOpen, Settings, Users, Library, CheckSquare,
-  Check, X, ArrowRight, Zap, Shield, Award
-} from "lucide-react"
+  AlignLeft,
+  ArrowRight,
+  BarChart2,
+  BookOpen,
+  Brain,
+  CalendarDays,
+  CheckCircle2,
+  Database,
+  Eye,
+  FileSearch,
+  FileText,
+  Gauge,
+  Layers,
+  Lightbulb,
+  LineChart,
+  List,
+  Menu,
+  Network,
+  PenLine,
+  Search,
+  Settings,
+  Shield,
+  Star,
+  Target,
+  TrendingUp,
+  Users,
+  Wand2,
+  X,
+  Zap,
+} from 'lucide-react'
 
-// ─── Header ──────────────────────────────────────────────────────────────────
-function Header() {
+// ─── Motion helpers ───────────────────────────────────────────────────────────
+const reveal = {
+  hidden: { opacity: 0, y: 32 },
+  visible: { opacity: 1, y: 0 },
+}
+const stagger = {
+  visible: { transition: { staggerChildren: 0.07 } },
+}
+
+// ─── Nav ─────────────────────────────────────────────────────────────────────
+const navItems = [
+  { label: 'Features', href: '/features' },
+  { label: 'How It Works', href: '/how-it-works' },
+  { label: 'Use Cases', href: '/#benefits' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/' },
+  { label: 'Contact', href: '/' },
+]
+
+// ─── Icon maps ────────────────────────────────────────────────────────────────
+const researchIcons = [Search, FileSearch, Eye, TrendingUp, Database, Lightbulb, BarChart2, AlignLeft]
+const planningIcons = [Brain, Network, CalendarDays]
+const creationIcons = [Wand2, List, Star, BookOpen]
+const brandIcons = [Settings, Users, FileText, CheckCircle2]
+
+// ─── Shared components ────────────────────────────────────────────────────────
+function Logo({ variant = 'light' }: { variant?: 'light' | 'dark' }) {
+  const textClass = variant === 'dark' ? 'text-white' : 'text-[#101828]'
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-[#1d63ff] flex items-center justify-center">
-            <Zap className="w-4 h-4 text-white" />
-          </div>
-          <span className="text-[#0a0f1e] font-black text-lg tracking-tight">RankPilot</span>
-        </Link>
-        <nav className="hidden md:flex items-center gap-7">
-          {[
-            { label: "Features", href: "/features" },
-            { label: "How It Works", href: "/how-it-works" },
-            { label: "Pricing", href: "/#pricing" },
-            { label: "Blog", href: "/blog" },
-          ].map(({ label, href }) => (
+    <Link href="/" className="group inline-flex items-center gap-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1c6bff]">
+      <span className="grid h-11 w-11 place-items-center rounded-full bg-[#1d63ff] text-white shadow-[0_12px_30px_rgba(29,99,255,0.22)] transition-transform duration-300 group-hover:scale-105">
+        <Gauge className="h-5 w-5" />
+      </span>
+      <span className={`font-display text-2xl font-black tracking-tight ${textClass}`}>RankPilot</span>
+    </Link>
+  )
+}
+
+function Header() {
+  const [open, setOpen] = useState(false)
+  return (
+    <header className="fixed left-0 right-0 top-0 z-50 w-full bg-white/95 shadow-[0_8px_35px_rgba(16,24,40,0.08)] backdrop-blur-md">
+      <div className="mx-auto flex h-[78px] w-full max-w-none items-center justify-between px-5 sm:px-8 lg:px-14">
+        <Logo />
+        <nav className="hidden items-center gap-1 rounded-full bg-[#f4f8ff] p-1 lg:flex" aria-label="Primary navigation">
+          {navItems.map((item) => (
             <Link
-              key={label}
-              href={href}
-              className={`text-sm font-semibold transition-colors ${
-                label === "Features"
-                  ? "text-[#1d63ff]"
-                  : "text-[#374151] hover:text-[#1d63ff]"
+              key={item.label}
+              href={item.href}
+              className={`rounded-full px-5 py-3 text-sm font-bold transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)] ${
+                item.href === '/features' ? 'bg-white text-[#1d63ff] shadow-[0_10px_25px_rgba(16,24,40,0.07)]' : 'text-[#25324b]'
               }`}
             >
-              {label}
+              {item.label}
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
-          <Link href="/#pricing" className="text-sm font-semibold text-[#374151] hover:text-[#1d63ff] transition-colors hidden sm:block">
-            Sign In
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link href="/" className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-[#f4f8ff] hover:text-[#1d63ff]">
+            Log In
           </Link>
-          <Link
-            href="/#pricing"
-            className="bg-[#1d63ff] hover:bg-[#0b52e7] text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all hover:shadow-[0_8px_20px_rgba(29,99,255,0.35)]"
-          >
+          <Link href="/" className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_30px_rgba(29,99,255,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b52e7]">
             Get Started
           </Link>
         </div>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          className="grid h-11 w-11 place-items-center rounded-full bg-[#f4f8ff] text-[#101828] shadow-[0_10px_25px_rgba(16,24,40,0.07)] lg:hidden"
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </div>
+      <motion.div
+        initial={false}
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        className="overflow-hidden bg-white lg:hidden"
+      >
+        <div className="grid gap-2 px-5 pb-5">
+          {navItems.map((item) => (
+            <Link
+              key={`mobile-${item.label}`}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link href="/" className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]">Log In</Link>
+          <Link href="/" className="rounded-2xl bg-[#1d63ff] px-5 py-4 text-left font-extrabold text-white">Get Started</Link>
+        </div>
+      </motion.div>
     </header>
   )
 }
 
-// ─── Footer ──────────────────────────────────────────────────────────────────
 function Footer() {
   return (
-    <footer className="bg-[#0a0f1e] text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-white/10">
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-full bg-[#1d63ff] flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" />
-              </div>
-              <span className="font-black text-lg">RankPilot</span>
-            </div>
-            <p className="text-sm text-white/50 leading-relaxed">
+    <footer className="relative overflow-hidden bg-[#071225] pt-20 text-white">
+      <div className="relative mx-auto max-w-[1200px] px-5 pb-10 sm:px-8">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-2">
+            <Logo variant="dark" />
+            <p className="mt-5 max-w-xs text-base leading-7 text-white/55">
               The all-in-one SEO content platform that helps you research, plan, and create content that ranks.
             </p>
           </div>
-          {[
-            { heading: "Product", links: ["Features", "Pricing", "Keyword Research", "Content Generation"] },
-            { heading: "Company", links: ["About", "Contact", "Blog", "Careers"] },
-            { heading: "Resources", links: ["Documentation", "API Reference", "Help Center", "Status"] },
-            { heading: "Legal", links: ["Privacy Policy", "Terms of Service", "Cookie Policy"] },
-          ].map(({ heading, links }) => (
-            <div key={heading}>
-              <p className="text-xs font-extrabold uppercase tracking-widest text-white/40 mb-4">{heading}</p>
-              <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link}>
-                    <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">{link}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Product</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {['Features', 'Pricing', 'Keyword Research', 'Content Generation'].map((item) => (
+                <li key={item}><Link href="/" className="transition-colors hover:text-white">{item}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Company</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {['About', 'Contact', 'Blog', 'Careers'].map((item) => (
+                <li key={item}><Link href={item === 'Blog' ? '/blog' : '/'} className="transition-colors hover:text-white">{item}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Resources</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {['Documentation', 'API Reference', 'Help Center', 'Status'].map((item) => (
+                <li key={item}><Link href="/" className="transition-colors hover:text-white">{item}</Link></li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <p className="text-center text-xs text-white/30 mt-8">© 2026 RankPilot. All rights reserved.</p>
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm font-bold text-white/55 sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 RankPilot. All rights reserved.</span>
+          <div className="flex gap-6">
+            {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
+              <Link key={item} href="/" className="transition-colors hover:text-white">{item}</Link>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   )
 }
 
-// ─── Tool card ───────────────────────────────────────────────────────────────
-function ToolCard({ icon: Icon, title, desc }: { icon: React.ElementType; title: string; desc: string }) {
+// ─── Tool card ────────────────────────────────────────────────────────────────
+function ToolCard({ icon: Icon, title, desc, accent = '#1d63ff' }: {
+  icon: React.ElementType; title: string; desc: string; accent?: string
+}) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-[#1d63ff]/30 hover:shadow-[0_8px_30px_rgba(29,99,255,0.08)] transition-all group">
-      <div className="w-10 h-10 rounded-xl bg-[#eef4ff] flex items-center justify-center mb-4 group-hover:bg-[#1d63ff] transition-colors">
-        <Icon className="w-5 h-5 text-[#1d63ff] group-hover:text-white transition-colors" />
+    <motion.div
+      variants={reveal}
+      className="group relative flex flex-col gap-4 rounded-[28px] bg-white p-7 shadow-[0_8px_40px_rgba(16,24,40,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(29,99,255,0.12)]"
+    >
+      <div
+        className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-white transition-transform duration-300 group-hover:scale-110"
+        style={{ background: accent, boxShadow: `0 10px 24px ${accent}40` }}
+      >
+        <Icon className="h-5 w-5" />
       </div>
-      <h3 className="font-bold text-[#0a0f1e] text-base mb-2">{title}</h3>
-      <p className="text-sm text-[#6b7280] leading-relaxed">{desc}</p>
-    </div>
+      <div>
+        <h3 className="font-display text-lg font-black tracking-tight text-[#071225]">{title}</h3>
+        <p className="mt-2 text-sm leading-7 text-[#667085]">{desc}</p>
+      </div>
+    </motion.div>
   )
 }
 
 // ─── Section header ───────────────────────────────────────────────────────────
-function SectionHeader({ eyebrow, title, desc }: { eyebrow: string; title: string; desc: string }) {
+function SectionHeader({ eyebrow, title, desc, accent = '#1d63ff' }: {
+  eyebrow: string; title: string; desc: string; accent?: string
+}) {
   return (
-    <div className="mb-12">
-      <div className="inline-flex items-center gap-2 bg-[#eef4ff] text-[#1d63ff] text-xs font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full mb-4">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#1d63ff]" />
+    <motion.div
+      variants={reveal}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      className="mb-14"
+    >
+      <div
+        className="mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-white"
+        style={{ background: accent }}
+      >
         {eyebrow}
       </div>
-      <h2 className="text-3xl md:text-4xl font-black text-[#0a0f1e] mb-4 leading-tight">{title}</h2>
-      <p className="text-lg text-[#6b7280] max-w-2xl leading-relaxed">{desc}</p>
-    </div>
+      <h2 className="font-display max-w-2xl text-4xl font-black tracking-[-0.04em] text-[#071225] sm:text-5xl">
+        {title}
+      </h2>
+      <p className="mt-4 max-w-2xl text-lg leading-8 text-[#667085]">{desc}</p>
+    </motion.div>
   )
 }
 
 // ─── Comparison table ─────────────────────────────────────────────────────────
 const COMPARISON_ROWS = [
-  { feature: "Keyword Research (Autocomplete)", rankpilot: true, surfer: false, frase: false, jasper: false },
-  { feature: "GSC Analyzer (Near Jumps, Cannibalization)", rankpilot: true, surfer: false, frase: false, jasper: false },
-  { feature: "Competitor URL Analyzer", rankpilot: true, surfer: true, frase: true, jasper: false },
-  { feature: "Topic Clusters & Coverage Tracking", rankpilot: true, surfer: false, frase: true, jasper: false },
-  { feature: "AI Article Generation", rankpilot: true, surfer: true, frase: true, jasper: true },
-  { feature: "Brand Voice Per Project", rankpilot: true, surfer: false, frase: false, jasper: true },
-  { feature: "ICP (Ideal Customer Profile)", rankpilot: true, surfer: false, frase: false, jasper: false },
-  { feature: "Cross Check Fact Verification", rankpilot: true, surfer: false, frase: false, jasper: false },
-  { feature: "Negative Keywords System", rankpilot: true, surfer: false, frase: false, jasper: false },
-  { feature: "Internal Linking via Sitemap", rankpilot: true, surfer: false, frase: false, jasper: false },
-  { feature: "Content Grader (E-E-A-T, AIO)", rankpilot: true, surfer: true, frase: true, jasper: false },
-  { feature: "Position Tracker", rankpilot: true, surfer: true, frase: false, jasper: false },
+  { feature: 'Keyword Research (Autocomplete)', rankpilot: true, surfer: false, frase: false, jasper: false },
+  { feature: 'GSC Analyzer (Near Jumps, Cannibalization)', rankpilot: true, surfer: false, frase: false, jasper: false },
+  { feature: 'Competitor URL Analyzer', rankpilot: true, surfer: true, frase: true, jasper: false },
+  { feature: 'Topic Clusters & Coverage Tracking', rankpilot: true, surfer: false, frase: true, jasper: false },
+  { feature: 'AI Article Generation', rankpilot: true, surfer: true, frase: true, jasper: true },
+  { feature: 'Brand Voice Per Project', rankpilot: true, surfer: false, frase: false, jasper: true },
+  { feature: 'ICP (Ideal Customer Profile)', rankpilot: true, surfer: false, frase: false, jasper: false },
+  { feature: 'Cross Check Fact Verification', rankpilot: true, surfer: false, frase: false, jasper: false },
+  { feature: 'Negative Keywords System', rankpilot: true, surfer: false, frase: false, jasper: false },
+  { feature: 'Internal Linking via Sitemap', rankpilot: true, surfer: false, frase: false, jasper: false },
+  { feature: 'Content Grader (E-E-A-T, AIO)', rankpilot: true, surfer: true, frase: true, jasper: false },
+  { feature: 'Position Tracker', rankpilot: true, surfer: true, frase: false, jasper: false },
 ]
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default function FeaturesPage() {
-  const [activeTab, setActiveTab] = useState<"research" | "planning" | "creation" | "brand">("research")
-
   return (
     <>
       <Header />
-      <main className="pt-16">
+      <main className="bg-[#fbfaf4] pt-[78px]">
 
-        {/* ── Hero ── */}
-        <section className="bg-gradient-to-b from-[#f0f5ff] to-white pt-20 pb-16 text-center">
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="inline-flex items-center gap-2 bg-white border border-[#1d63ff]/20 text-[#1d63ff] text-xs font-extrabold uppercase tracking-widest px-4 py-2 rounded-full mb-6 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1d63ff]" />
-              {content.hero.badge}
-            </div>
-            <h1 className="text-4xl md:text-6xl font-black text-[#0a0f1e] leading-tight mb-6">
-              {content.hero.headline}{" "}
-              <span className="text-[#1d63ff]">{content.hero.headlineAccent}</span>
-            </h1>
-            <p className="text-xl text-[#6b7280] max-w-2xl mx-auto leading-relaxed">
-              {content.hero.subheadline}
-            </p>
+        {/* ── Hero ─────────────────────────────────────────────────────────── */}
+        <section className="relative overflow-hidden bg-[#071225] pb-28 pt-24">
+          {/* Background glow */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <div className="absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#1d63ff]/20 blur-[120px]" />
+            <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#7c3aed]/15 blur-[120px]" />
+          </div>
+          <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+              className="mx-auto max-w-3xl text-center"
+            >
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-white/70 backdrop-blur-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1d63ff]" />
+                {content.hero.badge}
+              </div>
+              <h1 className="font-display text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
+                {content.hero.headline}{' '}
+                <span className="bg-gradient-to-r from-[#1d63ff] to-[#7c3aed] bg-clip-text text-transparent">
+                  {content.hero.headlineAccent}
+                </span>
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-white/60">
+                {content.hero.subheadline}
+              </p>
+            </motion.div>
           </div>
         </section>
 
-        {/* ── Tab navigator ── */}
-        <div className="sticky top-16 z-40 bg-white border-b border-gray-100 shadow-sm">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="flex gap-1 overflow-x-auto py-3 scrollbar-hide">
-              {[
-                { key: "research", label: "SEO Research" },
-                { key: "planning", label: "Planning & Strategy" },
-                { key: "creation", label: "Content Creation" },
-                { key: "brand", label: "Brand & Project" },
-              ].map(({ key, label }) => (
-                <button
-                  key={key}
-                  onClick={() => setActiveTab(key as typeof activeTab)}
-                  className={`whitespace-nowrap px-5 py-2 rounded-full text-sm font-bold transition-all ${
-                    activeTab === key
-                      ? "bg-[#1d63ff] text-white shadow-[0_4px_12px_rgba(29,99,255,0.3)]"
-                      : "text-[#6b7280] hover:text-[#1d63ff] hover:bg-[#eef4ff]"
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* ── SEO Research Tools ── */}
-        <section id="research" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <SectionHeader
-              eyebrow={content.research.eyebrow}
-              title={content.research.title}
-              desc={content.research.desc}
-            />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[Search, FileSearch, Eye, TrendingUp, Database, Lightbulb, BarChart2, AlignLeft].map((Icon, i) => (
-                content.research.tools[i] && (
-                  <ToolCard key={i} icon={Icon} title={content.research.tools[i].title} desc={content.research.tools[i].desc} />
-                )
-              ))}
-            </div>
-          </div>
+        {/* ── SEO Research Tools ───────────────────────────────────────────── */}
+        <section className="mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
+          <SectionHeader
+            eyebrow={content.research.eyebrow}
+            title={content.research.title}
+            desc={content.research.desc}
+            accent="#1d63ff"
+          />
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {content.research.tools.map((tool, i) => (
+              <ToolCard
+                key={i}
+                icon={researchIcons[i] ?? Search}
+                title={tool.title}
+                desc={tool.desc}
+                accent="#1d63ff"
+              />
+            ))}
+          </motion.div>
         </section>
 
-        {/* ── Planning & Strategy ── */}
-        <section id="planning" className="py-20 bg-[#f8faff]">
-          <div className="max-w-7xl mx-auto px-6">
+        {/* ── Planning & Strategy ──────────────────────────────────────────── */}
+        <section className="bg-white py-24">
+          <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
             <SectionHeader
               eyebrow={content.planning.eyebrow}
               title={content.planning.title}
               desc={content.planning.desc}
+              accent="#7c3aed"
             />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[Lightbulb, Layers, Calendar].map((Icon, i) => (
-                content.planning.tools[i] && (
-                  <ToolCard key={i} icon={Icon} title={content.planning.tools[i].title} desc={content.planning.tools[i].desc} />
-                )
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid gap-6 sm:grid-cols-3"
+            >
+              {content.planning.tools.map((tool, i) => (
+                <ToolCard
+                  key={i}
+                  icon={planningIcons[i] ?? Brain}
+                  title={tool.title}
+                  desc={tool.desc}
+                  accent="#7c3aed"
+                />
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* ── Content Creation & Optimization ── */}
-        <section id="creation" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <SectionHeader
-              eyebrow={content.creation.eyebrow}
-              title={content.creation.title}
-              desc={content.creation.desc}
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.creation.tools[0] && (
-                <div className="bg-white rounded-2xl border border-gray-100 p-8 hover:border-[#1d63ff]/30 hover:shadow-[0_8px_30px_rgba(29,99,255,0.08)] transition-all group md:col-span-2 lg:col-span-1">
-                  <div className="w-12 h-12 rounded-xl bg-[#eef4ff] flex items-center justify-center mb-5 group-hover:bg-[#1d63ff] transition-colors">
-                    <Pen className="w-6 h-6 text-[#1d63ff] group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="font-black text-[#0a0f1e] text-xl mb-3">{content.creation.tools[0].title}</h3>
-                  <p className="text-[#6b7280] leading-relaxed">{content.creation.tools[0].desc}</p>
+        {/* ── Content Creation & Optimization ─────────────────────────────── */}
+        <section className="mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
+          <SectionHeader
+            eyebrow={content.creation.eyebrow}
+            title={content.creation.title}
+            desc={content.creation.desc}
+            accent="#059669"
+          />
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            {/* Featured first card */}
+            {content.creation.tools[0] && (
+              <motion.div
+                variants={reveal}
+                className="group relative col-span-full flex flex-col gap-5 rounded-[28px] bg-gradient-to-br from-[#071225] to-[#0d1e3a] p-8 shadow-[0_20px_60px_rgba(7,18,37,0.3)] sm:col-span-2 lg:col-span-2"
+              >
+                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#1d63ff] text-white shadow-[0_10px_24px_rgba(29,99,255,0.4)]">
+                  <Wand2 className="h-6 w-6" />
                 </div>
-              )}
-              {[List, Star, BookOpen].map((Icon, i) => (
-                content.creation.tools[i + 1] && (
-                  <ToolCard key={i} icon={Icon} title={content.creation.tools[i + 1].title} desc={content.creation.tools[i + 1].desc} />
-                )
-              ))}
-            </div>
-          </div>
+                <div>
+                  <h3 className="font-display text-2xl font-black tracking-tight text-white">{content.creation.tools[0].title}</h3>
+                  <p className="mt-3 text-base leading-7 text-white/60">{content.creation.tools[0].desc}</p>
+                </div>
+                <div className="mt-auto">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff]/20 px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-[#6ea8fe]">
+                    <Zap className="h-3 w-3" /> AI-Powered
+                  </span>
+                </div>
+              </motion.div>
+            )}
+            {content.creation.tools.slice(1).map((tool, i) => (
+              <ToolCard
+                key={i}
+                icon={creationIcons[i + 1] ?? List}
+                title={tool.title}
+                desc={tool.desc}
+                accent="#059669"
+              />
+            ))}
+          </motion.div>
         </section>
 
-        {/* ── Brand & Project Management ── */}
-        <section id="brand" className="py-20 bg-[#f8faff]">
-          <div className="max-w-7xl mx-auto px-6">
+        {/* ── Brand & Project Management ───────────────────────────────────── */}
+        <section className="bg-white py-24">
+          <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
             <SectionHeader
               eyebrow={content.brand.eyebrow}
               title={content.brand.title}
               desc={content.brand.desc}
+              accent="#0891b2"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[Settings, Users, Library, CheckSquare].map((Icon, i) => (
-                content.brand.tools[i] && (
-                  <ToolCard key={i} icon={Icon} title={content.brand.tools[i].title} desc={content.brand.tools[i].desc} />
-                )
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+            >
+              {content.brand.tools.map((tool, i) => (
+                <ToolCard
+                  key={i}
+                  icon={brandIcons[i] ?? Settings}
+                  title={tool.title}
+                  desc={tool.desc}
+                  accent="#0891b2"
+                />
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* ── Comparison Table ── */}
-        <section className="py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-[#0a0f1e] mb-4">
-                {content.comparison.title}
-              </h2>
-              <p className="text-lg text-[#6b7280] max-w-2xl mx-auto">
-                {content.comparison.desc}
-              </p>
-            </div>
+        {/* ── Comparison Table ─────────────────────────────────────────────── */}
+        <section className="mx-auto max-w-[1200px] px-5 py-24 sm:px-8">
+          <motion.div
+            variants={reveal}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="mb-14 text-center"
+          >
+            <h2 className="font-display text-4xl font-black tracking-[-0.04em] text-[#071225] sm:text-5xl">
+              {content.comparison.title}
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#667085]">
+              {content.comparison.desc}
+            </p>
+          </motion.div>
 
-            <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+          <motion.div
+            variants={reveal}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="overflow-hidden rounded-[28px] bg-white shadow-[0_8px_40px_rgba(16,24,40,0.08)]"
+          >
+            <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="bg-[#f8faff]">
-                    <th className="text-left px-6 py-4 font-bold text-[#374151] w-1/2">Feature</th>
-                    <th className="px-4 py-4 text-center">
-                      <span className="inline-flex items-center gap-1.5 bg-[#1d63ff] text-white text-xs font-extrabold px-3 py-1.5 rounded-full">
-                        <Zap className="w-3 h-3" /> RankPilot
+                  <tr className="border-b border-[#f0f4ff]">
+                    <th className="px-8 py-5 text-left font-bold text-[#374151]">Feature</th>
+                    <th className="px-6 py-5 text-center">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1d63ff] px-4 py-2 text-xs font-extrabold text-white">
+                        <Zap className="h-3 w-3" /> RankPilot
                       </span>
                     </th>
-                    <th className="px-4 py-4 text-center font-semibold text-[#9ca3af]">Surfer SEO</th>
-                    <th className="px-4 py-4 text-center font-semibold text-[#9ca3af]">Frase</th>
-                    <th className="px-4 py-4 text-center font-semibold text-[#9ca3af]">Jasper</th>
+                    <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">Surfer SEO</th>
+                    <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">Frase</th>
+                    <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">Jasper</th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON_ROWS.map((row, i) => (
-                    <tr key={i} className={`border-t border-gray-50 ${i % 2 === 0 ? "bg-white" : "bg-[#fafbff]"}`}>
-                      <td className="px-6 py-3.5 font-medium text-[#374151]">{row.feature}</td>
-                      <td className="px-4 py-3.5 text-center">
-                        <Check className="w-5 h-5 text-[#1d63ff] mx-auto" strokeWidth={2.5} />
+                    <tr key={i} className={`border-b border-[#f8f9ff] ${i % 2 === 0 ? 'bg-white' : 'bg-[#fafbff]'}`}>
+                      <td className="px-8 py-4 font-medium text-[#374151]">{row.feature}</td>
+                      <td className="px-6 py-4 text-center">
+                        <CheckCircle2 className="mx-auto h-5 w-5 text-[#1d63ff]" strokeWidth={2.5} />
                       </td>
-                      <td className="px-4 py-3.5 text-center">
+                      <td className="px-6 py-4 text-center">
                         {row.surfer
-                          ? <Check className="w-4 h-4 text-green-500 mx-auto" />
-                          : <X className="w-4 h-4 text-gray-300 mx-auto" />}
+                          ? <CheckCircle2 className="mx-auto h-4 w-4 text-emerald-500" />
+                          : <X className="mx-auto h-4 w-4 text-gray-200" />}
                       </td>
-                      <td className="px-4 py-3.5 text-center">
+                      <td className="px-6 py-4 text-center">
                         {row.frase
-                          ? <Check className="w-4 h-4 text-green-500 mx-auto" />
-                          : <X className="w-4 h-4 text-gray-300 mx-auto" />}
+                          ? <CheckCircle2 className="mx-auto h-4 w-4 text-emerald-500" />
+                          : <X className="mx-auto h-4 w-4 text-gray-200" />}
                       </td>
-                      <td className="px-4 py-3.5 text-center">
+                      <td className="px-6 py-4 text-center">
                         {row.jasper
-                          ? <Check className="w-4 h-4 text-green-500 mx-auto" />
-                          : <X className="w-4 h-4 text-gray-300 mx-auto" />}
+                          ? <CheckCircle2 className="mx-auto h-4 w-4 text-emerald-500" />
+                          : <X className="mx-auto h-4 w-4 text-gray-200" />}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </div>
+          </motion.div>
         </section>
 
-        {/* ── Why RankPilot callouts ── */}
-        <section className="py-16 bg-[#f8faff]">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {([Zap, Shield, Award] as React.ElementType[]).map((Icon, i) => {
+        {/* ── Why RankPilot ────────────────────────────────────────────────── */}
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+            <motion.div
+              variants={stagger}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              className="grid gap-6 sm:grid-cols-3"
+            >
+              {([Zap, Shield, Target] as React.ElementType[]).map((Icon, i) => {
                 const item = content.whyUs[i]
                 if (!item) return null
                 return (
-                  <div key={i} className="bg-white rounded-2xl border border-gray-100 p-7">
-                    <div className="w-11 h-11 rounded-xl bg-[#eef4ff] flex items-center justify-center mb-4">
-                      <Icon className="w-5 h-5 text-[#1d63ff]" />
+                  <motion.div
+                    key={i}
+                    variants={reveal}
+                    className="rounded-[28px] bg-[#f4f8ff] p-8"
+                  >
+                    <div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-[#1d63ff] text-white shadow-[0_10px_24px_rgba(29,99,255,0.3)]">
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="font-black text-[#0a0f1e] text-lg mb-2">{item.title}</h3>
-                    <p className="text-sm text-[#6b7280] leading-relaxed">{item.desc}</p>
-                  </div>
+                    <h3 className="font-display text-xl font-black tracking-tight text-[#071225]">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-[#667085]">{item.desc}</p>
+                  </motion.div>
                 )
               })}
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* ── Final CTA ── */}
-        <section className="py-20 bg-[#0a0f1e]">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
-              {content.cta.title}
-            </h2>
-            <p className="text-lg text-white/60 mb-8">
-              {content.cta.desc}
-            </p>
-            <Link
-              href={content.cta.buttonHref}
-              className="inline-flex items-center gap-2 bg-[#1d63ff] hover:bg-[#0b52e7] text-white font-bold px-8 py-4 rounded-full text-base transition-all hover:shadow-[0_14px_30px_rgba(29,99,255,0.4)] hover:-translate-y-0.5"
+        {/* ── Final CTA ────────────────────────────────────────────────────── */}
+        <section className="relative overflow-hidden bg-[#071225] py-28">
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-[#1d63ff]/20 blur-[120px]" />
+            <div className="absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#7c3aed]/15 blur-[120px]" />
+          </div>
+          <div className="relative mx-auto max-w-[1200px] px-5 text-center sm:px-8">
+            <motion.div
+              variants={reveal}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
-              {content.cta.buttonText} <ArrowRight className="w-4 h-4" />
-            </Link>
+              <h2 className="font-display text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
+                {content.cta.title}
+              </h2>
+              <p className="mx-auto mt-5 max-w-xl text-xl leading-8 text-white/55">
+                {content.cta.desc}
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                <Link
+                  href={content.cta.buttonHref}
+                  className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-8 py-4 text-base font-extrabold text-white shadow-[0_14px_40px_rgba(29,99,255,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b52e7]"
+                >
+                  {content.cta.buttonText} <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/how-it-works"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-4 text-base font-bold text-white/80 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white"
+                >
+                  See How It Works
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
 
