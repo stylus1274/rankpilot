@@ -321,7 +321,7 @@ export default function PricingPage() {
       <main className="bg-[#fbfaf4] pt-[78px]">
 
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-[#071225] pb-32 pt-24">
+        <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-36 sm:pb-24 sm:pt-44">
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <div className="absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#1d63ff]/20 blur-[120px]" />
             <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#7c3aed]/15 blur-[120px]" />
@@ -333,11 +333,11 @@ export default function PricingPage() {
               transition={{ duration: 0.7, ease: 'easeOut' }}
               className="mx-auto max-w-3xl text-center"
             >
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-white/70 backdrop-blur-sm">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#1d63ff] shadow-[0_10px_35px_rgba(16,24,40,0.07)]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#1d63ff]" />
                 Pricing
               </div>
-              <h1 className="font-display text-5xl font-black tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
+              <h1 className="font-display text-5xl font-black tracking-[-0.04em] text-[#071225] sm:text-6xl lg:text-7xl">
                 Simple,{' '}
                 <span className="bg-gradient-to-r from-[#1d63ff] to-[#7c3aed] bg-clip-text text-transparent">
                   Transparent
