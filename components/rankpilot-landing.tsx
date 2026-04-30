@@ -100,7 +100,7 @@ const navItems = [
   { label: 'Use Cases', href: '#benefits' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '#home' },
+  { label: 'About', href: '/about' },
   { label: 'Contact', href: '#trial' },
 ]
 

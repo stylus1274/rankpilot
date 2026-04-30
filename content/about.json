@@ -1,0 +1,108 @@
+{
+  "seo": {
+    "title": "About RankPilot — The SEO Tool We Always Wanted",
+    "description": "RankPilot was built to eliminate the fragmented SEO content workflow. One platform for keyword research, content planning, AI writing, and optimization."
+  },
+  "hero": {
+    "badge": "Our Story",
+    "headline": "We Built the SEO Tool",
+    "headlineAccent": "We Always Wanted",
+    "subheadline": "RankPilot was born from a simple frustration: the SEO content workflow is broken. Too many tools, too many tabs, too much time wasted switching between platforms that should be working together."
+  },
+  "problem": {
+    "title": "The Problem We Solve",
+    "paragraphs": [
+      "Most SEO professionals use five or more separate tools to manage their content workflow. One tool for keyword research. Another for competitor analysis. A spreadsheet for planning. An AI writer for drafting. A separate grading tool for optimization. And none of them talk to each other.",
+      "This fragmented approach wastes hours every week on context switching, manual data transfer, and reconciling insights from different platforms. It also means that critical connections between your research and your content get lost along the way.",
+      "RankPilot eliminates this friction by bringing every step of the SEO content workflow into one unified platform. Your keyword research informs your content strategy. Your strategy feeds directly into AI-powered content generation. And every article is automatically optimized based on the data you have already gathered."
+    ]
+  },
+  "audience": {
+    "cards": [
+      {
+        "title": "For SEO Agencies",
+        "desc": "Manage multiple client projects with unique brand voices, audience profiles, and content standards. Scale your content operations without scaling your team."
+      },
+      {
+        "title": "For In-House Teams",
+        "desc": "Give your marketing team a single source of truth for keyword data, content plans, and published articles. Eliminate the tool sprawl and reduce your software costs."
+      },
+      {
+        "title": "For Freelance Marketers",
+        "desc": "Deliver professional-grade SEO content to your clients faster. Use RankPilot's research tools to back up your strategy with real data and produce content that gets results."
+      }
+    ]
+  },
+  "stats": [
+    { "value": "10,000+", "label": "Active Users" },
+    { "value": "2.4M+", "label": "Articles Generated" },
+    { "value": "98%", "label": "Customer Satisfaction" },
+    { "value": "4.9/5", "label": "Average Rating" }
+  ],
+  "values": {
+    "eyebrow": "What We Believe",
+    "title": "Principles That Guide Everything We Build",
+    "subtitle": "These principles guide every decision we make, from the features we build to the way we support our users.",
+    "items": [
+      {
+        "title": "Data Over Guesswork",
+        "desc": "Every recommendation in RankPilot is backed by real data. We believe SEO decisions should be informed by evidence, not intuition."
+      },
+      {
+        "title": "Speed Matters",
+        "desc": "Time spent switching between tools is time not spent creating content. We obsess over workflow efficiency so you can focus on what matters."
+      },
+      {
+        "title": "Quality at Scale",
+        "desc": "AI-generated content should meet the same standards as human-written content. Our tools enforce brand voice, accuracy, and optimization at every step."
+      },
+      {
+        "title": "Built for Practitioners",
+        "desc": "RankPilot is built by SEO professionals for SEO professionals. Every feature exists because someone on our team needed it in their own workflow."
+      }
+    ]
+  },
+  "mission": {
+    "eyebrow": "Our Journey",
+    "title": "How We Got Here",
+    "subtitle": "From a frustration shared by a small team of SEO professionals to a platform trusted by thousands of content teams worldwide.",
+    "milestones": [
+      {
+        "year": "2022",
+        "title": "The Idea",
+        "desc": "A small team of SEO professionals started building internal tools to streamline their own content workflow. The tools worked so well they decided to share them."
+      },
+      {
+        "year": "2023",
+        "title": "Private Beta",
+        "desc": "RankPilot launched in private beta with 200 hand-picked users. Feedback shaped the core workflow: research → plan → create → optimize."
+      },
+      {
+        "year": "2024",
+        "title": "Public Launch",
+        "desc": "RankPilot opened to the public. Within six months, over 5,000 content teams had adopted the platform as their primary SEO workflow tool."
+      },
+      {
+        "year": "2025",
+        "title": "AI Generation",
+        "desc": "The AI Article Generator launched, combining keyword data, brand voice, and competitive research into a single end-to-end content creation workflow."
+      },
+      {
+        "year": "2026",
+        "title": "10,000+ Users",
+        "desc": "RankPilot crossed 10,000 active users and expanded the platform with Topic Clusters, Content Calendar, and the Generate Wizard."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join Us on the Mission",
+    "desc": "Whether you are an agency managing dozens of clients or a solo marketer building your first content strategy, RankPilot is built for you.",
+    "primaryButton": "Start Your Free Trial",
+    "secondaryButton": "Get in Touch",
+    "trustItems": [
+      "No credit card required",
+      "14-day free trial",
+      "Cancel anytime"
+    ]
+  }
+}
