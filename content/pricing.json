@@ -1,0 +1,101 @@
+{
+  "seo": {
+    "title": "Pricing — RankPilot",
+    "description": "Simple, transparent pricing for RankPilot. No hidden fees. Start your 14-day free trial today."
+  },
+  "hero": {
+    "badge": "Pricing",
+    "headline": "Simple,",
+    "headlineAccent": "Transparent Pricing",
+    "subheadline": "No hidden fees. No per-seat surprises. Pick the plan that fits your workflow and start ranking."
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "monthly": 13,
+      "yearly": 9,
+      "desc": "Perfect for solo content creators and freelancers getting started with SEO.",
+      "featured": false,
+      "features": [
+        "Up to 3 Projects",
+        "50 keyword lookups / month",
+        "AI Article Generator (5 articles/mo)",
+        "Content Grader",
+        "Position Tracker (up to 50 keywords)",
+        "Basic Content Calendar",
+        "Email support"
+      ]
+    },
+    {
+      "name": "Professional",
+      "monthly": 48,
+      "yearly": 38,
+      "desc": "For growing teams who need the full SEO content workflow in one place.",
+      "featured": true,
+      "features": [
+        "Unlimited Projects",
+        "Unlimited keyword lookups",
+        "AI Article Generator (unlimited)",
+        "GSC Analyzer & Near Jumps",
+        "Competitor Analyzer",
+        "Topic Clusters & Content Calendar",
+        "Brand Voice & ICP per project",
+        "Internal Linking via Sitemap",
+        "Cross Check fact verification",
+        "Priority support"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "monthly": 96,
+      "yearly": 76,
+      "desc": "For agencies and large teams needing advanced controls and dedicated support.",
+      "featured": false,
+      "features": [
+        "Everything in Professional",
+        "Custom team seats",
+        "White-label reports",
+        "Dedicated account manager",
+        "Custom AI model fine-tuning",
+        "Advanced security & SSO",
+        "SLA & uptime guarantee",
+        "API access"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I switch plans at any time?",
+      "a": "Yes. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately and are prorated."
+    },
+    {
+      "q": "Is there a free trial?",
+      "a": "Yes — all plans come with a 14-day free trial. No credit card required to start."
+    },
+    {
+      "q": "What counts as an \"article\" in the AI generator?",
+      "a": "Each time you generate a full article using the AI Article Generator, it counts as one article. Outlines, edits, and regenerations of sections do not count."
+    },
+    {
+      "q": "Do you offer annual billing discounts?",
+      "a": "Yes. Switching to annual billing saves you approximately 20% compared to paying month-to-month."
+    },
+    {
+      "q": "Can I add team members to my account?",
+      "a": "Professional and Enterprise plans support multiple team members. Starter is designed for individual use."
+    },
+    {
+      "q": "What happens when I hit my article limit on Starter?",
+      "a": "You'll be notified when you're close to your limit. You can upgrade to Professional at any time to get unlimited article generation."
+    }
+  ],
+  "cta": {
+    "title": "Start Your Free 14-Day Trial",
+    "desc": "No credit card required. Full access to all Professional features. Cancel anytime.",
+    "buttonText": "Get Started Free",
+    "buttonHref": "/",
+    "secondaryText": "View All Features",
+    "secondaryHref": "/features",
+    "trustLine": "Trusted by 2,400+ SEO professionals and content teams"
+  }
+}

@@ -58,7 +58,7 @@ const navItems = [
   { label: 'Features', href: '/features' },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Use Cases', href: '/#benefits' },
-  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/' },
   { label: 'Contact', href: '/' },
