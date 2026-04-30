@@ -1,7 +1,8 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
   ArrowRight,
@@ -221,7 +222,16 @@ function HeroVisual() {
 
 function Header() {
   const [open, setOpen] = useState(false)
+  const router = useRouter()
   const safeNavItems = useMemo(() => navItems ?? [], [])
+
+  const handleNavClick = useCallback((href: string) => {
+    if (href.startsWith('/')) {
+      router.push(href)
+    } else {
+      smoothScrollTo(href)
+    }
+  }, [router])
 
   return (
     <header className="fixed left-0 right-0 top-0 z-50 w-full bg-white/95 shadow-[0_8px_35px_rgba(16,24,40,0.08)] backdrop-blur-md">
@@ -229,24 +239,14 @@ function Header() {
         <Logo />
         <nav className="hidden items-center gap-1 rounded-full bg-[#f4f8ff] p-1 lg:flex" aria-label="Primary navigation">
           {safeNavItems?.map?.((item: { label: string; href: string }) => (
-            item?.href?.startsWith('/') ? (
-              <Link
-                key={item?.label ?? item?.href}
-                href={item?.href}
-                className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
-              >
-                {item?.label ?? ''}
-              </Link>
-            ) : (
-              <button
-                key={item?.label ?? item?.href}
-                type="button"
-                onClick={() => smoothScrollTo(item?.href)}
-                className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
-              >
-                {item?.label ?? ''}
-              </button>
-            )
+            <button
+              key={item?.label ?? item?.href}
+              type="button"
+              onClick={() => handleNavClick(item?.href)}
+              className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
+            >
+              {item?.label ?? ''}
+            </button>
           )) ?? null}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
@@ -282,28 +282,17 @@ function Header() {
       >
         <div className="grid gap-2 px-5 pb-5">
           {safeNavItems?.map?.((item: { label: string; href: string }) => (
-            item?.href?.startsWith('/') ? (
-              <Link
-                key={`mobile-${item?.label ?? item?.href}`}
-                href={item?.href}
-                onClick={() => setOpen(false)}
-                className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
-              >
-                {item?.label ?? ''}
-              </Link>
-            ) : (
-              <button
-                key={`mobile-${item?.label ?? item?.href}`}
-                type="button"
-                onClick={() => {
-                  smoothScrollTo(item?.href)
-                  setOpen(false)
-                }}
-                className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
-              >
-                {item?.label ?? ''}
-              </button>
-            )
+            <button
+              key={`mobile-${item?.label ?? item?.href}`}
+              type="button"
+              onClick={() => {
+                handleNavClick(item?.href)
+                setOpen(false)
+              }}
+              className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
+            >
+              {item?.label ?? ''}
+            </button>
           )) ?? null}
           <button type="button" onClick={() => smoothScrollTo('#trial')} className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]">
             Log In
