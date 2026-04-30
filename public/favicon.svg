@@ -1,8 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" fill="#0A1F44"/>
-  <path d="M60 80 L60 176 L100 176 Q120 176 130 166 Q140 156 140 140 Q140 124 130 114 Q120 104 100 104 L80 104 L80 80 Z M80 124 L100 124 Q110 124 115 129 Q120 134 120 140 Q120 146 115 151 Q110 156 100 156 L80 156 Z" fill="#00D4FF"/>
-  <path d="M160 80 L160 176 L180 176 L180 140 L200 140 Q220 140 230 130 Q240 120 240 104 Q240 88 230 78 Q220 68 200 68 L160 68 Z M180 100 L180 88 L200 88 Q210 88 215 93 Q220 98 220 104 Q220 110 215 115 Q210 120 200 120 L180 120 Z" fill="#00D4FF"/>
-  <path d="M200 60 L220 40 L210 40 L190 60 L200 70 Z" fill="#00D4FF"/>
-  <path d="M220 40 L240 20 L230 20 L210 40 Z" fill="#00D4FF"/>
-  <circle cx="205" cy="65" r="3" fill="#00D4FF"/>
+  <!-- Blue circle background matching #1d63ff brand color -->
+  <circle cx="128" cy="128" r="128" fill="#1d63ff"/>
+
+  <!-- Gauge / speedometer icon — matches the Lucide Gauge used in the site logo -->
+  <!-- Outer arc (270° sweep, from ~135° to ~405°, i.e. bottom-left to bottom-right) -->
+  <path
+    d="M 52 156 A 80 80 0 1 1 204 156"
+    fill="none"
+    stroke="rgba(255,255,255,0.25)"
+    stroke-width="16"
+    stroke-linecap="round"
+  />
+  <!-- Active arc — about 60% filled, blue-white -->
+  <path
+    d="M 52 156 A 80 80 0 0 1 168 68"
+    fill="none"
+    stroke="white"
+    stroke-width="16"
+    stroke-linecap="round"
+  />
+  <!-- Needle — pointing to ~11 o'clock (high performance) -->
+  <line
+    x1="128" y1="128"
+    x2="88" y2="82"
+    stroke="white"
+    stroke-width="10"
+    stroke-linecap="round"
+  />
+  <!-- Center dot -->
+  <circle cx="128" cy="128" r="10" fill="white"/>
+  <!-- Small tick marks at min and max -->
+  <line x1="52" y1="156" x2="62" y2="148" stroke="rgba(255,255,255,0.5)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="204" y1="156" x2="194" y2="148" stroke="rgba(255,255,255,0.5)" stroke-width="6" stroke-linecap="round"/>
 </svg>
