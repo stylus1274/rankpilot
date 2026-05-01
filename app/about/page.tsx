@@ -47,7 +47,7 @@ const navItems = [
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 // ─── Icon map for "What We Believe" values ────────────────────────────────────
@@ -155,7 +155,7 @@ function Footer() {
             <ul className="space-y-3 text-sm font-medium text-white/70">
               {[
                 { label: 'About', href: '/about' },
-                { label: 'Contact', href: '/' },
+                { label: 'Contact', href: '/contact' },
                 { label: 'Blog', href: '/blog' },
                 { label: 'Careers', href: '/' },
               ].map((item) => (

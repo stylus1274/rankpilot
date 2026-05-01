@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Contact RankPilot — We'd Love to Hear From You",
+    "description": "Have a question about RankPilot? Need help choosing the right plan? Want to discuss a custom enterprise solution? We are here to help.",
+    "ogImage": ""
+  },
+  "hero": {
+    "badge": "Get in Touch",
+    "headline": "We Would Love to",
+    "headlineAccent": "Hear From You",
+    "subheadline": "Have a question about RankPilot? Need help choosing the right plan? Want to discuss a custom enterprise solution? We are here to help."
+  },
+  "contactCards": [
+    {
+      "title": "Email Us",
+      "desc": "Send us an email and we will respond within 24 hours.",
+      "link": "support@rankpilot.cc"
+    },
+    {
+      "title": "Live Chat",
+      "desc": "Chat with our team during business hours for quick answers.",
+      "link": "Available Mon–Fri, 9am–5pm EST"
+    },
+    {
+      "title": "Response Time",
+      "desc": "We pride ourselves on fast, helpful support for all users.",
+      "link": "< 24 hours for all plans"
+    }
+  ],
+  "form": {
+    "title": "Send Us a Message",
+    "subtitle": "Fill out the form below and we'll get back to you as soon as possible.",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "submitButton": "Send Message",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thanks for reaching out. We'll get back to you within 24 hours."
+  },
+  "faq": [
+    {
+      "q": "How quickly will I get a response?",
+      "a": "We aim to respond to all inquiries within 24 hours on business days. For urgent issues, our live chat is available Monday through Friday, 9am–5pm EST."
+    },
+    {
+      "q": "Do you offer a free trial?",
+      "a": "Yes! RankPilot offers a 14-day free trial on all plans. No credit card required. You can explore every feature and decide which plan fits your needs."
+    },
+    {
+      "q": "Can I get a demo before signing up?",
+      "a": "Absolutely. Reach out via the contact form or email us at support@rankpilot.cc and we'll schedule a personalized walkthrough of the platform."
+    },
+    {
+      "q": "Do you offer custom enterprise plans?",
+      "a": "Yes, we work with agencies and larger teams to create custom plans that fit your specific needs. Contact us to discuss volume pricing, custom integrations, and dedicated support."
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Get Started?",
+    "subheadline": "Join thousands of SEO professionals who use RankPilot to research, plan, and create content that ranks.",
+    "primaryButton": "Start Free 14-Day Trial",
+    "secondaryButton": "See All Features"
+  }
+}
