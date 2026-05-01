@@ -416,8 +416,9 @@ export default function BlogPage() {
     <>
       <Header />
 
+      <main className="bg-[#fbfaf4] pt-[78px]">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#fbfaf4] pb-16 pt-[94px] sm:pb-20 sm:pt-[94px]">
+      <section className="relative overflow-hidden bg-[#fbfaf4] pb-16 pt-16 sm:pb-20 sm:pt-20">
         {/* Background blobs — same as landing hero */}
         <div className="absolute -left-28 -top-44 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,245,205,0.95)_0%,rgba(255,245,205,0.55)_42%,transparent_68%)]" />
         <div className="absolute left-0 top-0 h-full w-[56%] bg-[radial-gradient(circle_at_32%_52%,rgba(231,242,255,0.95)_0%,rgba(231,242,255,0.7)_36%,transparent_67%)]" />
@@ -490,8 +491,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      </main>
       <NewsletterSection />
+      </main>
       <Footer />
     </>
   )
