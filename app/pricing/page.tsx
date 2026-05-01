@@ -1,16 +1,16 @@
 "use client"
-
 // ─── Design tokens (matches how-it-works/page.tsx & features/page.tsx) ────────
 // Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
 // Primary: #1d63ff / #0b52e7   Dark bg: #071225   Body text: #667085
 // Background: #fbfaf4   Cards: white, rounded-[28px], shadow soft-blue
 // Header: fixed white/95 backdrop-blur, pill nav in #f4f8ff
 // Section rhythm: py-24 / py-32, max-w-[1200px] px-5 sm:px-8
+// ALL CONTENT DRIVEN BY content/pricing.json — edit there, not here
 // ─────────────────────────────────────────────────────────────────────────────
-
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import content from '@/content/pricing.json'
 import {
   ArrowRight,
   Check,
@@ -41,94 +41,14 @@ const navItems = [
   { label: 'Contact', href: '/contact' },
 ]
 
-// ─── Pricing data ─────────────────────────────────────────────────────────────
-const plans = [
-  {
-    name: 'Starter',
-    icon: Rocket,
-    monthly: 13,
-    yearly: 9,
-    desc: 'Perfect for solo content creators and freelancers getting started with SEO.',
-    featured: false,
-    features: [
-      'Up to 3 Projects',
-      '50 keyword lookups / month',
-      'AI Article Generator (5 articles/mo)',
-      'Content Grader',
-      'Position Tracker (up to 50 keywords)',
-      'Basic Content Calendar',
-      'Email support',
-    ],
-  },
-  {
-    name: 'Professional',
-    icon: Zap,
-    monthly: 48,
-    yearly: 38,
-    desc: 'For growing teams who need the full SEO content workflow in one place.',
-    featured: true,
-    features: [
-      'Unlimited Projects',
-      'Unlimited keyword lookups',
-      'AI Article Generator (unlimited)',
-      'GSC Analyzer & Near Jumps',
-      'Competitor Analyzer',
-      'Topic Clusters & Content Calendar',
-      'Brand Voice & ICP per project',
-      'Internal Linking via Sitemap',
-      'Cross Check fact verification',
-      'Priority support',
-    ],
-  },
-  {
-    name: 'Enterprise',
-    icon: LockKeyhole,
-    monthly: 96,
-    yearly: 76,
-    desc: 'For agencies and large teams needing advanced controls and dedicated support.',
-    featured: false,
-    features: [
-      'Everything in Professional',
-      'Custom team seats',
-      'White-label reports',
-      'Dedicated account manager',
-      'Custom AI model fine-tuning',
-      'Advanced security & SSO',
-      'SLA & uptime guarantee',
-      'API access',
-    ],
-  },
-]
+// ─── Plan icon map ─────────────────────────────────────────────────────────────
+const planIcons: Record<string, React.ElementType> = {
+  Starter: Rocket,
+  Professional: Zap,
+  Enterprise: LockKeyhole,
+}
 
-// ─── FAQ data ─────────────────────────────────────────────────────────────────
-const faqs = [
-  {
-    q: 'Can I switch plans at any time?',
-    a: 'Yes. You can upgrade or downgrade your plan at any time from your account settings. Changes take effect immediately and are prorated.',
-  },
-  {
-    q: 'Is there a free trial?',
-    a: 'Yes — all plans come with a 14-day free trial. No credit card required to start.',
-  },
-  {
-    q: 'What counts as an "article" in the AI generator?',
-    a: 'Each time you generate a full article using the AI Article Generator, it counts as one article. Outlines, edits, and regenerations of sections do not count.',
-  },
-  {
-    q: 'Do you offer annual billing discounts?',
-    a: 'Yes. Switching to annual billing saves you approximately 20% compared to paying month-to-month.',
-  },
-  {
-    q: 'Can I add team members to my account?',
-    a: 'Professional and Enterprise plans support multiple team members. Starter is designed for individual use.',
-  },
-  {
-    q: 'What happens when I hit my article limit on Starter?',
-    a: "You'll be notified when you're close to your limit. You can upgrade to Professional at any time to get unlimited article generation.",
-  },
-]
-
-// ─── Comparison rows ──────────────────────────────────────────────────────────
+// ─── Comparison rows (visual table — kept static, not in JSON) ────────────────
 const comparisonRows = [
   { feature: 'Projects', starter: '3', pro: 'Unlimited', enterprise: 'Unlimited' },
   { feature: 'Keyword Lookups', starter: '50 / mo', pro: 'Unlimited', enterprise: 'Unlimited' },
@@ -198,22 +118,27 @@ function Header() {
       <motion.div
         initial={false}
         animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
-        className="overflow-hidden bg-white lg:hidden"
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className="overflow-hidden border-t border-[#f0f4ff] bg-white lg:hidden"
       >
-        <div className="grid gap-2 px-5 pb-5">
+        <nav className="flex flex-col gap-1 px-5 py-4">
           {navItems.map((item) => (
             <Link
-              key={`mobile-${item.label}`}
+              key={item.label}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
+              className={`rounded-xl px-4 py-3 text-sm font-bold transition-colors ${
+                item.href === '/pricing' ? 'bg-[#eef4ff] text-[#1d63ff]' : 'text-[#25324b] hover:bg-[#f4f8ff]'
+              }`}
             >
               {item.label}
             </Link>
           ))}
-          <Link href="/" className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]">Log In</Link>
-          <Link href="/" className="rounded-2xl bg-[#1d63ff] px-5 py-4 text-left font-extrabold text-white">Get Started</Link>
-        </div>
+          <div className="mt-3 grid gap-2 border-t border-[#f0f4ff] pt-3">
+            <Link href="/" className="rounded-xl border border-[#e4e9f0] px-4 py-3 text-center text-sm font-bold text-[#25324b]">Log In</Link>
+            <Link href="/" className="rounded-xl bg-[#1d63ff] px-4 py-3 text-center text-sm font-extrabold text-white">Get Started</Link>
+          </div>
+        </nav>
       </motion.div>
     </header>
   )
@@ -315,11 +240,14 @@ function Cell({ value }: { value: string | boolean }) {
 export default function PricingPage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly')
 
+  const { seo, hero, plans, faqs, cta } = content
+
   return (
     <>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
       <Header />
       <main className="bg-[#fbfaf4] pt-[78px]">
-
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-[94px] sm:pb-24 sm:pt-[94px]">
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -335,20 +263,19 @@ export default function PricingPage() {
             >
               <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#1d63ff] shadow-[0_10px_35px_rgba(16,24,40,0.07)]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#1d63ff]" />
-                Pricing
+                {hero.badge}
               </div>
               <h1 className="font-display text-5xl font-black tracking-[-0.04em] text-[#071225] sm:text-6xl lg:text-7xl">
-                Simple,{' '}
+                {hero.headline}{' '}
                 <span className="bg-gradient-to-r from-[#1d63ff] to-[#7c3aed] bg-clip-text text-transparent">
-                  Transparent
-                </span>{' '}
-                Pricing
+                  {hero.headlineAccent}
+                </span>
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-white/60">
-                No hidden fees. No per-seat surprises. Pick the plan that fits your workflow and start ranking.
+              <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-[#667085]">
+                {hero.subheadline}
               </p>
               {/* Billing toggle */}
-              <div className="mt-10 inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-sm">
+              <div className="mt-10 inline-flex items-center gap-1 rounded-full border border-[#e4e9f0] bg-white p-1 shadow-[0_8px_30px_rgba(16,24,40,0.07)]">
                 {(['monthly', 'yearly'] as const).map((mode) => (
                   <button
                     key={mode}
@@ -357,12 +284,12 @@ export default function PricingPage() {
                     className={`rounded-full px-6 py-2.5 text-sm font-extrabold transition-all duration-300 ${
                       billing === mode
                         ? 'bg-[#1d63ff] text-white shadow-[0_8px_20px_rgba(29,99,255,0.4)]'
-                        : 'text-white/60 hover:text-white'
+                        : 'text-[#667085] hover:text-[#1d63ff]'
                     }`}
                   >
                     {mode === 'monthly' ? 'Monthly' : 'Yearly'}
                     {mode === 'yearly' && (
-                      <span className="ml-2 rounded-full bg-emerald-500/20 px-2 py-0.5 text-xs font-black text-emerald-400">
+                      <span className={`ml-2 rounded-full px-2 py-0.5 text-xs font-black ${billing === 'yearly' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-emerald-50 text-emerald-600'}`}>
                         Save 20%
                       </span>
                     )}
@@ -373,7 +300,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        {/* ── Plan cards (overlap hero) ─────────────────────────────────────── */}
+        {/* ── Plan cards ───────────────────────────────────────────────────── */}
         <section className="relative z-10 mx-auto -mt-16 max-w-[1200px] px-5 pb-24 sm:px-8">
           <motion.div
             variants={stagger}
@@ -382,7 +309,7 @@ export default function PricingPage() {
             className="grid gap-6 lg:grid-cols-3"
           >
             {plans.map((plan) => {
-              const Icon = plan.icon
+              const Icon = planIcons[plan.name] ?? Zap
               const price = billing === 'monthly' ? plan.monthly : plan.yearly
               return (
                 <motion.article
@@ -457,10 +384,9 @@ export default function PricingPage() {
                 Compare All Features
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-[#667085]">
-                See exactly what's included in each plan before you commit.
+                See exactly what&apos;s included in each plan before you commit.
               </p>
             </motion.div>
-
             <motion.div
               variants={reveal}
               initial="hidden"
@@ -474,13 +400,13 @@ export default function PricingPage() {
                   <thead>
                     <tr className="border-b border-[#f0f4ff]">
                       <th className="px-8 py-5 text-left font-bold text-[#374151]">Feature</th>
-                      <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">Starter</th>
+                      <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">{plans[0]?.name}</th>
                       <th className="px-6 py-5 text-center">
                         <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1d63ff] px-4 py-2 text-xs font-extrabold text-white">
-                          <Zap className="h-3 w-3" /> Professional
+                          <Zap className="h-3 w-3" /> {plans[1]?.name}
                         </span>
                       </th>
-                      <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">Enterprise</th>
+                      <th className="px-6 py-5 text-center text-sm font-semibold text-[#9ca3af]">{plans[2]?.name}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -516,7 +442,6 @@ export default function PricingPage() {
               Everything you need to know before getting started.
             </p>
           </motion.div>
-
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -547,32 +472,31 @@ export default function PricingPage() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <h2 className="font-display text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">
-                Start Your Free 14-Day Trial
+                {cta.title}
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-xl leading-8 text-white/55">
-                No credit card required. Full access to all Professional features. Cancel anytime.
+                {cta.desc}
               </p>
               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
-                  href="/"
+                  href={cta.buttonHref}
                   className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-8 py-4 text-base font-extrabold text-white shadow-[0_14px_40px_rgba(29,99,255,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b52e7]"
                 >
-                  Get Started Free <ArrowRight className="h-4 w-4" />
+                  {cta.buttonText} <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/features"
+                  href={cta.secondaryHref}
                   className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-8 py-4 text-base font-bold text-white/80 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:text-white"
                 >
-                  View All Features
+                  {cta.secondaryText}
                 </Link>
               </div>
               <p className="mt-6 text-sm font-bold text-white/35">
-                Trusted by 2,400+ SEO professionals and content teams
+                {cta.trustLine}
               </p>
             </motion.div>
           </div>
         </section>
-
       </main>
       <Footer />
     </>
