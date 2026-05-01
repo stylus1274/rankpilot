@@ -267,7 +267,7 @@ export default function FeaturesPage() {
       <main className="bg-[#fbfaf4] pt-[78px]">
 
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-36 sm:pb-24 sm:pt-44">
+        <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-16 sm:pb-24 sm:pt-20">
           {/* Background glow */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <div className="absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#1d63ff]/20 blur-[120px]" />

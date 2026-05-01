@@ -261,7 +261,7 @@ export default function HowItWorksPage() {
       <Header />
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-36 sm:pb-24 sm:pt-44">
+      <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-16 sm:pb-24 sm:pt-20">
         {/* Background blobs */}
         <div className="absolute -left-28 -top-44 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,245,205,0.95)_0%,rgba(255,245,205,0.55)_42%,transparent_68%)]" />
         <div className="absolute left-0 top-0 h-full w-[56%] bg-[radial-gradient(circle_at_32%_52%,rgba(231,242,255,0.95)_0%,rgba(231,242,255,0.7)_36%,transparent_67%)]" />

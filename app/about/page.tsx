@@ -203,7 +203,7 @@ export default function AboutPage() {
       <Header />
 
       {/* ─── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#f4f8ff] pb-24 pt-40">
+      <section className="relative overflow-hidden bg-[#f4f8ff] pb-24 pt-16">
         {/* Decorative orbs */}
         <div className="pointer-events-none absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#1d63ff]/8 blur-[120px]" />
         <div className="pointer-events-none absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-[#7c3aed]/6 blur-[100px]" />
