@@ -321,7 +321,7 @@ export default function PricingPage() {
       <main className="bg-[#fbfaf4] pt-[78px]">
 
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-16 sm:pb-24 sm:pt-20">
+        <section className="relative overflow-hidden bg-[#fbfaf4] pb-20 pt-[94px] sm:pb-24 sm:pt-[94px]">
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             <div className="absolute -left-40 -top-40 h-[600px] w-[600px] rounded-full bg-[#1d63ff]/20 blur-[120px]" />
             <div className="absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-[#7c3aed]/15 blur-[120px]" />
