@@ -1,0 +1,160 @@
+{
+  "seo": {
+    "title": "Use Cases — RankPilot",
+    "description": "Whether you run an agency, manage an in-house team, build niche sites, or work in a regulated industry — RankPilot has a workflow designed specifically for your situation."
+  },
+  "hero": {
+    "eyebrow": "Who RankPilot Is For",
+    "headline": "Built for Every Kind of SEO Professional",
+    "subheadline": "Whether you run an agency, manage an in-house team, build niche sites, or work in a regulated industry — RankPilot has a workflow designed specifically for your situation."
+  },
+  "useCases": [
+    {
+      "id": "seo-agencies",
+      "tabLabel": "SEO Agencies",
+      "eyebrow": "SEO Agencies",
+      "headline": "Manage Every Client from One Platform",
+      "description": "Stop switching between tools for every client. RankPilot gives agencies a single workspace to research, plan, generate, and track content across unlimited client projects — each with its own brand voice, ICP, and citation library.",
+      "painPoints": [
+        "Juggling separate tools for keyword research, content writing, and reporting",
+        "Maintaining consistent brand voice across different writers and clients",
+        "Scaling content output without scaling headcount",
+        "Proving ROI to clients with clear, trackable deliverables"
+      ],
+      "helpItems": [
+        "Unlimited projects with isolated settings, brand voice, and ICP per client",
+        "AI generation that matches each client's tone — not a generic output",
+        "GSC Analyzer and Position Tracker to surface wins and report progress",
+        "Articles library with word counts, dates, and status tracking per project"
+      ],
+      "stat": {
+        "value": "88,611",
+        "label": "words generated for a single client project"
+      },
+      "cta": {
+        "label": "Start Managing Clients",
+        "href": "/pricing"
+      }
+    },
+    {
+      "id": "in-house-teams",
+      "tabLabel": "In-House Marketing Teams",
+      "eyebrow": "In-House Marketing Teams",
+      "headline": "Turn Your Search Console Data Into a Content Roadmap",
+      "description": "Your Google Search Console already holds the answers — which keywords are close to page one, which pages are cannibalizing each other, which content needs a refresh. RankPilot turns that raw data into a prioritized action plan.",
+      "painPoints": [
+        "GSC data is overwhelming and hard to act on without manual analysis",
+        "Content teams don't know which articles to write next",
+        "Keyword cannibalization silently hurts rankings without anyone noticing",
+        "Articles are published without a consistent internal linking strategy"
+      ],
+      "helpItems": [
+        "Near-jump keyword detection — find positions 11–30 ready to jump to page 1",
+        "Zero-click page detection and cannibalization alerts from real GSC data",
+        "Automatic internal linking via sitemap parsing on every generated article",
+        "Topic Clusters to plan pillar content and track coverage gaps"
+      ],
+      "stat": {
+        "value": "50+",
+        "label": "keyword clusters identified from a single GSC export"
+      },
+      "cta": {
+        "label": "Unlock Your GSC Data",
+        "href": "/pricing"
+      }
+    },
+    {
+      "id": "niche-site-builders",
+      "tabLabel": "Niche Site Builders",
+      "eyebrow": "Niche Site Builders",
+      "headline": "Build Topical Authority at Scale",
+      "description": "Ranking a niche site in 2026 requires depth, not just volume. RankPilot's Topic Clusters, Ideas generator, and Content Calendar help you plan and execute a comprehensive content strategy that builds real topical authority.",
+      "painPoints": [
+        "Publishing random articles without a coherent topical structure",
+        "AI-generated content that sounds generic and gets filtered by Google",
+        "No system for tracking what's been covered and what gaps remain",
+        "Article titles that scream 'AI content' and hurt credibility"
+      ],
+      "helpItems": [
+        "Topic Clusters with coverage tracking — see exactly what's missing",
+        "Negative Keywords system blocks 'Ultimate Guide', 'Comprehensive', and other AI clichés",
+        "Content Grader scores E-E-A-T, accuracy, AIO readiness, and readability before publish",
+        "Auto Complete generates question-based keywords for featured snippets and voice search"
+      ],
+      "stat": {
+        "value": "42",
+        "label": "articles published for a niche site in under 3 months"
+      },
+      "cta": {
+        "label": "Build Your Niche Site",
+        "href": "/pricing"
+      }
+    },
+    {
+      "id": "freelance-marketers",
+      "tabLabel": "Freelance Content Marketers",
+      "eyebrow": "Freelance Content Marketers",
+      "headline": "Deliver Client-Ready Content That Actually Sounds Human",
+      "description": "Your clients hired you because they trust your voice and judgment — not a generic AI. RankPilot's Brand Voice and ICP settings ensure every article you deliver sounds like the client, speaks to their audience, and hits their SEO targets.",
+      "painPoints": [
+        "AI writing tools produce generic content that needs heavy editing",
+        "Clients can tell when content doesn't match their brand voice",
+        "Research, writing, and optimization happen in too many separate tools",
+        "Proving the SEO value of your work to non-technical clients"
+      ],
+      "helpItems": [
+        "Brand Voice profiles with tone, perspective, and banned phrases per client",
+        "ICP settings with pain points, goals, objections, and buying triggers",
+        "Competitor Analyzer to build outlines that are designed to outrank",
+        "Content Grader to validate quality before delivery — no surprises"
+      ],
+      "stat": {
+        "value": "10",
+        "label": "brand voice profiles on the Professional plan"
+      },
+      "cta": {
+        "label": "Deliver Better Content",
+        "href": "/pricing"
+      }
+    },
+    {
+      "id": "regulated-industries",
+      "tabLabel": "Regulated Industries",
+      "eyebrow": "Regulated Industries",
+      "headline": "AI Content You Can Actually Trust to Be Accurate",
+      "description": "Healthcare, legal, finance, and insurance content can't afford factual errors. RankPilot's Cross Check feature verifies every generated article against your own reference documents — Medicare premium tables, legal statutes, product specs — before it ever reaches a reader.",
+      "painPoints": [
+        "AI hallucinations in regulated content create legal and compliance risk",
+        "Fact-checking every article manually is time-consuming and error-prone",
+        "Generic AI writers don't understand industry-specific terminology or compliance requirements",
+        "Outdated figures (premiums, rates, statutes) published without detection"
+      ],
+      "helpItems": [
+        "Cross Check verifies factual claims against your uploaded reference document post-generation",
+        "Reference docs never constrain the AI's creative output — they only validate after",
+        "Flags inaccurate figures, outdated data, and unverified claims before publish",
+        "ICP settings capture compliance-aware audience profiles for precise targeting"
+      ],
+      "stat": {
+        "value": "0",
+        "label": "factual errors published when Cross Check is active"
+      },
+      "cta": {
+        "label": "Protect Your Content",
+        "href": "/pricing"
+      }
+    }
+  ],
+  "cta": {
+    "headline": "Ready to See RankPilot in Action?",
+    "subheadline": "Start your free 14-day trial. No credit card required.",
+    "primaryButton": {
+      "label": "Start Free Trial",
+      "href": "/pricing"
+    },
+    "secondaryButton": {
+      "label": "See How It Works",
+      "href": "/how-it-works"
+    }
+  }
+}
