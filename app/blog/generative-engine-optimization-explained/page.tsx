@@ -172,20 +172,14 @@ export default function GEOPost() {
 
         {/* ── Featured image ────────────────────────────────────────────────── */}
         <div className="mx-auto mt-10 max-w-[860px] px-5 sm:px-8">
-          <div className="overflow-hidden rounded-2xl bg-gradient-to-br from-[#eef4ff] via-[#f0f5ff] to-[#f3f0ff]">
-            <div className="flex h-[320px] items-center justify-center sm:h-[380px]">
-              <div className="text-center">
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-[#2457f5]/10">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                    <circle cx="20" cy="20" r="16" stroke="#2457f5" strokeWidth="2.5"/>
-                    <path d="M13 20h14M20 13v14" stroke="#2457f5" strokeWidth="2.5" strokeLinecap="round"/>
-                    <circle cx="20" cy="20" r="4" fill="#2457f5"/>
-                  </svg>
-                </div>
-                <p className="mt-4 font-display text-2xl font-black text-[#2457f5]">GEO</p>
-                <p className="mt-1 text-sm text-[#94a3b8]">Generative Engine Optimization</p>
-              </div>
-            </div>
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/geo-blog-featured-5uXcEuVGzqtdSuKF3XnUMP.webp"
+              alt="Generative Engine Optimization: how AI search retrieves, extracts, and cites content"
+              className="w-full rounded-2xl object-cover"
+              width={860}
+              height={480}
+            />
           </div>
         </div>
 
