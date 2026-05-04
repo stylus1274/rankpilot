@@ -209,7 +209,7 @@ export default function ContentAuditPost() {
       <Header />
 
       {/* Hero / Article Header */}
-      <section className="relative overflow-hidden bg-[#fbfaf4] pb-12 pt-36 sm:pt-40">
+      <section className="relative overflow-hidden bg-[#fbfaf4] pb-16 pt-36 sm:pt-40">
         <div className="absolute -left-28 -top-44 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(255,245,205,0.95)_0%,rgba(255,245,205,0.55)_42%,transparent_68%)]" />
         <div className="absolute left-0 top-0 h-full w-[56%] bg-[radial-gradient(circle_at_32%_52%,rgba(231,242,255,0.95)_0%,rgba(231,242,255,0.7)_36%,transparent_67%)]" />
         <div className="relative mx-auto max-w-[860px] px-5 sm:px-8">
@@ -231,7 +231,7 @@ export default function ContentAuditPost() {
       </section>
 
       {/* Hero Image */}
-      <div className="mx-auto max-w-[860px] px-5 sm:px-8">
+      <div className="mx-auto mt-10 max-w-[860px] px-5 sm:px-8">
         <div className="overflow-hidden rounded-[28px]">
           <img src={post.hero.featuredImage} alt={post.hero.featuredImageAlt} className="w-full object-cover" />
         </div>
