@@ -3,6 +3,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, AlertTriangle, Lightbulb, Info, CheckCircle2, ChevronDown, Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const FEATURED_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/ai-tools-seo-audits-2026-featured-TfTcS9g78cdPk7ZKMrpTWK.webp";
 
@@ -17,6 +18,7 @@ const navItems = [
 ];
 
 function Nav() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#e8edf5]/60 bg-white/95 backdrop-blur-md">
@@ -29,7 +31,11 @@ function Nav() {
         </Link>
         <nav className="hidden items-center gap-1 rounded-2xl border border-[#e8edf5] bg-[#f8fafc] px-2 py-1.5 lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="rounded-xl px-4 py-2 text-sm font-semibold text-[#4b5568] transition-colors hover:bg-white hover:text-[#071225]">
+            <Link key={item.href} href={item.href} className={`rounded-xl px-4 py-2 text-sm font-semibold transition-colors ${
+              pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
+                ? 'bg-white text-[#071225] shadow-sm'
+                : 'text-[#4b5568] hover:bg-white hover:text-[#071225]'
+            }`}>
               {item.label}
             </Link>
           ))}

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   Calendar,
   Clock,
@@ -33,6 +34,7 @@ const navItems = [
 ];
 
 function Navbar() {
+  const pathname = usePathname();
   return (
     <header className="fixed top-0 z-50 w-full border-b border-[#e8edf5] bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8">
@@ -50,7 +52,11 @@ function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-1.5 text-sm font-medium text-[#4a5568] transition-colors hover:bg-[#f0f5ff] hover:text-[#2457f5]"
+              className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+              pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
+                ? 'bg-[#f0f5ff] text-[#2457f5] font-semibold'
+                : 'text-[#4a5568] hover:bg-[#f0f5ff] hover:text-[#2457f5]'
+            }`}
             >
               {item.label}
             </Link>

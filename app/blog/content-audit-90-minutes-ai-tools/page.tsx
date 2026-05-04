@@ -2,6 +2,7 @@
 
 import { useState, useRef } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   ArrowRight,
@@ -48,6 +49,7 @@ const navItems = [
 ]
 
 function Header() {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   return (
     <header className="fixed left-0 right-0 top-0 z-50 w-full bg-white/95 shadow-[0_8px_35px_rgba(16,24,40,0.08)] backdrop-blur-md">
@@ -58,7 +60,11 @@ function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
+              className={`rounded-full px-5 py-3 text-sm font-bold transition-all duration-300 ${
+                pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
+                  ? 'bg-white text-[#1d63ff] shadow-[0_10px_25px_rgba(16,24,40,0.07)]'
+                  : 'text-[#25324b] hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]'
+              }`}
             >
               {item.label}
             </Link>
