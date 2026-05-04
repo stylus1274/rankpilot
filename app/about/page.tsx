@@ -215,7 +215,7 @@ export default function AboutPage() {
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="max-w-3xl"
+            className="mx-auto max-w-3xl text-center"
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-[#1d63ff]/10 px-5 py-2 text-sm font-extrabold uppercase tracking-widest text-[#1d63ff]">
               {content.hero.badge}
@@ -226,7 +226,7 @@ export default function AboutPage() {
                 {content.hero.headlineAccent}
               </span>
             </h1>
-            <p className="mt-6 max-w-2xl text-xl leading-8 text-[#667085]">
+            <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-[#667085]">
               {content.hero.subheadline}
             </p>
           </motion.div>
