@@ -58,7 +58,7 @@ const posts: Post[] = [
     excerpt:
       'SEO has become more competitive than ever in 2026, with millions of websites fighting for the same top search positions. Small and medium businesses are struggling to keep up with the constant algorithm updates, technical requirements, and content demands that modern search engines require.',
     slug: '7-ways-businesses-benefit-seo-automation-ai',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/02/seo-automation-hero.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/seo-automation-blog-featured-hCb3vTX8d3HVGLbsVDra7G.webp',
   },
   {
     category: 'Marketing',
@@ -68,7 +68,7 @@ const posts: Post[] = [
     excerpt:
       'In 2026, digital marketing has become more complex than ever. According to recent industry reports, a significant percentage of marketers report increased difficulty managing campaigns, thanks to evolving AI algorithms and stricter privacy rules.',
     slug: '5-digital-marketing-challenges-2026',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/ready-martketing-2026.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/digital-marketing-challenges-2026-featured-Znwxuh3oQS9miWVSuSv3Pd.webp',
   },
   {
     category: 'AI Tools',
@@ -78,7 +78,7 @@ const posts: Post[] = [
     excerpt:
       'Remember when SEO audits meant drowning in spreadsheets for hours? Those days are fading fast. AI is here to automate the grunt work, and SEO pros aren\'t just dabbling. Most are already hooked on AI-powered tools and showing no signs of slowing down in 2026.',
     slug: 'ai-tools-seo-audits-2026',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/ai-audit-hero.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/ai-tools-seo-audits-2026-featured-TfTcS9g78cdPk7ZKMrpTWK.webp',
   },
   {
     category: 'Local SEO',
@@ -88,7 +88,7 @@ const posts: Post[] = [
     excerpt:
       'Your Google Business Profile is often the first place customers see your business online. It shows your hours, reviews, location, and key info that can influence whether someone clicks or keeps scrolling.',
     slug: 'ai-tools-google-my-business-optimization',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/gbp-graphic.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/gmb-optimization-blog-featured-HWK8g6sgB6DknKy6aKwnTQ.webp',
   },
   {
     category: 'GEO/AIO',
@@ -98,7 +98,7 @@ const posts: Post[] = [
     excerpt:
       'Search is still doing the same core job it always has. Helping people find useful information. But the interface between searcher and answer is changing fast — and GEO is how you stay visible.',
     slug: 'generative-engine-optimization-explained',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/geo-explained.png',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/geo-blog-featured-5uXcEuVGzqtdSuKF3XnUMP.webp',
   },
   {
     category: 'GEO/AIO',
@@ -108,7 +108,7 @@ const posts: Post[] = [
     excerpt:
       'SEO dashboards are telling a strange story lately. Impressions are rising. Clicks are falling. CTR is trending down. Rankings often look stable or improved, yet organic traffic feels softer and performance questions start piling up.',
     slug: 'ai-overviews-zero-click-reality',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/zero-click-hero.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/ai-overviews-zero-click-featured-9ECs9zsUuDfvLVVcMAk4DV.webp',
   },
   {
     category: 'Google Search Console',
@@ -118,7 +118,7 @@ const posts: Post[] = [
     excerpt:
       'Google Keyword Planner is a free tool inside Google Ads that helps you discover new keyword ideas, estimate search volume, and understand seasonal demand — all without spending a cent.',
     slug: 'google-keyword-planner-smarter-research',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/keyword-planner-graphic.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/keyword-planner-blog-featured-TBR5dCfk4T5FpcDXSQ8atA.webp',
   },
   {
     category: 'GEO/AIO',
@@ -128,7 +128,7 @@ const posts: Post[] = [
     excerpt:
       "Google's AI Overviews are changing how content gets seen and used. Instead of linking out to a single source, these summaries pull structured answers from multiple pages and piece together a complete response directly in the search result.",
     slug: 'content-formats-google-ai-overviews',
-    image: 'https://rankpilot.cc/wp-content/uploads/2026/01/proven-content-formats.jpg',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/content-formats-ai-overviews-featured-ZRczuotaW6cAySdqkSnh98.webp',
   },
 ]
 
