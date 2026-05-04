@@ -224,7 +224,7 @@ function FaqAccordion({ faqs }: { faqs: { q: string; a: string }[] }) {
 
 function InlineCta() {
   return (
-    <div className="my-10 rounded-2xl bg-[#071225] px-8 py-8 text-center">
+    <div className="not-prose my-10 rounded-2xl bg-[#071225] px-8 py-8 text-center">
       <p className="font-display text-xl font-black text-white">Stop guessing. Start optimizing for AI search.</p>
       <p className="mt-2 text-sm text-[#94a3b8]">
         RankPilot tracks your AI Overview appearances, monitors citation signals, and helps you structure content that gets cited, not just ranked.
