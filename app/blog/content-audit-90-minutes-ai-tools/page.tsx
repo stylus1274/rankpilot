@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
@@ -11,7 +11,6 @@ import {
   Gauge,
   Menu,
   X,
-  ChevronRight,
   CheckCircle2,
   Zap,
 } from 'lucide-react'
@@ -102,31 +101,6 @@ function Header() {
   )
 }
 
-// ─── Table of Contents ────────────────────────────────────────────────────────
-function TableOfContents({ activeId }: { activeId: string }) {
-  return (
-    <div className="rounded-2xl border border-[#e8edf5] bg-white p-6 shadow-[0_8px_30px_rgba(16,24,40,0.06)]">
-      <p className="mb-4 text-xs font-extrabold uppercase tracking-widest text-[#94a3b8]">Table of Contents</p>
-      <ul className="space-y-1">
-        {post.tocItems.map((item) => (
-          <li key={item.id}>
-            <a
-              href={`#${item.id}`}
-              className={`flex items-start gap-2 rounded-lg px-3 py-2 text-sm leading-snug transition-all duration-150 ${
-                activeId === item.id
-                  ? 'bg-[#eef4ff] font-bold text-[#2457f5]'
-                  : 'text-[#667085] hover:bg-[#f8fafc] hover:text-[#1a2233]'
-              }`}
-            >
-              <ChevronRight className={`mt-0.5 h-3.5 w-3.5 shrink-0 transition-colors ${activeId === item.id ? 'text-[#2457f5]' : 'text-[#cbd5e1]'}`} />
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 function Footer() {
@@ -180,22 +154,7 @@ function Footer() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function ContentAuditPost() {
-  const [activeId, setActiveId] = useState('')
   const articleRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveId(entry.target.id)
-        })
-      },
-      { rootMargin: '-20% 0px -70% 0px' }
-    )
-    const headings = articleRef.current?.querySelectorAll('h2[id], h3[id]')
-    headings?.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
 
   // Bucket color map
   const bucketColors: Record<string, { color: string; bg: string }> = {
@@ -237,9 +196,8 @@ export default function ContentAuditPost() {
         </div>
       </div>
 
-      {/* Article Body + Sidebar */}
-      <div className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1fr_300px]">
+      {/* Article Body */}
+      <div className="mx-auto max-w-[860px] px-5 py-16 sm:px-8">
 
           {/* Article Content */}
           <article ref={articleRef} className="min-w-0">
@@ -331,23 +289,7 @@ export default function ContentAuditPost() {
                 </Link>
               </div>
             </div>
-          </article>
-
-          {/* Sticky Sidebar */}
-          <aside className="hidden lg:block">
-            <div className="sticky top-[100px] space-y-6">
-              <TableOfContents activeId={activeId} />
-              <div className="rounded-2xl bg-[#2457f5] p-6 text-white">
-                <p className="font-display text-lg font-black leading-snug">{post.cta.sidebarTitle}</p>
-                <p className="mt-2 text-sm text-white/75">{post.cta.sidebarSubtitle}</p>
-                <Link href="/" className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-extrabold text-[#2457f5] transition-all duration-200 hover:bg-[#eef4ff]">
-                  {post.cta.sidebarButton}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </aside>
-        </div>
+           </article>
       </div>
 
       {/* Related Posts */}
