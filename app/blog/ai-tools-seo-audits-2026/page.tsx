@@ -369,24 +369,31 @@ export default function AiToolsSeoAudits2026Page() {
           ]} />
         </article>
 
-        {/* Related Posts */}
+                {/* Related Posts */}
         <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
           <div className="mx-auto max-w-[860px] px-5 sm:px-8">
             <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
               <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
                 <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
                 <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
                 <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A step-by-step guide to completing a focused, actionable content audit in 90 minutes using AI to do the heavy lifting.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A step-by-step framework for auditing your entire content library in under two hours using RankPilot.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
               <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
                 <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Automation</span>
                 <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Feb 12, 2026 · 15 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">From rank tracking to content briefs, here is how AI automation is changing what is possible for SEO teams of every size.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <p className="mt-2 text-sm text-[#94a3b8]">Feb 22, 2026 · 10 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">From keyword research to content scoring, AI is reshaping how teams approach organic search in 2026.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/google-keyword-planner-smarter-research" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Keyword Research</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Use Google Keyword Planner for Smarter Research</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Dec 5, 2025 · 10 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Five advanced techniques to extract more signal from Google Keyword Planner and combine it with AI-powered tools.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
             </div>
           </div>

@@ -400,24 +400,31 @@ export default function DigitalMarketingChallenges2026Page() {
           ]} />
         </article>
 
-        {/* Related Posts */}
+                {/* Related Posts */}
         <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
           <div className="mx-auto max-w-[860px] px-5 sm:px-8">
             <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
               <Link href="/blog/ai-overviews-zero-click-reality" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO/AIO</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">AI Overviews and the Zero Click Reality</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Jan 18, 2026 · 14 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Impressions are rising, clicks are falling. Here is what is actually happening and what to do about it.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO / AIO</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">AI Overviews and the Zero-Click Reality: What It Means for Your Traffic</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Feb 5, 2026 · 14 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Zero-click searches are rising. Here is what the data actually shows and what you should do about it.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
               <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
                 <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Automation</span>
                 <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Feb 12, 2026 · 15 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">From rank tracking to content briefs, here is how AI automation is changing what is possible for SEO teams of every size.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <p className="mt-2 text-sm text-[#94a3b8]">Feb 22, 2026 · 10 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">From keyword research to content scoring, AI is reshaping how teams approach organic search in 2026.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Tools</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">The Best AI Tools for SEO Audits in 2026</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Jan 14, 2026 · 11 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A practical guide to using AI tools across every phase of the modern SEO audit workflow.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
             </div>
           </div>

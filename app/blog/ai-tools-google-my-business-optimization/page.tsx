@@ -404,24 +404,31 @@ export default function AiToolsGmbOptimizationPage() {
           ]} />
         </article>
 
-        {/* Related Posts */}
+                {/* Related Posts */}
         <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
           <div className="mx-auto max-w-[860px] px-5 sm:px-8">
             <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-              <Link href="/blog/generative-engine-optimization-explained" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">Generative Engine Optimization Explained</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Mar 5, 2026 · 14 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">What GEO is, how it differs from traditional SEO, and the concrete steps you can take to get your content cited by AI search engines.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
-              </Link>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
               <Link href="/blog/5-digital-marketing-challenges-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
                 <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Digital Marketing</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">5 Digital Marketing Challenges in 2026 (and How to Solve Them)</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Jan 22, 2026 · 11 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">The five challenges that are defining digital marketing strategy in 2026 and the practical approaches that are working.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">5 Digital Marketing Challenges in 2026 (And How to Solve Them)</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Jan 28, 2026 · 13 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Data fragmentation, AI disruption, privacy shifts — the five biggest challenges marketers face this year and practical solutions.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/google-keyword-planner-smarter-research" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Keyword Research</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Use Google Keyword Planner for Smarter Research</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Dec 5, 2025 · 10 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Five advanced techniques to extract more signal from Google Keyword Planner and combine it with AI-powered tools.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Tools</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">The Best AI Tools for SEO Audits in 2026</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Jan 14, 2026 · 11 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A practical guide to using AI tools across every phase of the modern SEO audit workflow.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
             </div>
           </div>

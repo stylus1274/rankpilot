@@ -561,39 +561,32 @@ export default function SevenWaysSEOAutomationPage() {
       </div>
 
 
-      {/* ── Related Posts ─────────────────────────────────────────────────── */}
+            {/* Related Posts */}
       <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
         <div className="mx-auto max-w-[860px] px-5 sm:px-8">
           <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <Link
-              href="/blog/content-audit-90-minutes-ai-tools"
-              className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md"
-            >
-              <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
-              <p className="mt-3 font-display text-base font-black text-[#071225] group-hover:text-[#2457f5] transition-colors">
-                How to Do a Content Audit in 90 Minutes Using AI Tools
-              </p>
-              <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
-              <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">
-                A step-by-step guide to completing a focused, actionable content audit in 90 minutes — using AI to do the heavy lifting.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
-            </Link>
-            <Link
-              href="/blog/generative-engine-optimization-explained"
-              className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md"
-            >
-              <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO/AIO</span>
-              <p className="mt-3 font-display text-base font-black text-[#071225] group-hover:text-[#2457f5] transition-colors">
-                Generative Engine Optimization Explained: What GEO Is and How AI Overviews Use Content
-              </p>
-              <p className="mt-2 text-sm text-[#94a3b8]">Jan 19, 2026 · 16 min read</p>
-              <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">
-                AI search engines don't rank pages — they cite them. Learn what GEO is, how it differs from traditional SEO, and the three content traits that get you cited.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
-            </Link>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Tools</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">The Best AI Tools for SEO Audits in 2026</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Jan 14, 2026 · 11 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A practical guide to using AI tools across every phase of the modern SEO audit workflow.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+              </Link>
+              <Link href="/blog/5-digital-marketing-challenges-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Digital Marketing</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">5 Digital Marketing Challenges in 2026 (And How to Solve Them)</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Jan 28, 2026 · 13 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Data fragmentation, AI disruption, privacy shifts. The five biggest challenges marketers face this year and practical solutions.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+              </Link>
+              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A step-by-step framework for auditing your entire content library in under two hours using RankPilot.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+              </Link>
           </div>
         </div>
       </section>

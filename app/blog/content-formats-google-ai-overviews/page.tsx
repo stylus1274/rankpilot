@@ -381,24 +381,31 @@ export default function ContentFormatsAiOverviewsPage() {
           ]} />
         </article>
 
-        {/* Related Posts */}
+                {/* Related Posts */}
         <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
           <div className="mx-auto max-w-[860px] px-5 sm:px-8">
             <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
               <Link href="/blog/generative-engine-optimization-explained" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
                 <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">Generative Engine Optimization Explained</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Mar 5, 2026 · 14 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">What GEO is, how it differs from traditional SEO, and the concrete steps you can take to get your content cited by AI search engines.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">Generative Engine Optimization (GEO) Explained</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Mar 18, 2026 · 16 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">AI search engines don't rank pages — they cite them. Learn what GEO is and the three content traits that get you cited.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
               <Link href="/blog/ai-overviews-zero-click-reality" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">AI Search</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">AI Overviews and the Zero Click Reality</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Mar 28, 2026 · 10 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">How AI Overviews are changing click-through rates and what SEO practitioners need to do differently to maintain traffic.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article &#8594;</span>
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO / AIO</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">AI Overviews and the Zero-Click Reality: What It Means for Your Traffic</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Feb 5, 2026 · 14 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Zero-click searches are rising. Here is what the data actually shows and what you should do about it.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A step-by-step framework for auditing your entire content library in under two hours using RankPilot.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
               </Link>
             </div>
           </div>

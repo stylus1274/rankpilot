@@ -123,9 +123,9 @@ function Footer() {
 
 // ─── Related posts ────────────────────────────────────────────────────────────
 const relatedPosts = [
-  { slug: 'ai-overviews-zero-click-reality', category: 'GEO/AIO', date: 'February 5, 2026', title: 'AI Overviews and the Zero-Click Reality: What It Means for Your Traffic', excerpt: 'Zero-click searches are rising. Here is what the data actually shows and what you should do about it.' },
-  { slug: 'content-audit-90-minutes-ai-tools', category: 'Content Strategy', date: 'April 11, 2026', title: 'How to Do a Content Audit in 90 Minutes Using AI Tools', excerpt: 'A step-by-step framework for auditing your entire content library in under two hours using RankPilot.' },
-  { slug: '7-ways-businesses-benefit-seo-automation-ai', category: 'SEO Automation', date: 'February 22, 2026', title: '7 Ways Businesses Benefit from SEO Automation Using AI', excerpt: 'From keyword research to content scoring, AI is reshaping how teams approach organic search in 2026.' },
+  { slug: 'ai-overviews-zero-click-reality', category: 'GEO / AIO', date: 'February 5, 2026', title: 'AI Overviews and the Zero-Click Reality: What It Means for Your Traffic', excerpt: 'Zero-click searches are rising. Here is what the data actually shows and what you should do about it.' },
+  { slug: 'content-formats-google-ai-overviews', category: 'Content Strategy', date: 'November 18, 2025', title: 'Content Formats That Get Cited in Google AI Overviews', excerpt: 'Six content formats that AI systems extract from most reliably — and how to structure each one for maximum citation potential.' },
+  { slug: 'content-audit-90-minutes-ai-tools', category: 'Content Strategy', date: 'April 11, 2026', title: 'How to Do a Content Audit in 90 Minutes Using AI Tools', excerpt: 'A step-by-step framework for auditing your entire content library in under two hours using RankPilot.' }
 ]
 
 // ═══════════════════════════════════════════════════════════════════════════════

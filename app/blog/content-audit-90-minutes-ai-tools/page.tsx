@@ -309,43 +309,35 @@ export default function ContentAuditPost() {
            </article>
       </div>
 
-      {/* Related Posts */}
-      <section className="bg-[#f8fafc] py-16 sm:py-20">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-          <h2 className="font-display mb-10 text-3xl font-black tracking-tight text-[#071225]">Related Articles</h2>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {post.relatedPosts.map((relatedPost) => (
-              <motion.article
-                key={relatedPost.slug + relatedPost.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="group flex flex-col overflow-hidden rounded-[28px] bg-white shadow-[0_18px_55px_rgba(16,24,40,0.07)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(29,99,255,0.13)]"
-              >
-                <div className="relative h-[160px] overflow-hidden bg-[#eef5ff]">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="h-12 w-12 rounded-xl bg-[#2457f5]/20" />
-                  </div>
-                  <span className="absolute left-4 top-4 rounded-full bg-[#2457f5] px-3 py-1 text-xs font-bold text-white">
-                    {relatedPost.category}
-                  </span>
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <p className="mb-2 text-xs text-[#94a3b8]">{relatedPost.date}</p>
-                  <h3 className="font-display mb-3 text-lg font-black leading-snug text-[#071225] transition-colors group-hover:text-[#2457f5]">
-                    {relatedPost.title}
-                  </h3>
-                  <p className="mb-4 flex-1 text-sm leading-7 text-[#667085] line-clamp-2">{relatedPost.excerpt}</p>
-                  <Link href={`/blog/${relatedPost.slug}`} className="inline-flex items-center gap-2 text-sm font-bold text-[#2457f5] transition-all duration-200 hover:gap-3">
-                    Read Article <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
+              {/* Related Posts */}
+        <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
+          <div className="mx-auto max-w-[860px] px-5 sm:px-8">
+            <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Tools</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">The Best AI Tools for SEO Audits in 2026</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Jan 14, 2026 · 11 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A practical guide to using AI tools across every phase of the modern SEO audit workflow.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/generative-engine-optimization-explained" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">Generative Engine Optimization (GEO) Explained</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Mar 18, 2026 · 16 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">AI search engines don't rank pages — they cite them. Learn what GEO is and the three content traits that get you cited.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Automation</span>
+                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
+                <p className="mt-2 text-sm text-[#94a3b8]">Feb 22, 2026 · 10 min read</p>
+                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">From keyword research to content scoring, AI is reshaping how teams approach organic search in 2026.</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
 
       {/* ── Related Posts ─────────────────────────────────────────────────── */}
