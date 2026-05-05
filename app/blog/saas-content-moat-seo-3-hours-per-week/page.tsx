@@ -195,7 +195,7 @@ function KeyTakeaways({ items }: { items: string[] }) {
   );
 }
 
-function FaqAccordion({ faqs }: { faqs: { q: string; a: string }[] }) {
+function FaqAccordion({ faqs }: { faqs: { q: string; a: React.ReactNode }[] }) {
   const [open, setOpen] = useState<number | null>(null);
   return (
     <div className="not-prose my-10 space-y-3">
@@ -238,7 +238,7 @@ function InlineCta() {
   );
 }
 
-function WeeklyWorkflowCard({ icon, time, title, description }: { icon: React.ReactNode; time: string; title: string; description: string }) {
+function WeeklyWorkflowCard({ icon, time, title, description }: { icon: React.ReactNode; time: string; title: string; description: React.ReactNode }) {
   return (
     <div className="flex gap-4 rounded-xl border border-[#e8edf5] bg-white p-5">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eef2ff] text-[#2457f5]">
@@ -371,7 +371,7 @@ export default function SaasContentMoatPage() {
               icon={<Search className="h-5 w-5" />}
               time="45 min"
               title="Rank tracking review"
-              description="Check position changes for all target keywords in RankPilot's rank tracker. Flag any pieces that have moved into positions 5–15; these are the highest-leverage optimization targets, close enough to page one to move with a focused update."
+              description={<>Check position changes for all target keywords in RankPilot&apos;s rank tracker. Flag any pieces that have moved into positions 5–15; these are the highest-leverage optimization targets, close enough to page one to move with a focused update. Learn more about how <Link href="/features" className="text-[#2457f5] hover:underline">rank tracking works in RankPilot</Link>.</>}
             />
             <WeeklyWorkflowCard
               icon={<FileText className="h-5 w-5" />}
@@ -406,7 +406,7 @@ export default function SaasContentMoatPage() {
               By month six, the cluster effect was visible in the data. All three cornerstone pieces were on page one. The supporting pieces were ranking for their long-tail targets. Total organic traffic crossed 5,000 monthly visitors. More importantly, the demo request form was being submitted by visitors who had arrived through organic search and spent an average of four minutes reading before converting, a signal of genuine buyer intent that paid traffic rarely produces.
             </p>
             <p>
-              The growth from month six to month eighteen was not linear; it was exponential. Each new cluster built on the authority established by the previous ones. New articles ranked faster because the domain had accumulated trust. The content audit workflow meant that older pieces were continuously improving rather than decaying. By month eighteen, Meridian had 47 pieces of content ranking on page one, 38,000 monthly organic visitors, and a content library that was generating leads while Jamie was asleep.
+              The growth from month six to month eighteen was not linear; it was exponential. This is the compounding effect that <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai">SEO automation</Link> makes possible at scale. Each new cluster built on the authority established by the previous ones. New articles ranked faster because the domain had accumulated trust. The content audit workflow meant that older pieces were continuously improving rather than decaying. By month eighteen, Meridian had 47 pieces of content ranking on page one, 38,000 monthly organic visitors, and a content library that was generating leads while Jamie was asleep.
             </p>
 
             <PullQuote
@@ -503,7 +503,7 @@ export default function SaasContentMoatPage() {
             },
             {
               q: "Is this approach still relevant with AI Overviews changing how search results look?",
-              a: "Yes, and in some ways the cluster approach is more important now than it was before AI Overviews. Google's AI summaries draw heavily from authoritative, well-structured content on specific topics. Sites with deep, interconnected content on a defined topic set are more likely to be cited in AI Overviews than sites with broad, shallow coverage. The fundamentals of depth and authority have not changed; the interface for displaying them has."
+              a: <>Yes, and in some ways the cluster approach is more important now than it was before <Link href="/blog/ai-overviews-zero-click-reality" className="text-[#2457f5] hover:underline">AI Overviews</Link>. Google&apos;s AI summaries draw heavily from authoritative, well-structured content on specific topics. Sites with deep, interconnected content on a defined topic set are more likely to be cited in AI Overviews than sites with broad, shallow coverage. The fundamentals of depth and authority have not changed; the interface for displaying them has. For a deeper look at how to optimize for this shift, see our guide on <Link href="/blog/generative-engine-optimization-explained" className="text-[#2457f5] hover:underline">Generative Engine Optimization</Link>.</>
             },
           ]} />
 
