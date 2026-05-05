@@ -1,5 +1,6 @@
 "use client"
 
+import type { Metadata } from 'next'
 // ─── Design tokens (matches how-it-works/page.tsx & about/page.tsx) ──────────
 // Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
 // Primary: #1d63ff   Dark bg: #071225   Body text: #667085
@@ -193,6 +194,16 @@ function ContactCard({ icon: Icon, title, desc, link, accent = '#1d63ff' }: {
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: 'Contact RankPilot | Get in Touch',
+  description: 'Have a question or want to see RankPilot in action? Reach out to our team.',
+  openGraph: {
+    title: 'Contact RankPilot | Get in Touch',
+    description: 'Have a question or want to see RankPilot in action? Reach out to our team.',
+  },
+}
+
 export default function ContactPage() {
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' })
   const [submitted, setSubmitted] = useState(false)

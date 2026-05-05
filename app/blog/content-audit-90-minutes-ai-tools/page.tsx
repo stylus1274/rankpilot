@@ -1,5 +1,6 @@
 'use client'
 
+import type { Metadata } from 'next'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -159,6 +160,16 @@ function Footer() {
 }
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: 'How to Do a Content Audit in 90 Minutes Using AI Tools | RankPilot',
+  description: 'A step-by-step framework for running a complete content audit in 90 minutes using AI tools — no spreadsheet marathon required.',
+  openGraph: {
+    title: 'How to Do a Content Audit in 90 Minutes Using AI Tools | RankPilot',
+    description: 'A step-by-step framework for running a complete content audit in 90 minutes using AI tools — no spreadsheet marathon required.',
+  },
+}
+
 export default function ContentAuditPost() {
   const articleRef = useRef<HTMLDivElement>(null)
 

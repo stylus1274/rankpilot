@@ -16,15 +16,15 @@ const siteUrl = process.env.NEXTAUTH_URL ?? 'http://localhost:3000'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'RankPilot — Task Management Platform',
-  description: 'RankPilot helps teams manage tasks, time, projects, collaboration, and growth in one streamlined SaaS workspace.',
+  title: 'RankPilot | AI-Powered SEO Platform',
+  description: 'RankPilot is an AI-powered SEO platform that tracks rankings, audits content, and surfaces optimization opportunities — all in one workflow.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
   },
   openGraph: {
-    title: 'RankPilot — Task Management Platform',
-    description: 'Ultimate platform to manage tasks, teams, and time with a clean productivity workspace.',
+    title: 'RankPilot | AI-Powered SEO Platform',
+    description: 'RankPilot is an AI-powered SEO platform that tracks rankings, audits content, and surfaces optimization opportunities — all in one workflow.',
     images: ['/og-image.png'],
   },
 }

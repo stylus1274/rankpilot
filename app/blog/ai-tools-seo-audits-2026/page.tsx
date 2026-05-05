@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -243,6 +244,16 @@ function InlineCta() {
       </Link>
     </div>
   );
+}
+
+
+export const metadata: Metadata = {
+  title: 'AI Tools for SEO Audits in 2026 | RankPilot',
+  description: 'How to use AI tools to run faster, more accurate SEO audits — and which parts of the audit still need human judgment.',
+  openGraph: {
+    title: 'AI Tools for SEO Audits in 2026 | RankPilot',
+    description: 'How to use AI tools to run faster, more accurate SEO audits — and which parts of the audit still need human judgment.',
+  },
 }
 
 export default function AiToolsSeoAudits2026Page() {

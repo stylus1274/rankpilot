@@ -1,5 +1,6 @@
 'use client'
 
+import type { Metadata } from 'next'
 import { useState, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -130,6 +131,16 @@ const relatedPosts = [
 // ═══════════════════════════════════════════════════════════════════════════════
 // MAIN PAGE
 // ═══════════════════════════════════════════════════════════════════════════════
+
+export const metadata: Metadata = {
+  title: 'Generative Engine Optimization (GEO) Explained | RankPilot',
+  description: 'What GEO is, how it differs from traditional SEO, and the specific content signals that drive AI Overview citations.',
+  openGraph: {
+    title: 'Generative Engine Optimization (GEO) Explained | RankPilot',
+    description: 'What GEO is, how it differs from traditional SEO, and the specific content signals that drive AI Overview citations.',
+  },
+}
+
 export default function GEOPost() {
   const articleRef = useRef<HTMLDivElement>(null)
 

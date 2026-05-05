@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 "use client";
 
 import Link from "next/link";
@@ -243,6 +244,16 @@ function InlineCta() {
       </Link>
     </div>
   );
+}
+
+
+export const metadata: Metadata = {
+  title: 'AI Overviews and the Zero-Click Reality | RankPilot',
+  description: 'What AI Overviews mean for organic traffic, which query types are most affected, and how to adapt your content strategy.',
+  openGraph: {
+    title: 'AI Overviews and the Zero-Click Reality | RankPilot',
+    description: 'What AI Overviews mean for organic traffic, which query types are most affected, and how to adapt your content strategy.',
+  },
 }
 
 export default function AiOverviewsZeroClickPage() {

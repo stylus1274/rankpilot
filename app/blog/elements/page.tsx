@@ -1,5 +1,6 @@
 'use client'
 
+import type { Metadata } from 'next'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -704,6 +705,16 @@ const sections = [
 ]
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: 'Blog Element Gallery | RankPilot',
+  description: 'A living component gallery of rich blog elements available for use in RankPilot blog posts.',
+  openGraph: {
+    title: 'Blog Element Gallery | RankPilot',
+    description: 'A living component gallery of rich blog elements available for use in RankPilot blog posts.',
+  },
+}
+
 export default function BlogElementsPage() {
   return (
     <>

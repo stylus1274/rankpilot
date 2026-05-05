@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -243,6 +244,16 @@ function InlineCta() {
       </Link>
     </div>
   );
+}
+
+
+export const metadata: Metadata = {
+  title: 'Using Google Keyword Planner for Smarter Research | RankPilot',
+  description: 'How to get more out of Google Keyword Planner with AI-assisted research techniques that go beyond basic volume data.',
+  openGraph: {
+    title: 'Using Google Keyword Planner for Smarter Research | RankPilot',
+    description: 'How to get more out of Google Keyword Planner with AI-assisted research techniques that go beyond basic volume data.',
+  },
 }
 
 export default function GoogleKeywordPlannerPage() {

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -248,6 +249,16 @@ function InlineCta() {
       </Link>
     </div>
   );
+}
+
+
+export const metadata: Metadata = {
+  title: 'Content Formats That Win Google AI Overviews | RankPilot',
+  description: 'The specific content formats and structures that Google AI Overviews cite most frequently — and how to implement them.',
+  openGraph: {
+    title: 'Content Formats That Win Google AI Overviews | RankPilot',
+    description: 'The specific content formats and structures that Google AI Overviews cite most frequently — and how to implement them.',
+  },
 }
 
 export default function ContentFormatsAiOverviewsPage() {

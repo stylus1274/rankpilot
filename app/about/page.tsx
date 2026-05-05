@@ -1,5 +1,6 @@
 'use client'
 
+import type { Metadata } from 'next'
 // ─── Design tokens (matches all inner pages) ──────────────────────────────────
 // Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
 // Primary: #1d63ff / #2457f5   Dark bg: #071225   Body text: #667085
@@ -190,6 +191,16 @@ function Footer() {
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: 'About RankPilot | Our Story & Mission',
+  description: 'Learn how RankPilot was built to solve the broken SEO content workflow — and the team behind the platform.',
+  openGraph: {
+    title: 'About RankPilot | Our Story & Mission',
+    description: 'Learn how RankPilot was built to solve the broken SEO content workflow — and the team behind the platform.',
+  },
+}
+
 export default function AboutPage() {
   const values = content.values.items.map((v, i) => ({
     ...v,

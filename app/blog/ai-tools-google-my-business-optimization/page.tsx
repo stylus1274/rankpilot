@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -254,6 +255,16 @@ function InlineCta() {
       </Link>
     </div>
   );
+}
+
+
+export const metadata: Metadata = {
+  title: 'AI Tools for Google My Business Optimization in 2026 | RankPilot',
+  description: 'The specific AI tools and workflows producing measurable results for local businesses optimizing their Google Business Profile.',
+  openGraph: {
+    title: 'AI Tools for Google My Business Optimization in 2026 | RankPilot',
+    description: 'The specific AI tools and workflows producing measurable results for local businesses optimizing their Google Business Profile.',
+  },
 }
 
 export default function AiToolsGmbOptimizationPage() {

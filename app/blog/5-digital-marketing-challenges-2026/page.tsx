@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -265,6 +266,16 @@ function InlineCta() {
       </Link>
     </div>
   );
+}
+
+
+export const metadata: Metadata = {
+  title: '5 Digital Marketing Challenges in 2026 (and How to Solve Them) | RankPilot',
+  description: 'The five biggest challenges digital marketers face in 2026 — and the practical strategies to overcome each one.',
+  openGraph: {
+    title: '5 Digital Marketing Challenges in 2026 (and How to Solve Them) | RankPilot',
+    description: 'The five biggest challenges digital marketers face in 2026 — and the practical strategies to overcome each one.',
+  },
 }
 
 export default function DigitalMarketingChallenges2026Page() {

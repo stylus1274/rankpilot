@@ -1,5 +1,6 @@
 'use client'
 
+import type { Metadata } from 'next'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -409,6 +410,16 @@ function Footer() {
       </div>
     </footer>
   )
+}
+
+
+export const metadata: Metadata = {
+  title: 'RankPilot Blog | SEO Strategy, AI Search & Content Insights',
+  description: 'Expert articles on SEO strategy, AI search optimization, content audits, and digital marketing in 2026.',
+  openGraph: {
+    title: 'RankPilot Blog | SEO Strategy, AI Search & Content Insights',
+    description: 'Expert articles on SEO strategy, AI search optimization, content audits, and digital marketing in 2026.',
+  },
 }
 
 export default function BlogPage() {

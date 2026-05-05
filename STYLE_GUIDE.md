@@ -219,3 +219,39 @@ Centered card on gradient background. Use for login, signup, onboarding flows.
 | `ToggleGroup` | `@/components/ui/toggle-group` |
 | `Collapsible` | `@/components/ui/collapsible` |
 | `ThemeToggle` | `@/components/theme-toggle` — light/dark mode switch |
+---
+
+## Blog Post Element Selection — IMPORTANT WORKFLOW NOTE
+
+**Before building any new blog post, ask the user which elements they want included.**
+
+Do not default to using the same set of elements on every post. Element selection must be intentional and matched to the content type of the specific article.
+
+### The problem to avoid
+
+Using the same template elements on every post makes the blog feel repetitive and formulaic. For example, numbered step sequences work well for how-to content but are out of place in an opinion or data-driven post. Stat cards are powerful when used sparingly — overusing them dilutes their impact.
+
+### The workflow
+
+1. **Propose a curated shortlist** of 4–6 elements that fit the article's content type and angle.
+2. **Ask the user to confirm, remove, or swap** any elements before writing the page.
+3. **Only then** build the post with the agreed element set.
+
+### Element-to-content-type matching guide
+
+| Content Type | Recommended Elements | Avoid |
+|---|---|---|
+| How-to / Tutorial | Numbered steps, checklist, tip callout, code block | Stat cards, pull quote |
+| Data / Research | Stat cards, comparison table, before/after | Numbered steps, labeled cards |
+| Opinion / Thought leadership | Pull quote, warning callout, pros/cons | Stat cards, numbered steps |
+| Tool roundup / Comparison | Comparison table, labeled cards, pros/cons | Numbered steps, stat cards |
+| Definition / Explainer | Info callout, FAQ accordion, comparison table | Stat cards, before/after |
+| Local / Niche SEO | Labeled cards, checklist, tip callout | Stat cards, numbered steps |
+
+### Minimum and maximum element counts
+
+- **Minimum:** 3 distinct element types per post (beyond standard prose).
+- **Maximum:** 6 distinct element types per post. More than 6 makes the page feel cluttered.
+- **FAQ accordion:** Include on most posts — it aids AI Overview citation extraction.
+- **Inline CTA:** Always include exactly one, placed at the natural midpoint of the article.
+- **Related Posts:** Always include at the bottom — update all existing posts when a new one is added.
