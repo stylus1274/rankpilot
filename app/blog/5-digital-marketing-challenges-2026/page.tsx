@@ -389,8 +389,9 @@ export default function DigitalMarketingChallenges2026Page() {
             { q: "How do we compete with larger teams that have bigger content budgets?", a: "Focus on topics where you have genuine expertise that larger competitors cannot easily replicate. Original research, specific industry knowledge, and first-hand experience are difficult to outsource. Niche depth beats broad coverage for most smaller teams." },
           ]} />
         </article>
-          {/* Related Articles */}
-          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
+      <section className="border-t border-[#e8edf5] bg-white py-16">
+        <div className="mx-auto max-w-[860px] px-5 sm:px-8">
+          <div className="not-prose">
             <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/blog/ai-overviews-zero-click-reality" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
@@ -411,9 +412,10 @@ export default function DigitalMarketingChallenges2026Page() {
               </Link>
             </div>
           </div>
-
-        <Footer />
-      </main>
+        </div>
+      </section>
+    </main>
+    <Footer />
     </>
   );
 }

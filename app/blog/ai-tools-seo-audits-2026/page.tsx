@@ -358,8 +358,9 @@ export default function AiToolsSeoAudits2026Page() {
             { q: "Is technical SEO still important given AI Overviews?", a: "Yes. Technical SEO is the foundation that everything else builds on. A site with crawl issues, slow page speed, or poor mobile experience will underperform regardless of content quality. AI Overviews have changed the goals of content SEO, but they have not changed the importance of technical fundamentals." },
           ]} />
         </article>
-          {/* Related Articles */}
-          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
+      <section className="border-t border-[#e8edf5] bg-white py-16">
+        <div className="mx-auto max-w-[860px] px-5 sm:px-8">
+          <div className="not-prose">
             <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
             <div className="grid gap-4 sm:grid-cols-2">
               <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
@@ -380,9 +381,10 @@ export default function AiToolsSeoAudits2026Page() {
               </Link>
             </div>
           </div>
-
-        <Footer />
-      </main>
+        </div>
+      </section>
+    </main>
+    <Footer />
     </>
   );
 }

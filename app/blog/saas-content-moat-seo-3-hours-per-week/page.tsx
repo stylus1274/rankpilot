@@ -503,8 +503,11 @@ export default function SaasContentMoatPage() {
             },
           ]} />
 
-          {/* Related posts */}
-          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
+        </article>
+      </main>
+      <section className="border-t border-[#e8edf5] bg-white py-16">
+        <div className="mx-auto max-w-[860px] px-5 sm:px-8">
+          <div className="not-prose">
             <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
@@ -520,8 +523,8 @@ export default function SaasContentMoatPage() {
               ))}
             </div>
           </div>
-        </article>
-      </main>
+        </div>
+      </section>
       <Footer />
     </>
   );
