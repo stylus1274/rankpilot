@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Calendar, Clock, AlertTriangle, Lightbulb, Info, CheckCircle2, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, AlertTriangle, Lightbulb, Info, CheckCircle2, ChevronDown, Menu, X, Gauge } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -64,41 +64,76 @@ function Nav() {
   );
 }
 
+// ─── Logo ───────────────────────────────────────────────────────────────────
+function Logo({ variant = 'light' }: { variant?: 'light' | 'dark' }) {
+  const textClass = variant === 'dark' ? 'text-white' : 'text-[#101828]'
+  return (
+    <Link href="/" className="group inline-flex items-center gap-3 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1c6bff]">
+      <span className="grid h-11 w-11 place-items-center rounded-full bg-[#1d63ff] text-white shadow-[0_12px_30px_rgba(29,99,255,0.22)] transition-transform duration-300 group-hover:scale-105">
+        <Gauge className="h-5 w-5" />
+      </span>
+      <span className={`font-display text-2xl font-black tracking-tight ${textClass}`}>RankPilot</span>
+    </Link>
+  )
+}
+// ─── Footer ───────────────────────────────────────────────────────────────────
 function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#071225] pt-20 text-white">
-      <div className="mx-auto max-w-[1200px] px-5 pb-16 sm:px-8">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2457f5]">
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="white" strokeWidth="2.2"/><path d="M9 5v4l2.5 2.5" stroke="white" strokeWidth="2" strokeLinecap="round"/></svg>
-              </div>
-              <span className="font-display text-xl font-black">RankPilot</span>
-            </Link>
-            <p className="mt-4 text-sm leading-7 text-white/50">The all-in-one SEO content platform that helps you research, plan, and create content that ranks.</p>
+      <div className="relative mx-auto max-w-[1200px] px-5 pb-10 sm:px-8">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-2">
+            <Logo variant="dark" />
+            <p className="mt-5 max-w-xs text-base leading-7 text-white/55">
+              The all-in-one SEO content platform that helps you research, plan, and create content that ranks.
+            </p>
           </div>
-          {[
-            { title: "Product", links: ["Features", "How It Works", "Pricing", "Use Cases"] },
-            { title: "Company", links: ["About", "Blog", "Contact", "Help Center"] },
-            { title: "Legal", links: ["Privacy Policy", "Terms of Service", "Cookie Policy"] },
-          ].map((col) => (
-            <div key={col.title}>
-              <p className="mb-4 text-xs font-extrabold uppercase tracking-widest text-white/40">{col.title}</p>
-              <ul className="space-y-2">
-                {col.links.map((link) => (
-                  <li key={link}><Link href="/" className="text-sm text-white/60 transition-colors hover:text-white">{link}</Link></li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Product</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {[
+                { label: 'Features', href: '/features' },
+                { label: 'Pricing', href: '/pricing' },
+                { label: 'How It Works', href: '/how-it-works' },
+                { label: 'Use Cases', href: '/use-cases' },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="transition-colors hover:text-white">{item.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Company</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {[
+                { label: 'About', href: '/about' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Blog', href: '/blog' },
+                { label: 'Careers', href: '/' },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="transition-colors hover:text-white">{item.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Resources</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {['Documentation', 'API Reference', 'Help Center', 'Status'].map((item) => (
+                <li key={item}><Link href="/" className="transition-colors hover:text-white">{item}</Link></li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="mt-16 border-t border-white/10 pt-8 text-center text-xs text-white/30">
-          &copy; {new Date().getFullYear()} RankPilot. All rights reserved.
+        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm font-bold text-white/55 sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 RankPilot. All rights reserved.</span>
+          <div className="flex gap-6">
+            {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
+              <Link key={item} href="/" className="transition-colors hover:text-white">{item}</Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
 function StatCards({ stats }: { stats: { value: string; label: string; sub: string }[] }) {
@@ -253,6 +288,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Overviews and the Zero-Click Reality | RankPilot',
     description: 'What AI Overviews mean for organic traffic, which query types are most affected, and how to adapt your content strategy.',
+  
+    images: [{ url: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/ai-overviews-zero-click-featured-9ECs9zsUuDfvLVVcMAk4DV.webp', width: 1200, height: 630, alt: 'RankPilot' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Overviews and the Zero-Click Reality | RankPilot',
+    description: 'What AI Overviews mean for organic traffic, which query types are most affected, and how to adapt your content strategy.',
+    images: ['https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/ai-overviews-zero-click-featured-9ECs9zsUuDfvLVVcMAk4DV.webp'],
   },
 }
 

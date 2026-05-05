@@ -712,6 +712,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Blog Element Gallery | RankPilot',
     description: 'A living component gallery of rich blog elements available for use in RankPilot blog posts.',
+  
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'RankPilot' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog Element Gallery | RankPilot',
+    description: 'A living component gallery of rich blog elements available for use in RankPilot blog posts.',
+    images: ['/og-image.png'],
   },
 }
 

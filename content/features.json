@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Features — RankPilot | Every SEO & Content Tool You Need",
+    "title": "Features - RankPilot | Every SEO & Content Tool You Need",
     "description": "RankPilot packs over a dozen specialized SEO and content tools into one cohesive platform. Keyword research, AI article generation, content grading, position tracking, and more."
   },
   "hero": {
@@ -18,7 +18,7 @@
       { "title": "Keyword Auditor", "desc": "Analyze any URL for keyword density, placement, and on-page SEO factors. Get a comprehensive score with specific recommendations for meta titles, descriptions, headings, and body content." },
       { "title": "Competitor Analyzer", "desc": "Break down any competitor URL to reveal word count, read time, heading structure, internal and external links, target keywords, and content quality metrics." },
       { "title": "Position Tracker", "desc": "Monitor your keyword rankings over time with a threat leaderboard that scores competitors. Track position distribution across Top 3, Top 5, and Top 10 results." },
-      { "title": "GSC Analyzer", "desc": "Connect your Google Search Console to unlock near-jump keywords, zero-click pages, cannibalization detection, and keyword clustering — all from your real search data." },
+      { "title": "GSC Analyzer", "desc": "Connect your Google Search Console to unlock near-jump keywords, zero-click pages, cannibalization detection, and keyword clustering - all from your real search data." },
       { "title": "Keyword Insights", "desc": "Upload keyword exports from any tool. RankPilot scores each keyword by opportunity, groups them into clusters, and provides prioritized action recommendations." },
       { "title": "Thin Content Scanner", "desc": "Identify pages with weak depth, missing structure, or low topical coverage. Get specific recommendations to strengthen existing content instead of always creating new pages." },
       { "title": "Header Extractor", "desc": "Pull the complete heading structure from any URL to understand content hierarchy. Use this to plan better outlines and identify structural gaps in competitor content." }
@@ -61,7 +61,7 @@
     "desc": "Most SEO workflows require stitching together Semrush, Jasper, Frase, and a spreadsheet. RankPilot replaces all of them with a single, connected workflow."
   },
   "whyUs": [
-    { "title": "No Tool Switching", "desc": "Research, plan, generate, grade, and track — all in one platform. No copy-pasting between tabs." },
+    { "title": "No Tool Switching", "desc": "Research, plan, generate, grade, and track - all in one platform. No copy-pasting between tabs." },
     { "title": "Built for Real SEO Workflows", "desc": "Every feature was designed around how SEO professionals actually work, not how AI companies think they work." },
     { "title": "Unique to RankPilot", "desc": "Cross Check, Negative Keywords, ICP, and internal linking via sitemap are features you won't find anywhere else." }
   ],

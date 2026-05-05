@@ -1,4 +1,5 @@
 "use client"
+import type { Metadata } from 'next'
 // ─── Design tokens (matches how-it-works/page.tsx & features/page.tsx) ────────
 // Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
 // Primary: #1d63ff / #0b52e7   Dark bg: #071225   Body text: #667085
@@ -201,7 +202,7 @@ function Footer() {
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="border-b border-[#e8edf5]">
+    <div className="border-b border-[#e8edf5] last:border-b-0">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -241,6 +242,24 @@ function Cell({ value }: { value: string | boolean }) {
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
+
+export const metadata: Metadata = {
+  title: 'Pricing | RankPilot - AI-Powered SEO Platform',
+  description: 'Simple, transparent pricing for teams of all sizes. Start free, scale as you grow. No hidden fees.',
+  openGraph: {
+    type: 'website',
+    title: 'Pricing | RankPilot - AI-Powered SEO Platform',
+    description: 'Simple, transparent pricing for teams of all sizes. Start free, scale as you grow. No hidden fees.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'RankPilot Pricing' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pricing | RankPilot - AI-Powered SEO Platform',
+    description: 'Simple, transparent pricing for teams of all sizes. Start free, scale as you grow. No hidden fees.',
+    images: ['/og-image.png'],
+  },
+}
+
 export default function PricingPage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly')
 

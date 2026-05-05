@@ -198,6 +198,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About RankPilot | Our Story & Mission',
     description: 'Learn how RankPilot was built to solve the broken SEO content workflow — and the team behind the platform.',
+  
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'RankPilot' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About RankPilot | Our Story & Mission',
+    description: 'Learn how RankPilot was built to solve the broken SEO content workflow — and the team behind the platform.',
+    images: ['/og-image.png'],
   },
 }
 

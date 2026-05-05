@@ -275,10 +275,18 @@ function UseCasePanel({ useCase }: { useCase: typeof content.useCases[0] }) {
 
 export const metadata: Metadata = {
   title: 'RankPilot Use Cases | SEO for Every Team',
-  description: 'Whether you run an agency, in-house team, or niche site — RankPilot has a workflow built for your situation.',
+  description: 'Whether you run an agency, in-house team, or niche site - RankPilot has a workflow built for your situation.',
   openGraph: {
     title: 'RankPilot Use Cases | SEO for Every Team',
-    description: 'Whether you run an agency, in-house team, or niche site — RankPilot has a workflow built for your situation.',
+    description: 'Whether you run an agency, in-house team, or niche site - RankPilot has a workflow built for your situation.',
+  
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'RankPilot' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'RankPilot Use Cases | SEO for Every Team',
+    description: 'Whether you run an agency, in-house team, or niche site - RankPilot has a workflow built for your situation.',
+    images: ['/og-image.png'],
   },
 }
 
@@ -369,7 +377,7 @@ export default function UseCasesPage() {
                 Every Workflow, One Platform
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#667085]">
-                No matter how you work, RankPilot adapts to your process — not the other way around.
+                No matter how you work, RankPilot adapts to your process - not the other way around.
               </p>
             </motion.div>
             <motion.div

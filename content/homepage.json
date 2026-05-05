@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "RankPilot — AI-Powered SEO Content Platform",
+    "title": "RankPilot - AI-Powered SEO Content Platform",
     "description": "RankPilot combines keyword research, competitor analysis, content planning, and AI-powered article generation into one seamless workflow. Stop juggling tools and start ranking.",
     "ogImage": "https://rankpilot.cc/og-image.png"
   },
@@ -28,8 +28,8 @@
   },
   "howItWorks": {
     "eyebrow": "How it works",
-    "title": "No Setup Hassle — Just Start Working",
-    "subtitle": "No complex setup or training required — our platform is ready to use right out of the box.",
+    "title": "No Setup Hassle - Just Start Working",
+    "subtitle": "No complex setup or training required - our platform is ready to use right out of the box.",
     "steps": [
       { "title": "Create Your Account & Unlock Possibilities" },
       { "title": "Seamless Real-Time Collaboration" },
@@ -82,7 +82,7 @@
   "pricing": {
     "eyebrow": "Pricing",
     "title": "Transparent Pricing Plan",
-    "subtitle": "We offer flexible pricing plans designed to fit teams of all sizes — from solo",
+    "subtitle": "We offer flexible pricing plans designed to fit teams of all sizes - from solo",
     "plans": [
       {
         "name": "Starter",
@@ -164,7 +164,7 @@
         "name": "Maria Lopez",
         "title": "Delivery Manager",
         "avatar": "avatar-image2.webp",
-        "quote": "\"From setup to daily use, it delivers exactly what we need — clean, smart, and incredibly efficient.\""
+        "quote": "\"From setup to daily use, it delivers exactly what we need - clean, smart, and incredibly efficient.\""
       }
     ]
   },
@@ -174,17 +174,17 @@
     "items": [
       {
         "q": "1. How is this different from other task management tools?",
-        "a": "Our tool blends modern design with advanced workflow automation, intuitive scheduling, and real-time team insights — giving you control without complexity.",
+        "a": "Our tool blends modern design with advanced workflow automation, intuitive scheduling, and real-time team insights - giving you control without complexity.",
         "link": "real-time team insights"
       },
       {
         "q": "2. Do I need technical skills to use this platform?",
-        "a": "Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations — all in a clean, intuitive interface.",
+        "a": "Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations - all in a clean, intuitive interface.",
         "link": "seamless integrations"
       },
       {
         "q": "3. Can I invite team members to my workspace?",
-        "a": "Yes — you can easily invite teammates to collaborate in real time, assign roles, share updates, and manage projects together — all within one unified workspace.",
+        "a": "Yes - you can easily invite teammates to collaborate in real time, assign roles, share updates, and manage projects together - all within one unified workspace.",
         "link": "manage projects together"
       },
       {
@@ -194,7 +194,7 @@
       },
       {
         "q": "5. Do you offer a trial for premium features?",
-        "a": "Yes — you can explore all premium tools free for a limited time, including advanced reporting, custom workflows, and priority support access — no credit card required.",
+        "a": "Yes - you can explore all premium tools free for a limited time, including advanced reporting, custom workflows, and priority support access - no credit card required.",
         "link": "priority support access"
       }
     ]
