@@ -310,9 +310,15 @@ export default function SaasContentMoatPage() {
             { value: "40%", label: "Inbound Demos from Organic", sub: "Up from 0% at Series A" },
             { value: "3 hrs/wk", label: "Average SEO Time Investment", sub: "No agency, no freelancers" },
           ]} />
-
+          <KeyTakeaways items={[
+            "Keyword research done once, correctly, is worth more than months of undirected publishing.",
+            "Topic clusters (one cornerstone plus three supporting pieces) build authority faster than isolated articles.",
+            "Three hours per week is enough if those hours are spent on rank tracking, content briefs, and auditing rather than writing.",
+            "Continuous auditing of older content consistently outperforms creating new content in terms of ranking gains per hour invested.",
+            "The compounding effect of SEO becomes visible around month four to six; the teams that quit before then never see the return.",
+            "A content moat is a competitive advantage that compounds over time and is difficult for competitors to replicate quickly.",
+          ]} />
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:font-black prose-headings:text-[#071225] prose-p:text-[#4a5568] prose-p:leading-relaxed prose-a:text-[#2457f5] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#071225] prose-li:text-[#4a5568]">
-
             <h2>The Problem Most SaaS Startups Have With SEO</h2>
             <p>
               The conventional wisdom in SaaS marketing is that SEO takes too long to matter at the early stages. Paid acquisition gives you data fast. Partnerships and product-led growth feel more controllable. SEO, by contrast, feels like planting trees you will never sit under.
@@ -473,17 +479,7 @@ export default function SaasContentMoatPage() {
               That is the real argument for starting SEO early, staying consistent, and using tools that make the research and auditing fast enough to fit into a lean team's schedule. The window to build a content moat in most SaaS categories is still open, but it closes a little more every quarter as more teams figure this out.
             </p>
 
-          </div>
-
-          <KeyTakeaways items={[
-            "Keyword research done once, correctly, is worth more than months of undirected publishing.",
-            "Topic clusters (one cornerstone plus three supporting pieces) build authority faster than isolated articles.",
-            "Three hours per week is enough if those hours are spent on rank tracking, content briefs, and auditing rather than writing.",
-            "Continuous auditing of older content consistently outperforms creating new content in terms of ranking gains per hour invested.",
-            "The compounding effect of SEO becomes visible around month four to six; the teams that quit before then never see the return.",
-            "A content moat is a competitive advantage that compounds over time and is difficult for competitors to replicate quickly.",
-          ]} />
-
+           </div>
           <FaqAccordion faqs={[
             {
               q: "How long does it realistically take to see organic traffic from this approach?",
