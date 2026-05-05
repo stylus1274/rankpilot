@@ -6,7 +6,7 @@
 import { NextResponse } from 'next/server'
 
 const SITE_URL =
-  process.env.NEXTAUTH_URL ?? 'https://rankpilot-fr9zunye.manus.space'
+  process.env.NEXTAUTH_URL ?? 'https://rankpilot-sand.vercel.app'
 
 export function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8"?>

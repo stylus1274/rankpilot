@@ -12,7 +12,7 @@ const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-sans' })
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-display' })
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
-const siteUrl = process.env.NEXTAUTH_URL ?? 'https://rankpilot-fr9zunye.manus.space'
+const siteUrl = process.env.NEXTAUTH_URL ?? 'https://rankpilot-sand.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

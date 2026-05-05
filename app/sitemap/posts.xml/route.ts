@@ -5,7 +5,7 @@
 import { NextResponse } from 'next/server'
 
 const SITE_URL =
-  process.env.NEXTAUTH_URL ?? 'https://rankpilot-fr9zunye.manus.space'
+  process.env.NEXTAUTH_URL ?? 'https://rankpilot-sand.vercel.app'
 
 const posts = [
   { slug: 'content-audit-90-minutes-ai-tools', lastmod: '2026-04-11' },
