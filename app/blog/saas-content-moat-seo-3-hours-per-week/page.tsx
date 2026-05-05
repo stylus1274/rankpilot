@@ -297,10 +297,10 @@ export default function SaasContentMoatPage() {
           <div className="prose prose-lg max-w-none prose-headings:font-display prose-headings:font-black prose-headings:text-[#071225] prose-p:text-[#4a5568] prose-p:leading-relaxed prose-a:text-[#2457f5] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#071225] prose-li:text-[#4a5568]">
 
             <p className="lead text-xl leading-9 text-[#4a5568]">
-              When Meridian — a B2B project management SaaS serving mid-market operations teams — hit their Series A, their organic search traffic was essentially zero. They had a product that customers loved, a sales team closing deals, and a marketing budget that could have funded an agency retainer. Instead, their head of growth made a different call: three hours per week, one person, and a disciplined SEO workflow powered by RankPilot. Eighteen months later, organic search was their second-largest acquisition channel, generating 40% of all inbound demo requests.
+              When Meridian, a B2B project management SaaS serving mid-market operations teams, hit their Series A, their organic search traffic was essentially zero. They had a product that customers loved, a sales team closing deals, and a marketing budget that could have funded an agency retainer. Instead, their head of growth made a different call: three hours per week, one person, and a disciplined SEO workflow powered by RankPilot. Eighteen months later, organic search was their second-largest acquisition channel, generating 40% of all inbound demo requests.
             </p>
             <p>
-              This is not a story about gaming algorithms or publishing at scale. It is a story about focus, compounding effort, and using the right tools to make every hour count. Here is exactly how they did it — and how you can replicate the approach regardless of your team size or budget.
+              This is not a story about gaming algorithms or publishing at scale. It is a story about focus, compounding effort, and using the right tools to make every hour count. Here is exactly how they did it, and how you can replicate the approach regardless of your team size or budget.
             </p>
 
           </div>
@@ -331,13 +331,13 @@ export default function SaasContentMoatPage() {
 
             <h2>Step 1: Mapping the Keyword Universe in Week One</h2>
             <p>
-              Before writing a single word, Jamie spent the first week doing nothing but keyword research. Using RankPilot's <Link href="/features">Keyword Planner</Link>, she built what she calls a "keyword universe" — a complete map of every topic their target buyer (operations directors at 50–500 person companies) might search for across the entire buying journey.
+              Before writing a single word, Jamie spent the first week doing nothing but keyword research. Using RankPilot's <Link href="/features">Keyword Planner</Link>, she built what she calls a "keyword universe": a complete map of every topic their target buyer (operations directors at 50–500 person companies) might search for across the entire buying journey.
             </p>
             <p>
               The process was deliberately broad at first. She seeded the research with ten core terms: "project management software," "operations workflow tool," "team task tracking," and seven others. RankPilot expanded each seed into hundreds of related queries, clustering them by topic, intent, and estimated difficulty. The output was a prioritized list of 340 keyword opportunities, sorted by a composite score that weighted search volume, competition level, and commercial intent together.
             </p>
             <p>
-              The critical insight from this exercise was not which keywords had the most volume — it was which keyword clusters had the best ratio of search intent to competition. Three clusters stood out immediately: "operations workflow templates," "cross-team project visibility," and "project status reporting." None of these were obvious. None of them were the terms Meridian's sales team used internally. But all three had clear buyer intent, moderate competition, and almost no strong SaaS-specific content ranking for them.
+              The critical insight from this exercise was not which keywords had the most volume; it was which keyword clusters had the best ratio of search intent to competition. Three clusters stood out immediately: "operations workflow templates," "cross-team project visibility," and "project status reporting." None of these were obvious. None of them were the terms Meridian's sales team used internally. But all three had clear buyer intent, moderate competition, and almost no strong SaaS-specific content ranking for them.
             </p>
 
           </div>
@@ -353,7 +353,7 @@ export default function SaasContentMoatPage() {
               With the keyword universe mapped, Jamie narrowed her focus ruthlessly. Rather than spreading effort across all 340 opportunities, she chose three topic clusters and committed to owning them completely before touching anything else. Each cluster would get one cornerstone piece (2,000+ words, targeting the primary keyword) and three supporting pieces (800–1,200 words, targeting long-tail variants and related questions).
             </p>
             <p>
-              This gave her a 90-day plan of twelve articles — roughly one per week — each with a clear keyword target, an internal linking structure connecting the supporting pieces to the cornerstone, and a defined call-to-action tied to a specific stage of the buying journey.
+              This gave her a 90-day plan of twelve articles, roughly one per week, each with a clear keyword target, an internal linking structure connecting the supporting pieces to the cornerstone, and a defined call-to-action tied to a specific stage of the buying journey.
             </p>
             <p>
               The internal linking architecture was not an afterthought. RankPilot's content planning view let her map which articles should link to which, ensuring that every supporting piece passed authority back to the cornerstone and that the cornerstone linked forward to relevant product pages. This cluster structure is what separates content that ranks from content that simply exists.
@@ -361,7 +361,7 @@ export default function SaasContentMoatPage() {
 
             <h2>Step 3: The 3-Hour Weekly Workflow</h2>
             <p>
-              Once the plan was in place, Jamie's weekly SEO commitment settled into a repeatable rhythm. The three hours were not spent writing — that was handled by a part-time contractor working from RankPilot-generated content briefs. The three hours were spent on the activities that actually move the needle over time.
+              Once the plan was in place, Jamie's weekly SEO commitment settled into a repeatable rhythm. The three hours were not spent writing; that was handled by a part-time contractor working from RankPilot-generated content briefs. The three hours were spent on the activities that actually move the needle over time.
             </p>
 
           </div>
@@ -371,19 +371,19 @@ export default function SaasContentMoatPage() {
               icon={<Search className="h-5 w-5" />}
               time="45 min"
               title="Rank tracking review"
-              description="Check position changes for all target keywords in RankPilot's rank tracker. Flag any pieces that have moved into positions 5–15 — these are the highest-leverage optimization targets, close enough to page one to move with a focused update."
+              description="Check position changes for all target keywords in RankPilot's rank tracker. Flag any pieces that have moved into positions 5–15; these are the highest-leverage optimization targets, close enough to page one to move with a focused update."
             />
             <WeeklyWorkflowCard
               icon={<FileText className="h-5 w-5" />}
               time="60 min"
               title="Content brief for next article"
-              description="Use RankPilot's AI brief generator to create a structured outline for the following week's article. The brief includes target keyword, secondary keywords, recommended headings, questions to answer, and internal linking suggestions — everything the contractor needs to write without back-and-forth."
+              description="Use RankPilot's AI brief generator to create a structured outline for the following week's article. The brief includes target keyword, secondary keywords, recommended headings, questions to answer, and internal linking suggestions: everything the contractor needs to write without back-and-forth."
             />
             <WeeklyWorkflowCard
               icon={<BarChart2 className="h-5 w-5" />}
               time="30 min"
               title="Content audit scan"
-              description="Run RankPilot's content audit on the two oldest published pieces each week. Check for keyword cannibalization, thin sections, and missing internal links. Most weeks this produces one small update — a paragraph added, a link inserted — that takes ten minutes to implement."
+              description="Run RankPilot's content audit on the two oldest published pieces each week. Check for keyword cannibalization, thin sections, and missing internal links. Most weeks this produces one small update: a paragraph added, a link inserted, which takes ten minutes to implement."
             />
             <WeeklyWorkflowCard
               icon={<TrendingUp className="h-5 w-5" />}
@@ -403,23 +403,23 @@ export default function SaasContentMoatPage() {
               Month four was when the first cornerstones started ranking. The "operations workflow templates" piece hit position 8 for its primary keyword and began pulling in 200–300 visitors per month. Not impressive in isolation, but the supporting pieces were also indexing, and the internal linking structure meant that every new piece strengthened the ones already ranking.
             </p>
             <p>
-              By month six, the cluster effect was visible in the data. All three cornerstone pieces were on page one. The supporting pieces were ranking for their long-tail targets. Total organic traffic crossed 5,000 monthly visitors. More importantly, the demo request form was being submitted by visitors who had arrived through organic search and spent an average of four minutes reading before converting — a signal of genuine buyer intent that paid traffic rarely produces.
+              By month six, the cluster effect was visible in the data. All three cornerstone pieces were on page one. The supporting pieces were ranking for their long-tail targets. Total organic traffic crossed 5,000 monthly visitors. More importantly, the demo request form was being submitted by visitors who had arrived through organic search and spent an average of four minutes reading before converting, a signal of genuine buyer intent that paid traffic rarely produces.
             </p>
             <p>
-              The growth from month six to month eighteen was not linear — it was exponential. Each new cluster built on the authority established by the previous ones. New articles ranked faster because the domain had accumulated trust. The content audit workflow meant that older pieces were continuously improving rather than decaying. By month eighteen, Meridian had 47 pieces of content ranking on page one, 38,000 monthly organic visitors, and a content library that was generating leads while Jamie was asleep.
+              The growth from month six to month eighteen was not linear; it was exponential. Each new cluster built on the authority established by the previous ones. New articles ranked faster because the domain had accumulated trust. The content audit workflow meant that older pieces were continuously improving rather than decaying. By month eighteen, Meridian had 47 pieces of content ranking on page one, 38,000 monthly organic visitors, and a content library that was generating leads while Jamie was asleep.
             </p>
 
             <PullQuote
-              quote="The hardest part was trusting the process in months two and three when nothing seemed to be working. The data was moving in the right direction — we just could not see it yet."
+              quote="The hardest part was trusting the process in months two and three when nothing seemed to be working. The data was moving in the right direction. We just could not see it yet."
               attribution="Jamie, Head of Growth, Meridian"
             />
 
             <h2>Why the Content Audit Step Is the Most Underrated Part</h2>
             <p>
-              Most SEO guides focus entirely on creating new content. The audit step in Meridian's workflow — reviewing and updating two older pieces per week — was responsible for a disproportionate share of their ranking gains.
+              Most SEO guides focus entirely on creating new content. The audit step in Meridian's workflow, reviewing and updating two older pieces per week, was responsible for a disproportionate share of their ranking gains.
             </p>
             <p>
-              The reason is simple: Google's algorithm rewards freshness and depth. A piece that was published eight months ago and has since been updated with new data, additional sections, and better internal links will consistently outperform a newer piece that has never been touched. The <Link href="/blog/content-audit-90-minutes-ai-tools">content audit process</Link> does not need to be exhaustive to be effective. Even small, targeted improvements — adding a paragraph that answers a related question, inserting a link to a newer piece, updating a statistic — compound over time.
+              The reason is simple: Google's algorithm rewards freshness and depth. A piece that was published eight months ago and has since been updated with new data, additional sections, and better internal links will consistently outperform a newer piece that has never been touched. The <Link href="/blog/content-audit-90-minutes-ai-tools">content audit process</Link> does not need to be exhaustive to be effective. Even small, targeted improvements compound over time: adding a paragraph that answers a related question, inserting a link to a newer piece, or updating a statistic.
             </p>
             <p>
               RankPilot's content audit tool surfaces exactly which pieces need attention and why. Rather than manually reviewing every article, Jamie could see at a glance which pieces had keyword cannibalization issues, which were missing internal links to newer content, and which had thin sections that competitors were outranking on. The thirty minutes per week she spent on audits consistently produced the highest ROI of any activity in her workflow.
@@ -447,11 +447,11 @@ export default function SaasContentMoatPage() {
             },
             {
               title: "Track rankings weekly, not monthly",
-              body: "Weekly rank tracking in RankPilot lets you catch position changes while they are still actionable. A piece that drops from position 4 to position 9 needs attention now — not in your monthly review when it has already lost momentum."
+              body: "Weekly rank tracking in RankPilot lets you catch position changes while they are still actionable. A piece that drops from position 4 to position 9 needs attention now, not in your monthly review when it has already lost momentum."
             },
             {
               title: "Audit older content continuously",
-              body: "Review and update two older pieces per week. Focus on pieces ranking in positions 5–20 — these have the most to gain from targeted improvements. Use RankPilot's audit output to identify exactly what to fix rather than guessing."
+              body: "Review and update two older pieces per week. Focus on pieces ranking in positions 5–20; these have the most to gain from targeted improvements. Use RankPilot's audit output to identify exactly what to fix rather than guessing."
             },
           ]} />
 
@@ -464,23 +464,23 @@ export default function SaasContentMoatPage() {
               The term gets used loosely, but a content moat has a specific meaning in competitive SEO: it is a body of interconnected, high-quality content on a defined topic set that is difficult for competitors to replicate quickly. It is not about volume. It is about depth, internal architecture, and the accumulated trust that comes from consistent publishing and updating over time.
             </p>
             <p>
-              Meridian's moat is not impenetrable. A well-funded competitor could hire a team of writers and attempt to out-publish them. But they would need to produce better content, build equivalent internal linking structures, earn comparable backlinks, and wait for Google to trust their domain — all at the same time. The compounding advantage of eighteen months of consistent work is not easily bought.
+              Meridian's moat is not impenetrable. A well-funded competitor could hire a team of writers and attempt to out-publish them. But they would need to produce better content, build equivalent internal linking structures, earn comparable backlinks, and wait for Google to trust their domain, all at the same time. The compounding advantage of eighteen months of consistent work is not easily bought.
             </p>
             <p>
               The deeper point is that the moat is not just a defensive asset. It is a growth engine. Every new piece Meridian publishes now ranks faster because it inherits authority from the existing cluster. Every update to an older piece strengthens the whole network. The three hours per week that felt like a leap of faith in month one now generates a return that no paid channel in their stack can match on a cost-per-acquisition basis.
             </p>
             <p>
-              That is the real argument for starting SEO early, staying consistent, and using tools that make the research and auditing fast enough to fit into a lean team's schedule. The window to build a content moat in most SaaS categories is still open — but it closes a little more every quarter as more teams figure this out.
+              That is the real argument for starting SEO early, staying consistent, and using tools that make the research and auditing fast enough to fit into a lean team's schedule. The window to build a content moat in most SaaS categories is still open, but it closes a little more every quarter as more teams figure this out.
             </p>
 
           </div>
 
           <KeyTakeaways items={[
             "Keyword research done once, correctly, is worth more than months of undirected publishing.",
-            "Topic clusters — one cornerstone plus three supporting pieces — build authority faster than isolated articles.",
+            "Topic clusters (one cornerstone plus three supporting pieces) build authority faster than isolated articles.",
             "Three hours per week is enough if those hours are spent on rank tracking, content briefs, and auditing rather than writing.",
             "Continuous auditing of older content consistently outperforms creating new content in terms of ranking gains per hour invested.",
-            "The compounding effect of SEO becomes visible around month four to six — the teams that quit before then never see the return.",
+            "The compounding effect of SEO becomes visible around month four to six; the teams that quit before then never see the return.",
             "A content moat is a competitive advantage that compounds over time and is difficult for competitors to replicate quickly.",
           ]} />
 
@@ -491,19 +491,19 @@ export default function SaasContentMoatPage() {
             },
             {
               q: "Do I need a dedicated SEO person or can a generalist marketer run this workflow?",
-              a: "A generalist marketer can absolutely run this workflow. The reason Meridian succeeded with one person is that RankPilot handles the technical complexity — keyword clustering, difficulty scoring, content auditing, rank tracking — so the human work is strategic rather than analytical. You need someone who can read data and make decisions, not someone with deep technical SEO expertise."
+              a: "A generalist marketer can absolutely run this workflow. The reason Meridian succeeded with one person is that RankPilot handles the technical complexity: keyword clustering, difficulty scoring, content auditing, rank tracking. The human work is strategic rather than analytical. You need someone who can read data and make decisions, not someone with deep technical SEO expertise."
             },
             {
               q: "What if my SaaS is in a very competitive category like CRM or project management?",
-              a: "Highly competitive categories require more patience and a tighter initial focus. Rather than targeting category-level keywords like 'CRM software,' start with highly specific problem-framing queries where the competition is thinner. RankPilot's difficulty scoring helps identify these gaps. The cluster approach still works — it just takes longer to build enough domain authority to compete on the broader terms."
+              a: "Highly competitive categories require more patience and a tighter initial focus. Rather than targeting category-level keywords like 'CRM software,' start with highly specific problem-framing queries where the competition is thinner. RankPilot's difficulty scoring helps identify these gaps. The cluster approach still works; it just takes longer to build enough domain authority to compete on the broader terms."
             },
             {
               q: "How many articles do I need before the cluster effect kicks in?",
-              a: "A complete cluster — one cornerstone and three supporting pieces — is the minimum viable unit. You will typically see the cluster effect (supporting pieces boosting the cornerstone's rankings) within 4–8 weeks of publishing all four pieces, assuming they are well-linked to each other and to relevant product pages."
+              a: "A complete cluster (one cornerstone and three supporting pieces) is the minimum viable unit. You will typically see the cluster effect (supporting pieces boosting the cornerstone's rankings) within 4–8 weeks of publishing all four pieces, assuming they are well-linked to each other and to relevant product pages."
             },
             {
               q: "Is this approach still relevant with AI Overviews changing how search results look?",
-              a: "Yes — and in some ways the cluster approach is more important now than it was before AI Overviews. Google's AI summaries draw heavily from authoritative, well-structured content on specific topics. Sites with deep, interconnected content on a defined topic set are more likely to be cited in AI Overviews than sites with broad, shallow coverage. The fundamentals of depth and authority have not changed; the interface for displaying them has."
+              a: "Yes, and in some ways the cluster approach is more important now than it was before AI Overviews. Google's AI summaries draw heavily from authoritative, well-structured content on specific topics. Sites with deep, interconnected content on a defined topic set are more likely to be cited in AI Overviews than sites with broad, shallow coverage. The fundamentals of depth and authority have not changed; the interface for displaying them has."
             },
           ]} />
 
