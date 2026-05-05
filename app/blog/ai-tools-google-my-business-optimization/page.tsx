@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 "use client";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -257,23 +256,6 @@ function InlineCta() {
   );
 }
 
-
-export const metadata: Metadata = {
-  title: 'AI Tools for Google My Business Optimization in 2026 | RankPilot',
-  description: 'The specific AI tools and workflows producing measurable results for local businesses optimizing their Google Business Profile.',
-  openGraph: {
-    title: 'AI Tools for Google My Business Optimization in 2026 | RankPilot',
-    description: 'The specific AI tools and workflows producing measurable results for local businesses optimizing their Google Business Profile.',
-  
-    images: [{ url: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/gmb-optimization-blog-featured-HWK8g6sgB6DknKy6aKwnTQ.webp', width: 1200, height: 630, alt: 'RankPilot' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Tools for Google My Business Optimization in 2026 | RankPilot',
-    description: 'The specific AI tools and workflows producing measurable results for local businesses optimizing their Google Business Profile.',
-    images: ['https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/gmb-optimization-blog-featured-HWK8g6sgB6DknKy6aKwnTQ.webp'],
-  },
-}
 
 export default function AiToolsGmbOptimizationPage() {
   return (

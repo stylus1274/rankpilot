@@ -1,6 +1,5 @@
 "use client"
 
-import type { Metadata } from 'next'
 // ─── Design tokens (matches how-it-works/page.tsx & blog/page.tsx) ────────────
 // Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
 // Primary: #1d63ff / #2457f5   Dark bg: #071225   Body text: #667085
@@ -266,22 +265,6 @@ const COMPARISON_ROWS = [
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export const metadata: Metadata = {
-  title: 'RankPilot Features | AI-Powered SEO Tools',
-  description: "Explore RankPilot's full feature set — rank tracking, content audits, AI recommendations, and more.",
-  openGraph: {
-    title: 'RankPilot Features | AI-Powered SEO Tools',
-    description: "Explore RankPilot's full feature set — rank tracking, content audits, AI recommendations, and more.",
-  
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'RankPilot' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'RankPilot Features | AI-Powered SEO Tools',
-    description: 'AI-Powered SEO Platform',
-    images: ['/og-image.png'],
-  },
-}
 
 export default function FeaturesPage() {
   return (

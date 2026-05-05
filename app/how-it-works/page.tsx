@@ -1,6 +1,5 @@
 'use client'
 
-import type { Metadata } from 'next'
 // ─── Design tokens (matches rankpilot-landing.tsx & blog/page.tsx) ────────────
 // Font: Plus Jakarta Sans (--font-display) + DM Sans (--font-sans)
 // Primary: #1d63ff / #2457f5   Dark bg: #071225   Body text: #667085
@@ -259,22 +258,6 @@ function ToolCard({ icon: Icon, title, desc, accentColor }: {
 
 // ─── Main page ────────────────────────────────────────────────────────────────
 
-export const metadata: Metadata = {
-  title: 'How RankPilot Works | Your SEO Workflow Simplified',
-  description: 'See how RankPilot connects rank tracking, content audits, and AI recommendations into one seamless workflow.',
-  openGraph: {
-    title: 'How RankPilot Works | Your SEO Workflow Simplified',
-    description: 'See how RankPilot connects rank tracking, content audits, and AI recommendations into one seamless workflow.',
-  
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'RankPilot' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How RankPilot Works | Your SEO Workflow Simplified',
-    description: 'See how RankPilot connects rank tracking, content audits, and AI recommendations into one seamless workflow.',
-    images: ['/og-image.png'],
-  },
-}
 
 export default function HowItWorksPage() {
   const [activePhase, setActivePhase] = useState('01')
