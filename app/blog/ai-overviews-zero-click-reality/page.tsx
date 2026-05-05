@@ -387,21 +387,21 @@ export default function AiOverviewsZeroClickPage() {
           <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
             <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Link href="/blog/generative-engine-optimization-explained" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
-                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">GEO</span>
-                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">Generative Engine Optimization Explained: The Complete Guide</p>
+              <Link href="/blog/generative-engine-optimization-explained" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">GEO</span>
+                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">Generative Engine Optimization Explained: The Complete Guide</p>
               </Link>
-              <Link href="/blog/content-formats-google-ai-overviews" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
-                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">AI Overviews</span>
-                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">Content Formats That Get Featured in Google AI Overviews</p>
+              <Link href="/blog/content-formats-google-ai-overviews" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">AI Overviews</span>
+                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">Content Formats That Get Featured in Google AI Overviews</p>
               </Link>
-              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
-                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">SEO Automation</span>
-                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
+              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">SEO Automation</span>
+                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
               </Link>
-              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
-                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">Content Strategy</span>
-                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
+              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">Content Strategy</span>
+                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
               </Link>
             </div>
           </div>

@@ -513,9 +513,9 @@ export default function SaasContentMoatPage() {
                 { title: "Google Keyword Planner: How to Use It for Smarter Keyword Research", slug: "google-keyword-planner-smarter-research", category: "Keyword Research" },
                 { title: "The Role of AI Tools in SEO Audits: What to Expect in 2026", slug: "ai-tools-seo-audits-2026", category: "AI Tools" },
               ].map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
-                  <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">{post.category}</span>
-                  <p className="font-display text-sm font-black leading-snug text-[#071225] group-hover:text-[#2457f5] transition-colors">{post.title}</p>
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
+                  <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">{post.category}</span>
+                  <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">{post.title}</p>
                 </Link>
               ))}
             </div>
