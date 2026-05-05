@@ -42,6 +42,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    category: 'Use Case',
+    date: 'May 5, 2026',
+    readTime: '11 min read',
+    title: 'How a SaaS Startup Built a Content Moat with 3 Hours of SEO Work Per Week',
+    excerpt:
+      'When Meridian hit their Series A, their organic search traffic was zero. Eighteen months later, organic was their second-largest acquisition channel. Here is exactly how they did it with one person and three hours per week.',
+    slug: 'saas-content-moat-seo-3-hours-per-week',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+  },
+  {
     category: 'Content Strategy',
     date: 'April 11, 2026',
     readTime: '12 min read',
@@ -133,7 +143,7 @@ const posts: Post[] = [
   },
 ]
 
-const categories = ['All', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
+const categories = ['All', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
 
 // Category colour accents
 const categoryColor: Record<string, string> = {
@@ -143,6 +153,7 @@ const categoryColor: Record<string, string> = {
   'Local SEO': '#059669',
   'GEO/AIO': '#d97706',
   'Google Search Console': '#dc2626',
+  'Use Case': '#0891b2',
 }
 
 function smoothScrollTo(href: string) {

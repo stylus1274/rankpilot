@@ -1,5 +1,5 @@
 // ─── Posts Sitemap ────────────────────────────────────────────────────────────
-// Serves /sitemap/1.xml — all blog post pages
+// Serves /sitemap/posts.xml — all blog post pages
 // Referenced by /sitemap-index.xml
 // ─────────────────────────────────────────────────────────────────────────────
 import { NextResponse } from 'next/server'
@@ -8,6 +8,7 @@ const SITE_URL =
   process.env.NEXTAUTH_URL ?? 'https://rankpilot-sand.vercel.app'
 
 const posts = [
+  { slug: 'saas-content-moat-seo-3-hours-per-week', lastmod: '2026-05-05' },
   { slug: 'content-audit-90-minutes-ai-tools', lastmod: '2026-04-11' },
   { slug: '7-ways-businesses-benefit-seo-automation-ai', lastmod: '2026-02-22' },
   { slug: '5-digital-marketing-challenges-2026', lastmod: '2026-01-23' },
