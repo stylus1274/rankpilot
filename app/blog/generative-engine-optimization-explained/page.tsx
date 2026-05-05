@@ -552,78 +552,30 @@ export default function GEOPost() {
         {/* ── Related posts ──────────────────────────────────────────────────── */}
         <section className="bg-[#f8fafc] py-16 sm:py-20">
           <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-            <h2 className="font-display mb-10 text-3xl font-black tracking-tight text-[#071225]">Related Articles</h2>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedPosts.map((post) => (
-                <motion.article
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                  className="group flex flex-col overflow-hidden rounded-[28px] bg-white shadow-[0_18px_55px_rgba(16,24,40,0.07)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_28px_70px_rgba(29,99,255,0.13)]"
-                >
-                  <div className="relative h-[160px] overflow-hidden bg-[#eef5ff]">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="h-12 w-12 rounded-xl bg-[#2457f5]/20" />
-                    </div>
-                    <span className="absolute left-4 top-4 rounded-full bg-[#2457f5] px-3 py-1 text-xs font-bold text-white">
-                      {post.category}
-                    </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <p className="mb-2 text-xs text-[#94a3b8]">{post.date}</p>
-                    <h3 className="font-display mb-3 text-lg font-black leading-snug text-[#071225] transition-colors group-hover:text-[#2457f5]">
-                      {post.title}
-                    </h3>
-                    <p className="mb-4 flex-1 text-sm leading-7 text-[#667085] line-clamp-2">{post.excerpt}</p>
-                    <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-bold text-[#2457f5] transition-all duration-200 hover:gap-3">
-                      Read Article <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.article>
-              ))}
+          {/* Related Articles */}
+          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
+            <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">Content Strategy</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
+              </Link>
+              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">SEO Automation</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
+              </Link>
+              <Link href="/blog/ai-overviews-zero-click-reality" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">GEO / AIO</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">AI Overviews and the Zero-Click Reality: What It Means for Your Traffic</p>
+              </Link>
+              <Link href="/blog/saas-content-moat-seo-3-hours-per-week" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">Use Case</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">How a SaaS Startup Built a Content Moat with 3 Hours of SEO Work Per Week</p>
+              </Link>
             </div>
           </div>
-        </section>
-
-
-      {/* ── Related Posts ─────────────────────────────────────────────────── */}
-      <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
-        <div className="mx-auto max-w-[860px] px-5 sm:px-8">
-          <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <Link
-              href="/blog/content-audit-90-minutes-ai-tools"
-              className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md"
-            >
-              <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
-              <p className="mt-3 font-display text-base font-black text-[#071225] group-hover:text-[#2457f5] transition-colors">
-                How to Do a Content Audit in 90 Minutes Using AI Tools
-              </p>
-              <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
-              <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">
-                A step-by-step guide to completing a focused, actionable content audit in 90 minutes — using AI to do the heavy lifting.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
-            </Link>
-            <Link
-              href="/blog/7-ways-businesses-benefit-seo-automation-ai"
-              className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md"
-            >
-              <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">AI Tools</span>
-              <p className="mt-3 font-display text-base font-black text-[#071225] group-hover:text-[#2457f5] transition-colors">
-                7 Ways Businesses Benefit from SEO Automation Using AI
-              </p>
-              <p className="mt-2 text-sm text-[#94a3b8]">Feb 22, 2026 · 10 min read</p>
-              <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">
-                How AI-powered automation handles keyword research, rank tracking, content audits, and reporting — saving teams 5 to 20 hours every week.
-              </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
-            </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
         <Footer />
       </main>

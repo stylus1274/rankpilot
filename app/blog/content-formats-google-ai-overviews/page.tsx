@@ -370,36 +370,28 @@ export default function ContentFormatsAiOverviewsPage() {
             { q: "What about schema markup - does it help with AI Overviews?", a: "Schema markup helps Google understand the structure and type of your content, which can indirectly support AI Overview citation. FAQ schema, HowTo schema, and Article schema are the most relevant types. However, schema is a supplement to good content structure, not a replacement for it. A well-structured page without schema will outperform a poorly structured page with schema." },
           ]} />
         </article>
-
-                {/* Related Posts */}
-        <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
-          <div className="mx-auto max-w-[860px] px-5 sm:px-8">
-            <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-              <Link href="/blog/generative-engine-optimization-explained" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">Generative Engine Optimization (GEO) Explained</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Mar 18, 2026 · 16 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">AI search engines don't rank pages — they cite them. Learn what GEO is and the three content traits that get you cited.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+          {/* Related Articles */}
+          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
+            <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link href="/blog/ai-overviews-zero-click-reality" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">GEO / AIO</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">AI Overviews and the Zero-Click Reality: What It Means for Your Traffic</p>
               </Link>
-              <Link href="/blog/ai-overviews-zero-click-reality" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">GEO / AIO</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">AI Overviews and the Zero-Click Reality: What It Means for Your Traffic</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Feb 5, 2026 · 14 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">Zero-click searches are rising. Here is what the data actually shows and what you should do about it.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              <Link href="/blog/generative-engine-optimization-explained" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">GEO</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">Generative Engine Optimization Explained: The Complete Guide</p>
               </Link>
-              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A step-by-step framework for auditing your entire content library in under two hours using RankPilot.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">Content Strategy</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
+              </Link>
+              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">SEO Automation</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
               </Link>
             </div>
           </div>
-        </section>
 
         <Footer />
       </main>

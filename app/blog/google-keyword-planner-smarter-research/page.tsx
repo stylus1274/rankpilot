@@ -387,36 +387,28 @@ export default function GoogleKeywordPlannerPage() {
             { q: "What is the best way to organize keyword research output?", a: "Export to a spreadsheet and organize by three dimensions: search intent (informational/commercial/transactional), priority score (volume multiplied by gap from current ranking), and content type needed (new page, update existing page, consolidate with another page). This structure makes it immediately actionable rather than just a list of keywords." },
           ]} />
         </article>
-
-                {/* Related Posts */}
-        <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
-          <div className="mx-auto max-w-[860px] px-5 sm:px-8">
-            <p className="mb-8 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">SEO Tools</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">The Best AI Tools for SEO Audits in 2026</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Jan 14, 2026 · 11 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A practical guide to using AI tools across every phase of the modern SEO audit workflow.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+          {/* Related Articles */}
+          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
+            <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">SEO Tools</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">The Role of AI Tools in SEO Audits: What to Expect in 2026</p>
               </Link>
-              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Content Strategy</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Apr 11, 2026 · 12 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">A step-by-step framework for auditing your entire content library in under two hours using RankPilot.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              <Link href="/blog/content-audit-90-minutes-ai-tools" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">Content Strategy</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">How to Do a Content Audit in 90 Minutes Using AI Tools</p>
               </Link>
-              <Link href="/blog/ai-tools-google-my-business-optimization" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="inline-block rounded-full bg-[#2457f5]/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#2457f5]">Local SEO</span>
-                <p className="mt-3 font-display text-base font-black text-[#071225] transition-colors group-hover:text-[#2457f5]">AI Tools for Google My Business Optimization in 2026</p>
-                <p className="mt-2 text-sm text-[#94a3b8]">Dec 20, 2025 · 12 min read</p>
-                <p className="mt-3 text-sm leading-relaxed text-[#4a5568]">How AI is transforming local SEO — from automated review responses to GBP content generation and citation monitoring.</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#2457f5]">Read Article →</span>
+              <Link href="/blog/saas-content-moat-seo-3-hours-per-week" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">Use Case</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">How a SaaS Startup Built a Content Moat with 3 Hours of SEO Work Per Week</p>
+              </Link>
+              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-xl border border-[#e8edf5] bg-white p-5 transition-shadow hover:shadow-md">
+                <span className="mb-2 inline-block rounded-full bg-[#eef2ff] px-2.5 py-1 text-xs font-semibold text-[#2457f5]">SEO Automation</span>
+                <p className="mt-2 font-display text-sm font-black leading-snug text-[#071225]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
               </Link>
             </div>
           </div>
-        </section>
 
         <Footer />
       </main>
