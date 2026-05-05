@@ -12,11 +12,11 @@ export function GET() {
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>${SITE_URL}/sitemap/0.xml</loc>
+    <loc>${SITE_URL}/sitemap/pages.xml</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
   </sitemap>
   <sitemap>
-    <loc>${SITE_URL}/sitemap/1.xml</loc>
+    <loc>${SITE_URL}/sitemap/posts.xml</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
   </sitemap>
 </sitemapindex>`
