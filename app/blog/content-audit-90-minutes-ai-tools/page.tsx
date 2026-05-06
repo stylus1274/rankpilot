@@ -299,30 +299,6 @@ export default function ContentAuditPost() {
             </div>
            </article>
       </div>
-          {/* Related Articles */}
-          <div className="not-prose mt-16 border-t border-[#e8edf5] pt-12">
-            <p className="mb-6 font-display text-2xl font-black text-[#071225]">Related Articles</p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Link href="/blog/ai-tools-seo-audits-2026" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">SEO Tools</span>
-                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">The Role of AI Tools in SEO Audits: What to Expect in 2026</p>
-              </Link>
-              <Link href="/blog/7-ways-businesses-benefit-seo-automation-ai" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">SEO Automation</span>
-                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">7 Ways Businesses Benefit from SEO Automation Using AI</p>
-              </Link>
-              <Link href="/blog/google-keyword-planner-smarter-research" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">Keyword Research</span>
-                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">Google Keyword Planner: How to Use It for Smarter Keyword Research</p>
-              </Link>
-              <Link href="/blog/saas-content-moat-seo-3-hours-per-week" className="group rounded-2xl border border-[#e8edf5] bg-white p-6 transition-shadow hover:shadow-md">
-                <span className="mb-3 inline-block rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">Use Case</span>
-                <p className="mt-3 font-display text-base font-bold leading-snug text-[#2457f5]">How a SaaS Startup Built a Content Moat with 3 Hours of SEO Work Per Week</p>
-              </Link>
-            </div>
-          </div>
-
-
       {/* ── Related Posts ─────────────────────────────────────────────────── */}
       <section className="border-t border-[#e8edf5] bg-[#f8faff] py-16">
         <div className="mx-auto max-w-[860px] px-5 sm:px-8">

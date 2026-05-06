@@ -239,31 +239,28 @@ function Header() {
         <Logo />
         <nav className="hidden items-center gap-1 rounded-full bg-[#f4f8ff] p-1 lg:flex" aria-label="Primary navigation">
           {safeNavItems?.map?.((item: { label: string; href: string }) => (
-            <button
+            <Link
               key={item?.label ?? item?.href}
-              type="button"
-              onClick={() => handleNavClick(item?.href)}
+              href={item?.href ?? '/'}
               className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
             >
               {item?.label ?? ''}
-            </button>
+            </Link>
           )) ?? null}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <button
-            type="button"
-            onClick={() => smoothScrollTo('#trial')}
+          <Link
+            href="/pricing"
             className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-[#f4f8ff] hover:text-[#1d63ff]"
           >
             Log In
-          </button>
-          <button
-            type="button"
-            onClick={() => smoothScrollTo('#trial')}
+          </Link>
+          <Link
+            href="/pricing"
             className="inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-6 py-3 text-sm font-extrabold text-white shadow-[0_14px_30px_rgba(29,99,255,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0b52e7]"
           >
             Get Started
-          </button>
+          </Link>
         </div>
         <button
           type="button"
@@ -282,24 +279,21 @@ function Header() {
       >
         <div className="grid gap-2 px-5 pb-5">
           {safeNavItems?.map?.((item: { label: string; href: string }) => (
-            <button
+            <Link
               key={`mobile-${item?.label ?? item?.href}`}
-              type="button"
-              onClick={() => {
-                handleNavClick(item?.href)
-                setOpen(false)
-              }}
+              href={item?.href ?? '/'}
+              onClick={() => setOpen(false)}
               className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
             >
               {item?.label ?? ''}
-            </button>
+            </Link>
           )) ?? null}
-          <button type="button" onClick={() => smoothScrollTo('#trial')} className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]">
+          <Link href="/pricing" className="rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]">
             Log In
-          </button>
-          <button type="button" onClick={() => smoothScrollTo('#trial')} className="rounded-2xl bg-[#1d63ff] px-5 py-4 text-left font-extrabold text-white">
+          </Link>
+          <Link href="/pricing" className="rounded-2xl bg-[#1d63ff] px-5 py-4 text-left font-extrabold text-white">
             Get Started
-          </button>
+          </Link>
         </div>
       </motion.div>
     </header>
@@ -328,14 +322,13 @@ function Hero() {
             {hero.subheadline}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button
-              type="button"
-              onClick={() => smoothScrollTo('#pricing')}
+            <Link
+              href="/pricing"
               className="inline-flex min-w-[290px] items-center justify-center gap-4 rounded-lg bg-[#2457f5] px-8 py-4 text-lg font-extrabold text-white shadow-[0_18px_40px_rgba(29,99,255,0.25)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0b52e7] sm:min-w-0"
             >
               {hero.ctaPrimary}
               <ArrowRight className="h-5 w-5" />
-            </button>
+            </Link>
             <button
               type="button"
               onClick={() => smoothScrollTo('#solutions')}
@@ -457,9 +450,9 @@ function BenefitsSection() {
                 <li key={item} className="flex items-center gap-3 font-bold"><Check className="h-5 w-5 text-[#1d63ff]" />{item}</li>
               )) ?? null}
             </ul>
-            <button type="button" onClick={() => smoothScrollTo('#pricing')} className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#101828] px-7 py-4 font-extrabold text-white shadow-[0_16px_35px_rgba(16,24,40,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d63ff]">
+            <Link href="/pricing" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#101828] px-7 py-4 font-extrabold text-white shadow-[0_16px_35px_rgba(16,24,40,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d63ff]">
               {benefits.ctaButton} <ArrowRight className="h-5 w-5" />
-            </button>
+            </Link>
           </div>
           <div className="rounded-[28px] bg-white p-3 shadow-[0_22px_60px_rgba(29,99,255,0.12)]">
             <div className="relative aspect-[930/681] overflow-hidden rounded-[20px] bg-[#eef5ff]">
@@ -602,9 +595,9 @@ function TrialSection() {
         </div>
         <h2 className="mx-auto max-w-3xl font-display text-4xl font-black tracking-[-0.04em] text-white sm:text-5xl lg:text-[58px] lg:leading-[1.03]">{cta.title}</h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/80">{cta.subtitle}</p>
-        <button type="button" onClick={() => smoothScrollTo('#pricing')} className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-extrabold text-[#1d63ff] shadow-[0_18px_45px_rgba(16,24,40,0.12)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#101828] hover:text-white">
+        <Link href="/pricing" className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-extrabold text-[#1d63ff] shadow-[0_18px_45px_rgba(16,24,40,0.12)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#101828] hover:text-white">
           {cta.button} <ArrowRight className="h-5 w-5" />
-        </button>
+        </Link>
         <div className="mt-9 flex flex-wrap justify-center gap-4 text-sm font-bold text-white/80">
           {cta.trustItems?.map?.((item: string) => <span key={item} className="inline-flex items-center gap-2"><Check className="h-4 w-4" />{item}</span>) ?? null}
         </div>
@@ -616,35 +609,55 @@ function TrialSection() {
 function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#071225] pt-20 text-white">
-      <div className="absolute inset-x-0 bottom-0 h-56 opacity-20" style={{ backgroundImage: `url(${ASSET_BASE}bg-footer.svg)`, backgroundSize: 'cover', backgroundPosition: 'center bottom' }} />
       <div className="relative mx-auto max-w-[1200px] px-5 pb-10 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
-          <div>
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="lg:col-span-2">
             <Logo variant="dark" />
-            <h2 className="mt-8 max-w-lg font-display text-4xl font-black tracking-[-0.04em] text-white">AI-powered SEO for teams that want to rank faster and write smarter.</h2>
-            <button type="button" onClick={() => smoothScrollTo('#pricing')} className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-7 py-4 font-extrabold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#1d63ff]">
-              Get Started With Us <ArrowRight className="h-5 w-5" />
-            </button>
+            <p className="mt-5 max-w-xs text-base leading-7 text-white/55">
+              The all-in-one SEO content platform that helps you research, plan, and create content that ranks.
+            </p>
           </div>
-          {[
-            { heading: 'Product', links: ['Features', 'Pricing', 'How It Works', 'Use Cases', 'Blog'] },
-            { heading: 'Resources', links: ['About', 'Contact', 'Help Center', 'Status'] },
-            { heading: 'Links', links: ['Contact', 'Security'] },
-          ]?.map?.((group: { heading: string; links: string[] }) => (
-            <div key={group?.heading ?? ''}>
-              <h4 className="mb-5 font-display text-lg font-black tracking-tight text-white">{group?.heading ?? ''}</h4>
-              <ul className="grid gap-3 text-sm font-bold text-white/60">
-                {group?.links?.map?.((link: string) => <li key={link}><button type="button" onClick={() => smoothScrollTo(link === 'Pricing' ? '#pricing' : '#home')} className="transition-colors duration-300 hover:text-white">{link}</button></li>) ?? null}
-              </ul>
-            </div>
-          )) ?? null}
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Product</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {[
+                { label: 'Features', href: '/features' },
+                { label: 'Pricing', href: '/pricing' },
+                { label: 'How It Works', href: '/how-it-works' },
+                { label: 'Use Cases', href: '/use-cases' },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="transition-colors hover:text-white">{item.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Company</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {[
+                { label: 'About', href: '/about' },
+                { label: 'Contact', href: '/contact' },
+                { label: 'Blog', href: '/blog' },
+                { label: 'Careers', href: '/' },
+              ].map((item) => (
+                <li key={item.label}><Link href={item.href} className="transition-colors hover:text-white">{item.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="mb-5 text-sm font-extrabold uppercase tracking-widest text-white/40">Resources</p>
+            <ul className="space-y-3 text-sm font-medium text-white/70">
+              {['Documentation', 'API Reference', 'Help Center', 'Status'].map((item) => (
+                <li key={item}><Link href="/" className="transition-colors hover:text-white">{item}</Link></li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm font-bold text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>©2026 RankPilot · All rights reserved.</p>
-          <div className="flex gap-4">
-            <button type="button" onClick={() => smoothScrollTo('#solutions')} className="hover:text-white">Product</button>
-            <button type="button" onClick={() => smoothScrollTo('#benefits')} className="hover:text-white">Resources</button>
-            <button type="button" onClick={() => smoothScrollTo('#questions')} className="hover:text-white">Security</button>
+          <span>© 2026 RankPilot. All rights reserved.</span>
+          <div className="flex gap-6">
+            {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
+              <Link key={item} href="/" className="transition-colors hover:text-white">{item}</Link>
+            ))}
           </div>
         </div>
       </div>
