@@ -2,7 +2,7 @@
   "seo": {
     "title": "RankPilot - AI-Powered SEO Content Platform",
     "description": "RankPilot combines keyword research, competitor analysis, content planning, and AI-powered article generation into one seamless workflow. Stop juggling tools and start ranking.",
-    "ogImage": "https://rankpilot.cc/og-image.png"
+    "ogImage": "https://rankpilot-sand.vercel.app/og-image.png"
   },
   "hero": {
     "badge": "AI-Powered SEO Content Platform",
@@ -11,221 +11,293 @@
     "subheadline": "RankPilot combines keyword research, competitor analysis, content planning, and AI-powered article generation into one seamless workflow. Stop juggling tools and start ranking.",
     "ctaPrimary": "Start Free 14-Day Trial",
     "ctaSecondary": "See How It Works",
-    "trustLine": "No credit card required · 14-day free trial · Cancel anytime"
+    "trustLine": "No credit card required \u00b7 14-day free trial \u00b7 Cancel anytime"
   },
   "features": {
-    "eyebrow": "Solutions",
-    "title": "Powerful Features to Boost Your Productivity",
-    "subtitle": "Stay ahead with features built for performance grow SaaS and productivity.",
+    "eyebrow": "Features",
+    "title": "Everything You Need to Dominate Search",
+    "subtitle": "From keyword discovery to published content, RankPilot handles every step of the SEO workflow in one place.",
     "items": [
-      { "title": "AI-power generated apps", "image": "features1.webp" },
-      { "title": "Build-in Integrations", "image": "features2.webp" },
-      { "title": "User-inter face design", "image": "features3.webp" },
-      { "title": "Track Your Success", "image": "features4.webp" },
-      { "title": "Real-time Collaborations", "image": "features5.webp" },
-      { "title": "Track Your Productivity", "image": "features6.webp" }
+      {
+        "title": "AI Keyword Research",
+        "image": "features1.webp"
+      },
+      {
+        "title": "Competitor Analysis",
+        "image": "features2.webp"
+      },
+      {
+        "title": "AI Content Briefs",
+        "image": "features3.webp"
+      },
+      {
+        "title": "Rank Tracking",
+        "image": "features4.webp"
+      },
+      {
+        "title": "Content Audit",
+        "image": "features5.webp"
+      },
+      {
+        "title": "GEO Optimization",
+        "image": "features6.webp"
+      }
     ]
   },
   "howItWorks": {
-    "eyebrow": "How it works",
-    "title": "No Setup Hassle - Just Start Working",
-    "subtitle": "No complex setup or training required - our platform is ready to use right out of the box.",
+    "eyebrow": "How It Works",
+    "title": "From Keyword to Published Article in Minutes",
+    "subtitle": "RankPilot guides you through every step of the SEO content workflow, so nothing falls through the cracks.",
     "steps": [
-      { "title": "Create Your Account & Unlock Possibilities" },
-      { "title": "Seamless Real-Time Collaboration" },
-      { "title": "Track Progress & Stay Organized" },
-      { "title": "Analyze & Optimize for Growth" }
+      {
+        "title": "Connect Your Site and Set Your Goals"
+      },
+      {
+        "title": "Discover High-Value Keywords and Gaps"
+      },
+      {
+        "title": "Generate AI-Powered Content Briefs"
+      },
+      {
+        "title": "Track Rankings and Optimize Over Time"
+      }
     ]
   },
   "benefits": {
     "eyebrow": "Benefits",
-    "title": "What Makes Our Users Stick With Us",
-    "subtitle": "Our clients love how effortless task management becomes with our platform.",
-    "ctaButton": "Get 14th-day Free Trial",
+    "title": "Why SEO Teams Choose RankPilot",
+    "subtitle": "Replace five fragmented tools with one platform built for the full content lifecycle.",
+    "ctaButton": "Start Free 14-Day Trial",
     "bulletPoints": [
-      "Transforming Complexity Into Clarity",
-      "Unlock Efficiency, Scale Faster, and Work Smarter"
+      "Cut research time by 80% with AI-powered keyword clustering",
+      "Publish content that ranks faster with data-backed briefs"
     ],
     "tabs": [
       {
-        "label": "Smart task organization",
-        "title": "Tame the Chaos with Smart Task Organization",
-        "text": "Organizing your work has never been easier smart task structuring, you can break projects into subtasks assign priorities, set deadlines use custom.",
+        "label": "Keyword Research",
+        "title": "Find the Keywords Your Competitors Are Missing",
+        "text": "RankPilot surfaces high-opportunity keywords your competitors rank for but you don't, grouped into topic clusters ready for your content calendar.",
         "image": "image-tab1.webp"
       },
       {
-        "label": "Built-in time tracking",
-        "title": "Seamless Built-In Time Management",
-        "text": "Track project effort, daily focus, and team capacity from one uncluttered dashboard built for momentum.",
+        "label": "Content Briefs",
+        "title": "Generate AI Briefs That Writers Actually Use",
+        "text": "Every brief includes target keywords, recommended headings, word count, competitor references, and internal link suggestions, all generated in seconds.",
         "image": "image-tab2.webp"
       },
       {
-        "label": "Mobile-optimize access",
-        "title": "Fully Mobile-Optimized SaaS Platform",
-        "text": "Stay productive wherever you are with our fully mobile-optimized platform. Access your projects, track progress, and collaborate.",
+        "label": "Rank Tracking",
+        "title": "Monitor Every Keyword Across Every Market",
+        "text": "Track daily ranking changes for all your target keywords, see SERP feature ownership, and get alerts when positions shift so you can act fast.",
         "image": "image-tab3-mobile.webp"
       },
       {
-        "label": "Secure and reliable",
-        "title": "Enterprise-Grade Security You Can Trust",
-        "text": "Organizing your work has never been easier smart task structuring, you can break projects into subtasks assign priorities, set deadlines use custom.",
+        "label": "Content Audit",
+        "title": "Find and Fix Underperforming Content Fast",
+        "text": "RankPilot scans your entire site, flags pages losing traffic, identifies cannibalization issues, and prioritizes exactly which articles to update first.",
         "image": "image-tab4.webp"
       },
       {
-        "label": "User-friendly design",
-        "title": "Experience a Truly User-Friendly Interface",
-        "text": "A calm, readable workspace keeps priorities clear and helps every team member move from planning to execution faster.",
+        "label": "GEO Optimization",
+        "title": "Optimize Content for AI Overviews and Generative Search",
+        "text": "Score your pages on clarity, structure, and extractability, the three signals that determine whether your content gets cited in Google AI Overviews.",
         "image": "image-tab5.webp"
       }
     ]
   },
   "pricing": {
     "eyebrow": "Pricing",
-    "title": "Transparent Pricing Plan",
-    "subtitle": "We offer flexible pricing plans designed to fit teams of all sizes - from solo",
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, scale when you're ready. No hidden fees, no long-term contracts.",
+    "toggleMonthly": "Monthly",
+    "toggleYearly": "Yearly",
+    "yearlySavings": "Save up to 20%",
     "plans": [
       {
         "name": "Starter",
         "monthly": 13,
-        "yearly": 113,
+        "yearly": 9,
         "featured": false,
         "features": [
-          "Up to 3 Task Projects",
-          "5 Team Members includes",
-          "Basic Task Management",
-          "Real-Time Collaboration",
-          "Calendar View & email support"
+          "Up to 3 Projects",
+          "50 keyword lookups / month",
+          "AI Article Generator (5 articles/mo)",
+          "Content Grader",
+          "Position Tracker (up to 50 keywords)",
+          "Basic Content Calendar",
+          "Email support"
         ]
       },
       {
         "name": "Professional",
         "monthly": 48,
-        "yearly": 468,
+        "yearly": 38,
         "featured": true,
         "features": [
-          "Unlimited Projects & Tasks",
-          "Unlimited (8) Team Members",
-          "Advanced Task Organization",
-          "Time Tracking File Attachments",
-          "Integration with Slack, Google Drive"
+          "Unlimited Projects",
+          "Unlimited keyword lookups",
+          "AI Article Generator (unlimited)",
+          "GSC Analyzer and Near Jumps",
+          "Competitor Analyzer",
+          "Topic Clusters and Content Calendar",
+          "Brand Voice and Internal Linking",
+          "Priority support"
         ]
       },
       {
         "name": "Enterprise",
         "monthly": 96,
-        "yearly": 969,
+        "yearly": 76,
         "featured": false,
         "features": [
-          "All Professional Features",
-          "Custom Workflows & Permissions",
-          "Dedicated Account Manager",
-          "Advanced Security & Compliance",
-          "Single Sign-On (SSO)"
+          "Everything in Professional",
+          "Custom team seats",
+          "White-label reports",
+          "Dedicated account manager",
+          "Custom AI model fine-tuning",
+          "Advanced security and SSO",
+          "SLA and uptime guarantee"
         ]
       }
     ]
   },
   "testimonials": {
     "eyebrow": "Testimonials",
-    "title": "Clients Testimonials",
-    "subtitle": "Our users are at the heart of everything we do and their feedback says it all.",
+    "title": "Trusted by SEO Teams and Content Marketers",
+    "subtitle": "See how RankPilot users are growing organic traffic and cutting research time.",
     "items": [
       {
-        "name": "Sarah Linda",
-        "title": "Operations Lead",
+        "name": "Sarah Mitchell",
+        "title": "Head of SEO, Growthly",
         "avatar": "avatar-image3.webp",
-        "quote": "\"We've tried multiple tools, but this one hits the sweet spot between simplicity and powerful features team's.\""
+        "quote": "\"RankPilot replaced three separate tools for us. Keyword research, content briefs, and rank tracking all in one place. Our output doubled in the first month.\""
       },
       {
-        "name": "James Bond",
-        "title": "Product Manager",
+        "name": "James Thornton",
+        "title": "Content Director, Scalepath",
         "avatar": "avatar-image8.webp",
-        "quote": "\"I love how easy it is to organize tasks, assign roles, and track progress. It helps me stay of everything without .\""
+        "quote": "\"The AI briefs are genuinely good. Writers know exactly what to cover, which keywords to target, and how long to write. Editing time dropped by 60%.\""
       },
       {
-        "name": "Priya Donald",
-        "title": "Growth Director",
+        "name": "Priya Sharma",
+        "title": "Growth Lead, Launchpad SaaS",
         "avatar": "avatar-image7.webp",
-        "quote": "\"The integration options and the clean interface make this to best task manage tool we've used so far recommend!\""
+        "quote": "\"We went from 8K to 38K monthly organic visitors in five months. RankPilot's content audit showed us exactly which pages to fix first.\""
       },
       {
         "name": "Elena Rossi",
-        "title": "Agency Founder",
+        "title": "Founder, Rossi Digital Agency",
         "avatar": "avatar-image6.webp",
-        "quote": "\"After testing countless apps, this one finally balances ease of use with the depth our team needs.\""
+        "quote": "\"Managing SEO for 12 clients used to be a nightmare. RankPilot's project structure and white-label reports make it look effortless.\""
       },
       {
         "name": "Anna Carter",
-        "title": "Team Strategist",
+        "title": "SEO Strategist, Meridian Labs",
         "avatar": "avatar-image9.webp",
-        "quote": "\"It's rare to find a tool that's both intuitive and packed with everything a growing team requires.\""
+        "quote": "\"The GEO scoring feature is unlike anything else on the market. We started appearing in Google AI Overviews within weeks of optimizing our top pages.\""
       },
       {
-        "name": "Maria Lopez",
-        "title": "Delivery Manager",
+        "name": "Marcus Lopez",
+        "title": "VP Marketing, Stackwise",
         "avatar": "avatar-image2.webp",
-        "quote": "\"From setup to daily use, it delivers exactly what we need - clean, smart, and incredibly efficient.\""
+        "quote": "\"I was skeptical about another SEO tool, but RankPilot's competitor gap analysis alone paid for itself in the first week. The keyword clusters are incredibly accurate.\""
       }
     ]
   },
   "faq": {
     "eyebrow": "Questions",
-    "title": "Still Curious? Find Your Answers Below",
+    "title": "Frequently Asked Questions",
     "items": [
       {
-        "q": "1. How is this different from other task management tools?",
-        "a": "Our tool blends modern design with advanced workflow automation, intuitive scheduling, and real-time team insights - giving you control without complexity.",
-        "link": "real-time team insights"
+        "q": "1. How is RankPilot different from other SEO tools?",
+        "a": "RankPilot is the only platform that covers the full SEO content lifecycle in one workflow: keyword research, competitor analysis, AI content briefs, rank tracking, content auditing, and GEO optimization. Most tools do one or two of these well. RankPilot does all of them.",
+        "link": "GEO optimization"
       },
       {
-        "q": "2. Do I need technical skills to use this platform?",
-        "a": "Our platform combines simplicity with powerful features like real-time collaboration, smart task organization, and seamless integrations - all in a clean, intuitive interface.",
-        "link": "seamless integrations"
+        "q": "2. Do I need technical SEO knowledge to use RankPilot?",
+        "a": "No. RankPilot is built for content marketers, writers, and growth teams, not just SEO specialists. The platform guides you through every step and explains what actions to take and why.",
+        "link": "content marketers"
       },
       {
-        "q": "3. Can I invite team members to my workspace?",
-        "a": "Yes - you can easily invite teammates to collaborate in real time, assign roles, share updates, and manage projects together - all within one unified workspace.",
-        "link": "manage projects together"
+        "q": "3. Can I connect my Google Search Console account?",
+        "a": "Yes. RankPilot integrates directly with Google Search Console to surface near-jump opportunities, track impressions and clicks, and identify pages that are close to ranking on page one.",
+        "link": "near-jump opportunities"
       },
       {
-        "q": "4. What happens if I reach the limit of my plan?",
-        "a": "When you reach your plan's limit, you'll still keep full access to your existing data, but advanced features, extra seats, and premium automation will pause until you upgrade or adjust your workspace.",
-        "link": "premium automation"
+        "q": "4. What happens when I reach my plan's keyword limit?",
+        "a": "You will retain full access to all your existing data and projects. Additional keyword lookups and advanced features will pause until you upgrade your plan or your monthly limit resets.",
+        "link": "upgrade your plan"
       },
       {
-        "q": "5. Do you offer a trial for premium features?",
-        "a": "Yes - you can explore all premium tools free for a limited time, including advanced reporting, custom workflows, and priority support access - no credit card required.",
-        "link": "priority support access"
+        "q": "5. Does RankPilot support multiple websites or client accounts?",
+        "a": "Yes. The Professional and Enterprise plans support unlimited projects, making RankPilot ideal for agencies managing multiple client sites. Enterprise includes white-label reporting and dedicated account management.",
+        "link": "white-label reporting"
       }
     ]
   },
   "integrations": {
     "eyebrow": "Integrations",
-    "title": "Seamless Integrations",
-    "subtitle": "Our platform seamlessly integrates with the tools your team already knows",
+    "title": "Works With Your Existing Stack",
+    "subtitle": "RankPilot connects with the tools your team already uses, so your workflow stays uninterrupted.",
     "items": [
-      { "name": "Dropbox", "image": "logo-dropbox.webp" },
-      { "name": "Pinterest", "image": "logo-pinterest.webp" },
-      { "name": "Discord", "image": "logo-discord.webp" },
-      { "name": "Telegram", "image": "logo-telegram.webp" },
-      { "name": "Mailchimp", "image": "mailchimp.webp" },
-      { "name": "Shopify", "image": "shopify.webp" },
-      { "name": "Zoom", "image": "zoom.webp" },
-      { "name": "MC360", "image": "mc360.webp" },
-      { "name": "Team", "image": "logo-team.webp" },
-      { "name": "Disqus", "image": "disqus.webp" },
-      { "name": "Notion", "image": "notion.webp" },
-      { "name": "Linksters", "image": "linksters.webp" }
+      {
+        "name": "Google Search Console",
+        "image": "logo-dropbox.webp"
+      },
+      {
+        "name": "Google Analytics",
+        "image": "logo-pinterest.webp"
+      },
+      {
+        "name": "WordPress",
+        "image": "logo-discord.webp"
+      },
+      {
+        "name": "Webflow",
+        "image": "logo-telegram.webp"
+      },
+      {
+        "name": "HubSpot",
+        "image": "mailchimp.webp"
+      },
+      {
+        "name": "Shopify",
+        "image": "shopify.webp"
+      },
+      {
+        "name": "Slack",
+        "image": "zoom.webp"
+      },
+      {
+        "name": "Zapier",
+        "image": "mc360.webp"
+      },
+      {
+        "name": "Ahrefs",
+        "image": "logo-team.webp"
+      },
+      {
+        "name": "Semrush",
+        "image": "disqus.webp"
+      },
+      {
+        "name": "Notion",
+        "image": "notion.webp"
+      },
+      {
+        "name": "Surfer SEO",
+        "image": "linksters.webp"
+      }
     ]
   },
   "cta": {
-    "title": "Take the First Step to Better Task Management",
-    "subtitle": "Sign up today and unlock a powerful suite of tools designed to help you organize tasks",
-    "button": "Get Started With Us",
+    "title": "Start Ranking with Less Effort",
+    "subtitle": "Join thousands of SEO teams using RankPilot to research faster, write better, and track what matters.",
+    "button": "Start Free 14-Day Trial",
     "trustItems": [
-      "Special Discounts & Offers",
-      "Webinars & Resources",
-      "Priority Support Access"
+      "No credit card required",
+      "14-day free trial",
+      "Cancel anytime"
     ]
   }
 }

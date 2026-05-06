@@ -214,7 +214,7 @@ function HeroVisual() {
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
     >
       <div className="relative aspect-[1935/1328] overflow-hidden rounded-[20px] bg-[#eef5ff]">
-        <Image src={`${ASSET_BASE}dashboard-banner.webp`} fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot task management dashboard preview" className="object-cover" />
+        <Image src={`${ASSET_BASE}dashboard-banner.webp`} fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot SEO platform dashboard preview" className="object-cover" />
       </div>
     </motion.div>
   )
@@ -621,14 +621,14 @@ function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
           <div>
             <Logo variant="dark" />
-            <h2 className="mt-8 max-w-lg font-display text-4xl font-black tracking-[-0.04em] text-white">Bring your website idea to life by guided SaaS assistance</h2>
+            <h2 className="mt-8 max-w-lg font-display text-4xl font-black tracking-[-0.04em] text-white">AI-powered SEO for teams that want to rank faster and write smarter.</h2>
             <button type="button" onClick={() => smoothScrollTo('#pricing')} className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#1d63ff] px-7 py-4 font-extrabold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#1d63ff]">
               Get Started With Us <ArrowRight className="h-5 w-5" />
             </button>
           </div>
           {[
-            { heading: 'Product', links: ['Documentation', 'Changelog', 'Pricing', 'Parsers', 'SDTF New', 'Use Cases', 'Launch Week'] },
-            { heading: 'Resources', links: ['Guide', 'Blog', 'Customers', 'Help Center'] },
+            { heading: 'Product', links: ['Features', 'Pricing', 'How It Works', 'Use Cases', 'Blog'] },
+            { heading: 'Resources', links: ['About', 'Contact', 'Help Center', 'Status'] },
             { heading: 'Links', links: ['Contact', 'Security'] },
           ]?.map?.((group: { heading: string; links: string[] }) => (
             <div key={group?.heading ?? ''}>
@@ -640,7 +640,7 @@ function Footer() {
           )) ?? null}
         </div>
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 text-sm font-bold text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>©2025 RankPilot · All rights reserved.</p>
+          <p>©2026 RankPilot · All rights reserved.</p>
           <div className="flex gap-4">
             <button type="button" onClick={() => smoothScrollTo('#solutions')} className="hover:text-white">Product</button>
             <button type="button" onClick={() => smoothScrollTo('#benefits')} className="hover:text-white">Resources</button>
