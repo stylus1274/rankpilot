@@ -42,6 +42,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    category: 'Keyword Research',
+    date: 'May 29, 2026',
+    readTime: '2 min read',
+    title: 'What Are Semantic Keywords and Why Do They Matter for SEO?',
+    excerpt:
+      'Semantic keywords are terms that share meaning with your target keyword. Learn what they are, why Google uses them, and how to use them to improve your rankings.',
+    slug: 'what-are-semantic-keywords',
+    image: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80',
+  },
+  {
     category: 'Use Case',
     date: 'May 5, 2026',
     readTime: '11 min read',
@@ -143,10 +153,11 @@ const posts: Post[] = [
   },
 ]
 
-const categories = ['All', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
+const categories = ['All', 'Keyword Research', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
 
 // Category colour accents
 const categoryColor: Record<string, string> = {
+  'Keyword Research': '#059669',
   'Content Strategy': '#7c3aed',
   'AI Tools': '#2457f5',
   'Marketing': '#0891b2',
