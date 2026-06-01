@@ -150,6 +150,17 @@ export default function SemanticKeywordsPost() {
               <span className="flex items-center gap-1.5"><Calendar className="h-4 w-4" /> May 29, 2026</span>
               <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> 2 min read</span>
             </div>
+              <div className="mt-5 flex items-center gap-3">
+                <img
+                  src="https://rankpilot-fr9zunye.manus.space/manus-storage/charlie-headshot_dd8e4e37.png"
+                  alt="Charlie Boudreau"
+                  className="h-10 w-10 rounded-full object-cover object-top ring-2 ring-white shadow-sm"
+                />
+                <div>
+                  <p className="text-sm font-semibold text-[#071225]">Charlie Boudreau</p>
+                  <p className="text-xs text-[#94a3b8]">Founder, RankPilot</p>
+                </div>
+              </div>
           </div>
         </section>
 

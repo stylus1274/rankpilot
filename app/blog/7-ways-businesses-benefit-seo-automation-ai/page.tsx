@@ -231,6 +231,17 @@ export default function SevenWaysSEOAutomationPage() {
               10 min read
             </span>
           </div>
+            <div className="mt-5 flex items-center gap-3">
+              <img
+                src="https://rankpilot-fr9zunye.manus.space/manus-storage/charlie-headshot_dd8e4e37.png"
+                alt="Charlie Boudreau"
+                className="h-10 w-10 rounded-full object-cover object-top ring-2 ring-white shadow-sm"
+              />
+              <div>
+                <p className="text-sm font-semibold text-[#071225]">Charlie Boudreau</p>
+                <p className="text-xs text-[#94a3b8]">Founder, RankPilot</p>
+              </div>
+            </div>
         </div>
       </section>
 
