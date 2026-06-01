@@ -5,7 +5,7 @@
 import { NextResponse } from 'next/server'
 
 const SITE_URL =
-  process.env.NEXTAUTH_URL ?? 'https://rankpilot-sand.vercel.app'
+  process.env.NEXTAUTH_URL ?? 'https://rankpilot.cc'
 
 const pages = [
   { url: '/', lastmod: '2026-04-11', changefreq: 'weekly', priority: '1.0' },

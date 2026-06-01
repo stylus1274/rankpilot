@@ -5,7 +5,7 @@
 import type { MetadataRoute } from 'next'
 
 const SITE_URL =
-  process.env.NEXTAUTH_URL ?? 'https://rankpilot-sand.vercel.app'
+  process.env.NEXTAUTH_URL ?? 'https://rankpilot.cc'
 
 export default function robots(): MetadataRoute.Robots {
   return {
