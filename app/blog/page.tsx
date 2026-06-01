@@ -42,6 +42,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    category: 'On-Page SEO',
+    date: 'June 1, 2026',
+    readTime: '8 min read',
+    title: 'On-Page SEO Checklist: 12 Things to Optimize Before You Publish',
+    excerpt:
+      'A practical 12-point checklist covering title tags, meta descriptions, heading structure, internal links, image alt text, page speed, and more. Run through it before every publish.',
+    slug: 'on-page-seo-checklist-12-things-to-optimize',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/onpage-seo-checklist-hero-c9YrtqDrkWkJAQ6aNREBRv.webp',
+  },
+  {
     category: 'Keyword Research',
     date: 'May 29, 2026',
     readTime: '2 min read',
@@ -153,10 +163,11 @@ const posts: Post[] = [
   },
 ]
 
-const categories = ['All', 'Keyword Research', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
+const categories = ['All', 'On-Page SEO', 'Keyword Research', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
 
 // Category colour accents
 const categoryColor: Record<string, string> = {
+  'On-Page SEO': '#ea580c',
   'Keyword Research': '#059669',
   'Content Strategy': '#7c3aed',
   'AI Tools': '#2457f5',
