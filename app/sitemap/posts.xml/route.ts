@@ -8,6 +8,7 @@ const SITE_URL =
   process.env.NEXTAUTH_URL ?? 'https://rankpilot.cc'
 
 const posts = [
+  { slug: 'how-to-use-google-search-console-ai-visibility-report', lastmod: '2026-07-12' },
   { slug: 'on-page-seo-checklist-12-things-to-optimize', lastmod: '2026-06-01' },
   { slug: 'what-are-semantic-keywords', lastmod: '2026-05-29' },
   { slug: 'saas-content-moat-seo-3-hours-per-week', lastmod: '2026-05-05' },

@@ -42,6 +42,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    category: 'AI Search',
+    date: 'July 12, 2026',
+    readTime: '9 min read',
+    title: 'How to Use Google Search Console\'s New AI Visibility Report',
+    excerpt:
+      'Google Search Console now shows how often your pages appear in AI Overviews and AI Mode. Here is a complete guide to finding the report, reading the data, and acting on what you find.',
+    slug: 'how-to-use-google-search-console-ai-visibility-report',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/gsc-ai-visibility-hero-UzcR5q3KkjJphvEpLVQmdR.webp',
+  },
+  {
     category: 'On-Page SEO',
     date: 'June 1, 2026',
     readTime: '8 min read',
@@ -163,10 +173,11 @@ const posts: Post[] = [
   },
 ]
 
-const categories = ['All', 'On-Page SEO', 'Keyword Research', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
+const categories = ['All', 'AI Search', 'On-Page SEO', 'Keyword Research', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
 
 // Category colour accents
 const categoryColor: Record<string, string> = {
+  'AI Search': '#2457f5',
   'On-Page SEO': '#ea580c',
   'Keyword Research': '#059669',
   'Content Strategy': '#7c3aed',
