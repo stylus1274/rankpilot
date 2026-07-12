@@ -242,7 +242,7 @@ function Header() {
             <Link
               key={item?.label ?? item?.href}
               href={item?.href ?? '/'}
-              className="rounded-full px-5 py-3 text-sm font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
+              className="rounded-full px-5 py-3 text-base font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
             >
               {item?.label ?? ''}
             </Link>
