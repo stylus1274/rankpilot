@@ -468,11 +468,11 @@ export default function GscAiVisibilityReport() {
           <div className="my-14 overflow-hidden rounded-2xl bg-gradient-to-br from-[#2457f5] to-[#1d3fc4] p-8 text-white">
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <p className="font-display text-xl font-black">Track Your AI Visibility Automatically</p>
-                <p className="mt-1.5 text-sm leading-7 text-white/75">RankPilot monitors your AI search impressions alongside your organic performance so you can spot gaps and opportunities without switching between reports.</p>
+                <p className="font-display text-xl font-black">Start Ranking in AI Search</p>
+                <p className="mt-1.5 text-sm leading-7 text-white/75">RankPilot helps you research, plan, and publish content that gets cited in AI Overviews and ranks in organic search. Try it free.</p>
               </div>
               <Link href="/pricing" className="not-prose inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-[#2457f5] transition-opacity hover:opacity-90">
-                See Plans
+                Sign Up Free
               </Link>
             </div>
           </div>
