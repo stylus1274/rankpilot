@@ -24,7 +24,7 @@ export function GET() {
   return new NextResponse(body, {
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=86400, stale-while-revalidate=3600',
+      'Cache-Control': 'public, max-age=3600, stale-while-revalidate=600',
     },
   })
 }
