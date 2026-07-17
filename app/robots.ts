@@ -1,6 +1,6 @@
 // ─── robots.ts ────────────────────────────────────────────────────────────────
 // Serves /robots.txt via Next.js App Router metadata convention
-// Points crawlers to the sitemap index so both sitemaps are discovered.
+// Points crawlers to the single flat sitemap at /sitemap.xml
 // ─────────────────────────────────────────────────────────────────────────────
 import type { MetadataRoute } from 'next'
 
@@ -16,6 +16,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/'],
       },
     ],
-    sitemap: `${SITE_URL}/sitemap-index.xml`,
+    sitemap: `${SITE_URL}/sitemap.xml`,
   }
 }
