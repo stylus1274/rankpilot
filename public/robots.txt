@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://rankpilot.cc/sitemap.xml
+Sitemap: https://rankpilot.cc/sitemap-blog.xml
