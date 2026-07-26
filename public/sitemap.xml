@@ -44,9 +44,15 @@
   </url>
   <url>
     <loc>https://rankpilot.cc/blog</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rankpilot.cc/blog/search-volume-vs-search-intent</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://rankpilot.cc/blog/how-to-use-google-search-console-ai-visibility-report</loc>

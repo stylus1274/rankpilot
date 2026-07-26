@@ -42,6 +42,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    category: 'Keyword Research',
+    date: 'July 26, 2026',
+    readTime: '8 min read',
+    title: 'The Difference Between Search Volume and Search Intent (And Why It Matters)',
+    excerpt:
+      'Search volume tells you how many people search for a keyword. Search intent tells you why. Learn why intent is the more important signal and how to use both together to build content that actually ranks and converts.',
+    slug: 'search-volume-vs-search-intent',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/search-intent-hero-8m6taauxMuoU9Yd5rsYkzJ.png',
+  },
+  {
     category: 'AI Search',
     date: 'July 12, 2026',
     readTime: '9 min read',
