@@ -42,6 +42,16 @@ type Post = {
 
 const posts: Post[] = [
   {
+    category: 'SEO Tools',
+    date: 'July 26, 2026',
+    readTime: '10 min read',
+    title: 'Best AI Content Optimization Tools for SEO in 2026',
+    excerpt:
+      'Surfer SEO, Clearscope, and MarketMuse help you rank faster and write smarter. See which tools fit your workflow in 2026 and where RankPilot fills the AI search visibility gap they leave behind.',
+    slug: 'ai-content-optimization-tools',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028505829/Fr9ZuNYEY37aSYMryA5gnX/ai-content-tools-hero-Znq2HQdZWX5bB5hyRRGnB3.png',
+  },
+  {
     category: 'Keyword Research',
     date: 'July 26, 2026',
     readTime: '8 min read',
@@ -183,7 +193,7 @@ const posts: Post[] = [
   },
 ]
 
-const categories = ['All', 'AI Search', 'On-Page SEO', 'Keyword Research', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
+const categories = ['All', 'AI Search', 'On-Page SEO', 'Keyword Research', 'SEO Tools', 'Use Case', 'AI Tools', 'Marketing', 'Local SEO', 'GEO/AIO', 'Google Search Console', 'Content Strategy']
 
 // Category colour accents
 const categoryColor: Record<string, string> = {
@@ -197,6 +207,7 @@ const categoryColor: Record<string, string> = {
   'GEO/AIO': '#d97706',
   'Google Search Console': '#dc2626',
   'Use Case': '#0891b2',
+  'SEO Tools': '#7c3aed',
 }
 
 function smoothScrollTo(href: string) {
