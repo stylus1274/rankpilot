@@ -244,8 +244,48 @@ function HeroVisual() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
     >
-      <div className="relative aspect-[2048/1187] overflow-hidden rounded-[26px] bg-[#eef5ff]">
-        <Image src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/jVXbrkJEaiCucUXa.webp" fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot SEO platform dashboard preview" className="object-cover" />
+      {/* Workflow card graphic replacing the dashboard screenshot */}
+      <div className="overflow-hidden rounded-[26px] bg-[#f0f2f7] px-10 py-10 sm:px-16 sm:py-14">
+        <div className="flex flex-col gap-4 sm:gap-5">
+          {/* Step 01 - collapsed */}
+          <div className="rounded-2xl border border-[#e2e5ef] bg-white/80 px-8 py-5 sm:px-10 sm:py-6">
+            <span className="font-mono text-base font-semibold tracking-[0.18em] text-[#b0b8cc] sm:text-lg">01 RESEARCH</span>
+          </div>
+          {/* Step 02 - collapsed */}
+          <div className="rounded-2xl border border-[#e2e5ef] bg-white/80 px-8 py-5 sm:px-10 sm:py-6">
+            <span className="font-mono text-base font-semibold tracking-[0.18em] text-[#b0b8cc] sm:text-lg">02 PLAN</span>
+          </div>
+          {/* Step 03 - active/expanded */}
+          <div className="rounded-2xl border border-[#d8e2f8] bg-white px-8 py-7 shadow-[0_12px_48px_rgba(36,87,245,0.10)] sm:px-10 sm:py-8">
+            <div className="mb-5 flex items-center justify-between">
+              <span className="font-mono text-base font-bold tracking-[0.18em] text-[#2457f5] sm:text-lg">03 CREATE</span>
+              <span className="rounded-full bg-[#eef3ff] px-4 py-1.5 text-sm font-semibold text-[#2457f5]">drafting</span>
+            </div>
+            <p className="mb-4 text-lg font-bold text-[#1a2233] sm:text-xl">Best AI content optimization tools for SEO</p>
+            <div className="mb-6 flex flex-wrap gap-3">
+              <span className="rounded-full border border-[#dce6fb] bg-[#f0f4ff] px-4 py-1.5 text-sm font-semibold text-[#2457f5]">2,900 vol</span>
+              <span className="rounded-full border border-[#dce6fb] bg-[#f0f4ff] px-4 py-1.5 text-sm font-semibold text-[#2457f5]">KD 34</span>
+              <span className="rounded-full border border-[#dce6fb] bg-[#f0f4ff] px-4 py-1.5 text-sm font-semibold text-[#2457f5]">9 clusters</span>
+            </div>
+            {/* Skeleton text lines */}
+            <div className="mb-6 flex flex-col gap-2.5 rounded-xl bg-[#f6f8fd] px-5 py-5">
+              <div className="h-3 w-full rounded-full bg-[#dce3f5]" />
+              <div className="h-3 w-[80%] rounded-full bg-[#dce3f5]" />
+              <div className="h-3 w-[62%] rounded-full bg-[#dce3f5]" />
+              <div className="h-3 w-full rounded-full bg-[#dce3f5]" />
+              <div className="h-3 w-[55%] rounded-full bg-[#dce3f5]" />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#2457f5]" />
+                <span className="text-base text-[#566179]">Generating section 4 of 9</span>
+              </div>
+              <button type="button" className="rounded-xl bg-[#1a2233] px-7 py-3 text-base font-bold text-white">
+                Publish
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.div>
   )
