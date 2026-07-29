@@ -31,10 +31,14 @@ import {
   Smartphone,
   Sparkles,
   Star,
-  TimerReset,
+  TrendingUp,
   Users2,
   X,
   Zap,
+  LineChart,
+  SearchCheck,
+  GitCompare,
+  BookOpen,
 } from 'lucide-react'
 import homepageContent from '@/content/homepage.json'
 
@@ -96,13 +100,39 @@ const benefitIcons: IconComponent[] = [Layers3, Clock3, Smartphone, ShieldCheck,
 const planIcons: IconComponent[] = [Rocket, Zap, LockKeyhole]
 
 const navItems = [
-  { label: 'Features', href: '/features' },
   { label: 'How It Works', href: '/how-it-works' },
   { label: 'Use Cases', href: '/use-cases' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+]
+
+const featuresDropdown = [
+  {
+    label: 'Rank Tracking',
+    description: 'Monitor keyword positions across Google and AI search in real time.',
+    href: '/features#rank-tracking',
+    icon: LineChart,
+  },
+  {
+    label: 'AI Overview Monitoring',
+    description: 'See which pages appear in AI Overviews and AI Mode results.',
+    href: '/features#ai-overview',
+    icon: SearchCheck,
+  },
+  {
+    label: 'Content Gap Analysis',
+    description: 'Discover topics your competitors rank for that you are missing.',
+    href: '/features#content-gap',
+    icon: GitCompare,
+  },
+  {
+    label: 'Keyword Research',
+    description: 'Find high-intent keywords that drive traffic and conversions.',
+    href: '/features#keyword-research',
+    icon: BookOpen,
+  },
 ]
 
 // Build typed data from JSON
@@ -222,6 +252,7 @@ function HeroVisual() {
 
 function Header() {
   const [open, setOpen] = useState(false)
+  const [featuresOpen, setFeaturesOpen] = useState(false)
   const router = useRouter()
   const safeNavItems = useMemo(() => navItems ?? [], [])
 
@@ -238,6 +269,51 @@ function Header() {
       <div className="mx-auto flex h-[78px] w-full max-w-none items-center justify-between px-5 sm:px-8 lg:px-14">
         <Logo />
         <nav className="hidden items-center gap-1 rounded-full bg-[#f4f8ff] p-1 lg:flex" aria-label="Primary navigation">
+          {/* Features dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setFeaturesOpen(true)}
+            onMouseLeave={() => setFeaturesOpen(false)}
+          >
+            <Link
+              href="/features"
+              className="inline-flex items-center gap-1 rounded-full px-5 py-3 text-base font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
+            >
+              Features
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${featuresOpen ? 'rotate-180' : ''}`} />
+            </Link>
+            {featuresOpen && (
+              <div className="absolute left-0 top-full pt-2 z-50">
+                <div className="w-72 rounded-2xl bg-white shadow-[0_20px_60px_rgba(16,24,40,0.14)] border border-[#e8edf5] overflow-hidden">
+                  <div className="p-2">
+                    {featuresDropdown.map((item) => (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        className="flex items-start gap-3 rounded-xl px-4 py-3 transition-all duration-200 hover:bg-[#f4f8ff] group"
+                      >
+                        <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-[#eef3ff] text-[#1d63ff] transition-colors group-hover:bg-[#1d63ff] group-hover:text-white">
+                          <item.icon className="h-4 w-4" />
+                        </span>
+                        <span>
+                          <span className="block text-sm font-bold text-[#25324b] group-hover:text-[#1d63ff]">{item.label}</span>
+                          <span className="block text-xs text-[#667085] leading-relaxed mt-0.5">{item.description}</span>
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="border-t border-[#e8edf5] px-4 py-3">
+                    <Link
+                      href="/features"
+                      className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1d63ff] hover:gap-2.5 transition-all duration-200"
+                    >
+                      View all features <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
           {safeNavItems?.map?.((item: { label: string; href: string }) => (
             <Link
               key={item?.label ?? item?.href}
@@ -278,6 +354,34 @@ function Header() {
         className="overflow-hidden bg-white lg:hidden"
       >
         <div className="grid gap-2 px-5 pb-5">
+          {/* Mobile Features accordion */}
+          <div>
+            <button
+              type="button"
+              onClick={() => setFeaturesOpen((v) => !v)}
+              className="w-full flex items-center justify-between rounded-2xl bg-[#f4f8ff] px-5 py-4 text-left font-bold text-[#25324b]"
+            >
+              Features
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${featuresOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {featuresOpen && (
+              <div className="mt-1 grid gap-1 pl-3">
+                {featuresDropdown.map((item) => (
+                  <Link
+                    key={`mobile-feat-${item.label}`}
+                    href={item.href}
+                    onClick={() => { setOpen(false); setFeaturesOpen(false) }}
+                    className="flex items-center gap-3 rounded-xl bg-white border border-[#e8edf5] px-4 py-3"
+                  >
+                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-[#eef3ff] text-[#1d63ff]">
+                      <item.icon className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-sm font-bold text-[#25324b]">{item.label}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           {safeNavItems?.map?.((item: { label: string; href: string }) => (
             <Link
               key={`mobile-${item?.label ?? item?.href}`}
