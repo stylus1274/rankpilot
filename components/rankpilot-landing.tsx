@@ -239,13 +239,13 @@ function HeroVisual() {
   return (
     <motion.div
       style={{ y }}
-      className="relative mx-auto mt-14 max-w-6xl rounded-[28px] bg-white p-3 shadow-[0_36px_100px_rgba(29,99,255,0.18)]"
+      className="relative mx-auto mt-14 max-w-6xl rounded-[28px] bg-gradient-to-br from-[#7c3aed] via-[#6d28d9] to-[#4f46e5] p-[3px] shadow-[0_36px_100px_rgba(109,40,217,0.35),0_0_60px_rgba(79,70,229,0.2)]"
       initial={{ opacity: 0, y: 44, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
     >
-      <div className="relative aspect-[1935/1328] overflow-hidden rounded-[20px] bg-[#eef5ff]">
-        <Image src={`${ASSET_BASE}dashboard-banner.webp`} fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot SEO platform dashboard preview" className="object-cover" />
+      <div className="relative aspect-[2048/1187] overflow-hidden rounded-[26px] bg-[#eef5ff]">
+        <Image src="/manus-storage/dashboard-hero-new_fb3c1ef8.webp" fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot SEO platform dashboard preview" className="object-cover" />
       </div>
     </motion.div>
   )
