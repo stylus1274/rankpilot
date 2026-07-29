@@ -245,7 +245,7 @@ function HeroVisual() {
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
     >
       <div className="relative aspect-[2048/1187] overflow-hidden rounded-[26px] bg-[#eef5ff]">
-        <Image src="/manus-storage/dashboard-hero-new_fb3c1ef8.webp" fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot SEO platform dashboard preview" className="object-cover" />
+        <Image src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/jVXbrkJEaiCucUXa.webp" fill priority sizes="(max-width: 768px) 96vw, 1120px" alt="RankPilot SEO platform dashboard preview" className="object-cover" />
       </div>
     </motion.div>
   )
