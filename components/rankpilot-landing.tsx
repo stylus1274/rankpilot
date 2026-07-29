@@ -35,6 +35,7 @@ import {
   Users2,
   X,
   Zap,
+  TimerReset,
   LineChart,
   SearchCheck,
   GitCompare,
