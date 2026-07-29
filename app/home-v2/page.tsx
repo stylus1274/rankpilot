@@ -11,17 +11,13 @@ import {
   CalendarDays,
   Check,
   ChevronDown,
-  Clock3,
   Fingerprint,
   GitCompare,
-  Layers3,
   Menu,
   MessageSquare,
   MousePointer2,
   PieChart,
   SearchCheck,
-  ShieldCheck,
-  Smartphone,
   Sparkles,
   TimerReset,
   TrendingUp,
@@ -47,11 +43,6 @@ function Header() {
   const [open, setOpen] = useState(false)
   const [featuresOpen, setFeaturesOpen] = useState(false)
   const router = useRouter()
-  const content = homepageContent as any
-  const safeNavItems = useMemo(
-    () => (content?.navItems ?? []) as Array<{ label: string; href: string }>,
-    [content]
-  )
 
   const handleNavClick = useCallback(
     (href: string) => {
@@ -67,6 +58,12 @@ function Header() {
     { label: 'AI Overview Monitoring', desc: 'Track AI Overview appearances', href: '/features#ai-overview', icon: Sparkles },
     { label: 'Content Gap Analysis', desc: 'Find missing topic opportunities', href: '/features#content-gap', icon: GitCompare },
     { label: 'Keyword Research', desc: 'Discover high-intent keywords', href: '/features#keyword-research', icon: SearchCheck },
+  ]
+
+  const mainNavItems = [
+    { label: 'How It Works', href: '/how-it-works' },
+    { label: 'Pricing', href: '/pricing' },
+    { label: 'Blog', href: '/blog' },
   ]
 
   return (
@@ -112,18 +109,16 @@ function Header() {
               </div>
             )}
           </div>
-          {safeNavItems
-            .filter((n) => n.label !== 'Features')
-            .map((item) => (
-              <button
-                key={item.label}
-                type="button"
-                onClick={() => handleNavClick(item.href)}
-                className="rounded-lg px-4 py-2 text-sm font-semibold text-[#3b4658] transition hover:bg-[#f4f6fb] hover:text-[#2457f5]"
-              >
-                {item.label}
-              </button>
-            ))}
+          {mainNavItems.map((item) => (
+            <button
+              key={item.label}
+              type="button"
+              onClick={() => handleNavClick(item.href)}
+              className="rounded-lg px-4 py-2 text-sm font-semibold text-[#3b4658] transition hover:bg-[#f4f6fb] hover:text-[#2457f5]"
+            >
+              {item.label}
+            </button>
+          ))}
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -151,18 +146,16 @@ function Header() {
               </Link>
             ))}
             <div className="my-2 border-t border-[#f0f2f8]" />
-            {safeNavItems
-              .filter((n) => n.label !== 'Features')
-              .map((item) => (
-                <button
-                  key={item.label}
-                  type="button"
-                  onClick={() => handleNavClick(item.href)}
-                  className="rounded-xl px-3 py-2.5 text-left text-sm font-semibold text-[#3b4658] transition hover:bg-[#f4f6fb]"
-                >
-                  {item.label}
-                </button>
-              ))}
+            {mainNavItems.map((item) => (
+              <button
+                key={item.label}
+                type="button"
+                onClick={() => handleNavClick(item.href)}
+                className="rounded-xl px-3 py-2.5 text-left text-sm font-semibold text-[#3b4658] transition hover:bg-[#f4f6fb]"
+              >
+                {item.label}
+              </button>
+            ))}
             <div className="mt-3 flex flex-col gap-2">
               <Link href="https://app.rankpilot.cc/login" className="rounded-xl border border-[#e0e4ec] px-4 py-3 text-center text-sm font-bold text-[#3b4658]">Log in</Link>
               <Link href="/pricing" className="rounded-xl bg-[#2457f5] px-4 py-3 text-center text-sm font-bold text-white">Start Free Trial</Link>
@@ -184,15 +177,12 @@ function WorkflowCard() {
       className="w-full max-w-[580px]"
     >
       <div className="flex flex-col gap-3">
-        {/* Step 01 - collapsed */}
         <div className="rounded-2xl border border-[#e8eaf0] bg-white/70 px-6 py-4 backdrop-blur-sm">
           <span className="font-mono text-sm font-semibold tracking-widest text-[#c0c4d0]">01 RESEARCH</span>
         </div>
-        {/* Step 02 - collapsed */}
         <div className="rounded-2xl border border-[#e8eaf0] bg-white/70 px-6 py-4 backdrop-blur-sm">
           <span className="font-mono text-sm font-semibold tracking-widest text-[#c0c4d0]">02 PLAN</span>
         </div>
-        {/* Step 03 - active */}
         <div className="rounded-2xl border border-[#dce3f8] bg-white px-6 py-5 shadow-[0_8px_40px_rgba(36,87,245,0.10)]">
           <div className="mb-4 flex items-center justify-between">
             <span className="font-mono text-sm font-bold tracking-widest text-[#2457f5]">03 CREATE</span>
@@ -204,8 +194,14 @@ function WorkflowCard() {
             <span className="rounded-full bg-[#f0f4ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">KD 34</span>
             <span className="rounded-full bg-[#f0f4ff] px-3 py-1 text-xs font-semibold text-[#2457f5]">9 clusters</span>
           </div>
-          <div className="mb-4 flex h-[120px] items-center justify-center rounded-xl bg-[#f8f9fc] text-sm text-[#b0b8cc]">
-            editor screenshot
+          <div className="mb-4 flex h-[100px] items-center justify-center rounded-xl bg-[#f8f9fc]">
+            <div className="flex w-full flex-col gap-1.5 px-4">
+              <div className="h-2 w-full rounded bg-[#e0e6f8]" />
+              <div className="h-2 w-4/5 rounded bg-[#e0e6f8]" />
+              <div className="h-2 w-3/5 rounded bg-[#e0e6f8]" />
+              <div className="h-2 w-full rounded bg-[#e0e6f8]" />
+              <div className="h-2 w-2/3 rounded bg-[#e0e6f8]" />
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -232,13 +228,11 @@ function HeroV2() {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#f8f7f2] pb-20 pt-28 sm:pb-28 sm:pt-32">
-      {/* Background gradients */}
       <div className="pointer-events-none absolute right-0 top-0 h-[70%] w-[55%] bg-[radial-gradient(ellipse_at_top_right,rgba(210,220,255,0.55)_0%,rgba(230,235,255,0.25)_45%,transparent_75%)]" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-[40%] w-[40%] bg-[radial-gradient(ellipse_at_bottom_left,rgba(220,240,255,0.3)_0%,transparent_70%)]" />
 
       <div className="relative mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="flex flex-col items-start gap-16 lg:flex-row lg:items-center lg:gap-12">
-          {/* LEFT */}
           <div className="flex-1">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -266,7 +260,7 @@ function HeroV2() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-6 max-w-[480px] text-lg leading-7 text-[#566179]"
             >
-              RankPilot runs the whole loop — keyword research, competitor teardown, cluster planning, AI drafting — against one source of truth per client.
+              RankPilot runs the whole loop -- keyword research, competitor teardown, cluster planning, AI drafting -- against one source of truth per client.
             </motion.p>
 
             <motion.div
@@ -315,7 +309,6 @@ function HeroV2() {
             </motion.div>
           </div>
 
-          {/* RIGHT */}
           <div className="w-full lg:w-[48%] lg:flex-shrink-0">
             <WorkflowCard />
           </div>
@@ -326,23 +319,26 @@ function HeroV2() {
 }
 
 // ─── FEATURES ─────────────────────────────────────────────────────────────────
+// homepage.json structure: { features: { title, subtitle, items: [...] } }
 function FeaturesV2() {
-  const content = homepageContent as any
-  const safeFeatures = useMemo(
-    () => (content?.features ?? []) as Array<{ title: string; text: string }>,
-    [content]
+  const featureItems = useMemo(
+    () => (homepageContent.features?.items ?? []) as Array<{ title: string }>,
+    []
   )
+
   return (
     <section id="features-v2" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="mb-14 text-center">
           <h2 className="font-display text-4xl font-black tracking-tight text-[#1a2233] sm:text-5xl">
-            {content?.featuresTitle ?? 'Everything you need to rank'}
+            {homepageContent.features?.title ?? 'Everything you need to rank'}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#566179]">{content?.featuresSubtitle ?? ''}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#566179]">
+            {homepageContent.features?.subtitle ?? ''}
+          </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {safeFeatures.map((f, i) => {
+          {featureItems.map((f, i) => {
             const Icon = featureIcons[i] ?? Sparkles
             return (
               <motion.div
@@ -356,8 +352,7 @@ function FeaturesV2() {
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eef3ff]">
                   <Icon className="h-5 w-5 text-[#2457f5]" />
                 </div>
-                <h3 className="mb-2 text-lg font-bold text-[#1a2233]">{f.title}</h3>
-                <p className="text-sm leading-6 text-[#566179]">{f.text}</p>
+                <h3 className="text-lg font-bold text-[#1a2233]">{f.title}</h3>
               </motion.div>
             )
           })}
@@ -368,23 +363,26 @@ function FeaturesV2() {
 }
 
 // ─── HOW IT WORKS ─────────────────────────────────────────────────────────────
+// homepage.json structure: { howItWorks: { title, subtitle, steps: [...] } }
 function HowItWorksV2() {
-  const content = homepageContent as any
-  const safeSteps = useMemo(
-    () => (content?.steps ?? []) as Array<{ title: string; text: string }>,
-    [content]
+  const steps = useMemo(
+    () => (homepageContent.howItWorks?.steps ?? []) as Array<{ title: string }>,
+    []
   )
+
   return (
     <section className="bg-[#f8f9fc] py-24 sm:py-32">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="mb-14 text-center">
           <h2 className="font-display text-4xl font-black tracking-tight text-[#1a2233] sm:text-5xl">
-            {content?.stepsTitle ?? 'How it works'}
+            {homepageContent.howItWorks?.title ?? 'How it works'}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#566179]">{content?.stepsSubtitle ?? ''}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#566179]">
+            {homepageContent.howItWorks?.subtitle ?? ''}
+          </p>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {safeSteps.map((s, i) => {
+          {steps.map((s, i) => {
             const Icon = stepIcons[i] ?? Sparkles
             return (
               <div key={s.title} className="text-center">
@@ -392,8 +390,7 @@ function HowItWorksV2() {
                   <Icon className="h-6 w-6 text-white" />
                 </div>
                 <div className="mb-1 text-xs font-bold uppercase tracking-widest text-[#2457f5]">Step {i + 1}</div>
-                <h3 className="mb-2 text-lg font-bold text-[#1a2233]">{s.title}</h3>
-                <p className="text-sm leading-6 text-[#566179]">{s.text}</p>
+                <h3 className="text-base font-bold text-[#1a2233]">{s.title}</h3>
               </div>
             )
           })}
@@ -404,43 +401,67 @@ function HowItWorksV2() {
 }
 
 // ─── PRICING ──────────────────────────────────────────────────────────────────
+// homepage.json structure: { pricing: { title, subtitle, plans: [...] } }
 function PricingV2() {
-  const content = homepageContent as any
-  const safePlans = useMemo(
-    () => (content?.pricing ?? []) as Array<{ name: string; monthly: number; yearly: number; featured?: boolean; features: string[] }>,
-    [content]
+  const plans = useMemo(
+    () =>
+      (homepageContent.pricing?.plans ?? []) as Array<{
+        name: string
+        monthly: number
+        yearly: number
+        featured?: boolean
+        features: string[]
+      }>,
+    []
   )
+
   return (
     <section className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="mb-14 text-center">
           <h2 className="font-display text-4xl font-black tracking-tight text-[#1a2233] sm:text-5xl">
-            {content?.pricingTitle ?? 'Simple pricing'}
+            {homepageContent.pricing?.title ?? 'Simple pricing'}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#566179]">{content?.pricingSubtitle ?? ''}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-[#566179]">
+            {homepageContent.pricing?.subtitle ?? ''}
+          </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {safePlans.map((plan) => (
+          {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`rounded-2xl border p-8 ${plan.featured ? 'border-[#2457f5] bg-[#2457f5] text-white shadow-[0_20px_60px_rgba(36,87,245,0.3)]' : 'border-[#eaecf0] bg-white'}`}
+              className={`rounded-2xl border p-8 ${
+                plan.featured
+                  ? 'border-[#2457f5] bg-[#2457f5] shadow-[0_20px_60px_rgba(36,87,245,0.3)]'
+                  : 'border-[#eaecf0] bg-white'
+              }`}
             >
-              <h3 className={`mb-1 text-xl font-black ${plan.featured ? 'text-white' : 'text-[#1a2233]'}`}>{plan.name}</h3>
+              <h3 className={`mb-1 text-xl font-black ${plan.featured ? 'text-white' : 'text-[#1a2233]'}`}>
+                {plan.name}
+              </h3>
               <div className="mb-6 flex items-baseline gap-1">
-                <span className={`font-display text-4xl font-black ${plan.featured ? 'text-white' : 'text-[#1a2233]'}`}>${plan.monthly}</span>
+                <span className={`font-display text-4xl font-black ${plan.featured ? 'text-white' : 'text-[#1a2233]'}`}>
+                  ${plan.monthly}
+                </span>
                 <span className={`text-sm ${plan.featured ? 'text-blue-200' : 'text-[#8a94a6]'}`}>/mo</span>
               </div>
               <ul className="mb-8 space-y-3">
-                {plan.features.map((f) => (
+                {(plan.features ?? []).map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm">
-                    <Check className={`mt-0.5 h-4 w-4 flex-shrink-0 ${plan.featured ? 'text-blue-200' : 'text-[#2457f5]'}`} />
+                    <Check
+                      className={`mt-0.5 h-4 w-4 flex-shrink-0 ${plan.featured ? 'text-blue-200' : 'text-[#2457f5]'}`}
+                    />
                     <span className={plan.featured ? 'text-blue-100' : 'text-[#566179]'}>{f}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 href="/pricing"
-                className={`block rounded-xl py-3 text-center text-sm font-bold transition ${plan.featured ? 'bg-white text-[#2457f5] hover:bg-blue-50' : 'bg-[#2457f5] text-white hover:bg-[#0b52e7]'}`}
+                className={`block rounded-xl py-3 text-center text-sm font-bold transition ${
+                  plan.featured
+                    ? 'bg-white text-[#2457f5] hover:bg-blue-50'
+                    : 'bg-[#2457f5] text-white hover:bg-[#0b52e7]'
+                }`}
               >
                 Get started
               </Link>
@@ -452,7 +473,7 @@ function PricingV2() {
   )
 }
 
-// ─── CTA + FOOTER ─────────────────────────────────────────────────────────────
+// ─── CTA ──────────────────────────────────────────────────────────────────────
 function CtaV2() {
   return (
     <section className="bg-[#1a2233] py-20">
@@ -472,6 +493,7 @@ function CtaV2() {
   )
 }
 
+// ─── FOOTER ───────────────────────────────────────────────────────────────────
 function FooterV2() {
   return (
     <footer className="border-t border-[#eaecf0] bg-white py-12">
@@ -483,7 +505,9 @@ function FooterV2() {
             </div>
             <span className="font-display text-lg font-black text-[#1a2233]">RankPilot</span>
           </div>
-          <p className="text-sm text-[#8a94a6]">© {new Date().getFullYear()} RankPilot. All rights reserved.</p>
+          <p className="text-sm text-[#8a94a6]">
+            &copy; {new Date().getFullYear()} RankPilot. All rights reserved.
+          </p>
           <div className="flex gap-6">
             <Link href="/blog" className="text-sm text-[#566179] hover:text-[#2457f5]">Blog</Link>
             <Link href="/pricing" className="text-sm text-[#566179] hover:text-[#2457f5]">Pricing</Link>
