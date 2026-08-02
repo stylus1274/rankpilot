@@ -239,12 +239,13 @@ function HeroVisual() {
   return (
     <motion.div
       style={{ y }}
-      className="relative mx-auto mt-14 max-w-6xl rounded-[28px] shadow-[0_20px_56px_rgba(79,100,245,0.20)]"
+      className="relative mx-auto mt-14 max-w-6xl"
       initial={{ opacity: 0, y: 44, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
     >
-      <div className="relative overflow-hidden rounded-[26px]">
+      {/* Main dashboard screenshot */}
+      <div className="relative overflow-hidden rounded-[26px] shadow-[0_20px_56px_rgba(79,100,245,0.20)]">
         <Image
           src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/iLVDKuFVFZFtoRBU.webp"
           alt="RankPilot dashboard - Articles view showing content library and article editor"
@@ -254,6 +255,54 @@ function HeroVisual() {
           className="w-full"
         />
       </div>
+
+      {/* Floating stat card 1 — bottom-left: articles published */}
+      <motion.div
+        className="absolute -bottom-5 -left-4 sm:-left-8 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-[0_12px_40px_rgba(16,24,40,0.14)] border border-[#eef1f8] sm:px-5 sm:py-4"
+        initial={{ opacity: 0, x: -24, y: 16 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.7, ease: 'easeOut' }}
+      >
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#eef3ff] text-[#1d63ff]">
+          <FileText className="h-5 w-5" />
+        </span>
+        <div>
+          <p className="text-xl font-black leading-none text-[#101828]">34.8k</p>
+          <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-[#667085]">Words generated</p>
+        </div>
+      </motion.div>
+
+      {/* Floating stat card 2 — top-right: content grade */}
+      <motion.div
+        className="absolute -right-4 top-8 sm:-right-8 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-[0_12px_40px_rgba(16,24,40,0.14)] border border-[#eef1f8] sm:px-5 sm:py-4"
+        initial={{ opacity: 0, x: 24, y: -16 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.85, ease: 'easeOut' }}
+      >
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#f0fdf4] text-[#16a34a]">
+          <TrendingUp className="h-5 w-5" />
+        </span>
+        <div>
+          <p className="text-xl font-black leading-none text-[#101828]">+63%</p>
+          <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-[#667085]">Avg. content grade</p>
+        </div>
+      </motion.div>
+
+      {/* Floating stat card 3 — bottom-right: time saved */}
+      <motion.div
+        className="absolute -bottom-5 -right-4 sm:-right-8 flex items-center gap-3 rounded-2xl bg-[#1d63ff] px-4 py-3 shadow-[0_12px_40px_rgba(29,99,255,0.28)] sm:px-5 sm:py-4"
+        initial={{ opacity: 0, x: 24, y: 16 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.0, ease: 'easeOut' }}
+      >
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/20 text-white">
+          <Zap className="h-5 w-5" />
+        </span>
+        <div>
+          <p className="text-xl font-black leading-none text-white">3 hrs/wk</p>
+          <p className="mt-0.5 text-xs font-semibold uppercase tracking-wide text-blue-200">Avg. time saved</p>
+        </div>
+      </motion.div>
     </motion.div>
   )
 }
