@@ -292,30 +292,30 @@ function Header() {
             </Link>
             {featuresOpen && (
               <div className="absolute left-0 top-full pt-2 z-50">
-                <div className="w-72 rounded-2xl bg-white shadow-[0_20px_60px_rgba(16,24,40,0.14)] border border-[#e8edf5] overflow-hidden">
-                  <div className="p-2">
+                <div className="w-[345px] rounded-2xl bg-white shadow-[0_20px_60px_rgba(16,24,40,0.14)] border border-[#e8edf5] overflow-hidden">
+                  <div className="p-2.5">
                     {featuresDropdown.map((item) => (
                       <Link
                         key={item.label}
                         href={item.href}
-                        className="flex items-start gap-3 rounded-xl px-4 py-3 transition-all duration-200 hover:bg-[#f4f8ff] group"
+                        className="flex items-start gap-3.5 rounded-xl px-5 py-3.5 transition-all duration-200 hover:bg-[#f4f8ff] group"
                       >
-                        <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-[#eef3ff] text-[#1d63ff] transition-colors group-hover:bg-[#1d63ff] group-hover:text-white">
-                          <item.icon className="h-4 w-4" />
+                        <span className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-[#eef3ff] text-[#1d63ff] transition-colors group-hover:bg-[#1d63ff] group-hover:text-white">
+                          <item.icon className="h-5 w-5" />
                         </span>
                         <span>
-                          <span className="block text-sm font-bold text-[#25324b] group-hover:text-[#1d63ff]">{item.label}</span>
-                          <span className="block text-xs text-[#667085] leading-relaxed mt-0.5">{item.description}</span>
+                          <span className="block text-base font-bold text-[#25324b] group-hover:text-[#1d63ff]">{item.label}</span>
+                          <span className="block text-sm text-[#667085] leading-relaxed mt-0.5">{item.description}</span>
                         </span>
                       </Link>
                     ))}
                   </div>
-                  <div className="border-t border-[#e8edf5] px-4 py-3">
+                  <div className="border-t border-[#e8edf5] px-5 py-3.5">
                     <Link
                       href="/features"
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-[#1d63ff] hover:gap-2.5 transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 text-base font-bold text-[#1d63ff] hover:gap-2.5 transition-all duration-200"
                     >
-                      View all features <ArrowRight className="h-3.5 w-3.5" />
+                      View all features <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
