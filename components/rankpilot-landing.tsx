@@ -285,7 +285,7 @@ function Header() {
           >
             <Link
               href="/features"
-              className="inline-flex items-center gap-1 rounded-full px-5 py-3 text-base font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
+              className="inline-flex items-center gap-1 rounded-full px-5 py-3 text-lg font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
             >
               Features
               <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${featuresOpen ? 'rotate-180' : ''}`} />
@@ -304,7 +304,7 @@ function Header() {
                           <item.icon className="h-5 w-5" />
                         </span>
                         <span>
-                          <span className="block text-base font-bold text-[#25324b] group-hover:text-[#1d63ff]">{item.label}</span>
+                          <span className="block text-lg font-bold text-[#25324b] group-hover:text-[#1d63ff]">{item.label}</span>
                           <span className="block text-sm text-[#667085] leading-relaxed mt-0.5">{item.description}</span>
                         </span>
                       </Link>
@@ -313,7 +313,7 @@ function Header() {
                   <div className="border-t border-[#e8edf5] px-5 py-3.5">
                     <Link
                       href="/features"
-                      className="inline-flex items-center gap-1.5 text-base font-bold text-[#1d63ff] hover:gap-2.5 transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 text-lg font-bold text-[#1d63ff] hover:gap-2.5 transition-all duration-200"
                     >
                       View all features <ArrowRight className="h-4 w-4" />
                     </Link>
@@ -326,7 +326,7 @@ function Header() {
             <Link
               key={item?.label ?? item?.href}
               href={item?.href ?? '/'}
-              className="rounded-full px-5 py-3 text-base font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
+              className="rounded-full px-5 py-3 text-lg font-bold text-[#25324b] transition-all duration-300 hover:bg-white hover:text-[#1d63ff] hover:shadow-[0_10px_25px_rgba(16,24,40,0.07)]"
             >
               {item?.label ?? ''}
             </Link>
