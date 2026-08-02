@@ -256,73 +256,54 @@ function HeroVisual() {
         />
       </div>
 
-      {/* Floating stat card 1 — bottom-left: words generated */}
+      {/* Floating circle 1 — bottom-left: words generated */}
       <motion.div
-        className="absolute -bottom-7 -left-5 sm:-left-10 w-52 sm:w-60 rounded-3xl bg-white px-5 py-5 shadow-[0_20px_60px_rgba(29,99,255,0.18)] border border-[#e8edf8]"
+        className="absolute -bottom-10 -left-5 sm:-left-12 h-36 w-36 sm:h-44 sm:w-44 rounded-full bg-white shadow-[0_20px_60px_rgba(29,99,255,0.22)] border border-[#e8edf8] flex flex-col items-center justify-center text-center"
         initial={{ opacity: 0, x: -28, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.65, delay: 0.7, ease: 'easeOut' }}
       >
-        <div className="mb-3 flex items-center justify-between">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-[#1d63ff] to-[#6d28d9] text-white shadow-[0_4px_14px_rgba(29,99,255,0.35)]">
-            <FileText className="h-5 w-5" />
-          </span>
-          <span className="flex items-center gap-1 rounded-full bg-[#f0fdf4] px-2.5 py-1 text-xs font-bold text-[#16a34a]">
-            <TrendingUp className="h-3 w-3" /> +12%
-          </span>
-        </div>
-        <p className="text-3xl font-black leading-none tracking-tight text-[#101828]">34.8k</p>
-        <p className="mt-1.5 text-xs font-semibold uppercase tracking-widest text-[#94a3b8]">Words generated</p>
-        <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-[#f1f5f9]">
-          <div className="h-full w-[78%] rounded-full bg-gradient-to-r from-[#1d63ff] to-[#6d28d9]" />
-        </div>
+        <span className="mb-1.5 grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#1d63ff] to-[#6d28d9] text-white shadow-[0_4px_12px_rgba(29,99,255,0.40)]">
+          <FileText className="h-4 w-4" />
+        </span>
+        <p className="text-2xl font-black leading-none tracking-tight text-[#101828]">34.8k</p>
+        <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-[#94a3b8]">Words</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-[#94a3b8]">Generated</p>
+        <span className="mt-2 flex items-center gap-0.5 rounded-full bg-[#f0fdf4] px-2 py-0.5 text-[10px] font-bold text-[#16a34a]">
+          <TrendingUp className="h-2.5 w-2.5" /> +12%
+        </span>
       </motion.div>
 
-      {/* Floating stat card 2 — top-right: content grade */}
+      {/* Floating circle 2 — top-right: content grade */}
       <motion.div
-        className="absolute -right-5 top-6 sm:-right-10 w-52 sm:w-60 rounded-3xl bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] px-5 py-5 shadow-[0_20px_60px_rgba(15,23,42,0.35)]"
+        className="absolute -right-5 top-4 sm:-right-12 h-36 w-36 sm:h-44 sm:w-44 rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e3a5f] shadow-[0_20px_60px_rgba(15,23,42,0.40)] flex flex-col items-center justify-center text-center"
         initial={{ opacity: 0, x: 28, y: -20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.65, delay: 0.85, ease: 'easeOut' }}
       >
-        <div className="mb-3 flex items-center justify-between">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-[#22c55e] to-[#16a34a] text-white shadow-[0_4px_14px_rgba(34,197,94,0.35)]">
-            <TrendingUp className="h-5 w-5" />
-          </span>
-          <span className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-bold text-green-400">This month</span>
-        </div>
-        <p className="text-3xl font-black leading-none tracking-tight text-white">+63%</p>
-        <p className="mt-1.5 text-xs font-semibold uppercase tracking-widest text-slate-400">Avg. content grade</p>
-        <div className="mt-3 flex gap-1">
-          {[40, 55, 50, 70, 65, 82, 90].map((h, i) => (
-            <div key={i} className="flex-1 rounded-sm bg-green-500/30" style={{ height: `${h * 0.28}px` }} />
-          ))}
-        </div>
+        <span className="mb-1.5 grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-[#22c55e] to-[#16a34a] text-white shadow-[0_4px_12px_rgba(34,197,94,0.40)]">
+          <TrendingUp className="h-4 w-4" />
+        </span>
+        <p className="text-2xl font-black leading-none tracking-tight text-white">+63%</p>
+        <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Avg. Content</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Grade</p>
+        <span className="mt-2 rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold text-green-400">This month</span>
       </motion.div>
 
-      {/* Floating stat card 3 — bottom-right: time saved */}
+      {/* Floating circle 3 — bottom-right: time saved */}
       <motion.div
-        className="absolute -bottom-7 -right-5 sm:-right-10 w-52 sm:w-60 rounded-3xl bg-gradient-to-br from-[#1d63ff] via-[#2563eb] to-[#4f46e5] px-5 py-5 shadow-[0_20px_60px_rgba(29,99,255,0.38)]"
+        className="absolute -bottom-10 -right-5 sm:-right-12 h-36 w-36 sm:h-44 sm:w-44 rounded-full bg-gradient-to-br from-[#1d63ff] via-[#2563eb] to-[#4f46e5] shadow-[0_20px_60px_rgba(29,99,255,0.42)] flex flex-col items-center justify-center text-center"
         initial={{ opacity: 0, x: 28, y: 20 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.65, delay: 1.0, ease: 'easeOut' }}
       >
-        <div className="mb-3 flex items-center justify-between">
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white/20 text-white shadow-[0_4px_14px_rgba(255,255,255,0.15)]">
-            <Zap className="h-5 w-5" />
-          </span>
-          <span className="rounded-full bg-white/15 px-2.5 py-1 text-xs font-bold text-blue-100">Per user</span>
-        </div>
-        <p className="text-3xl font-black leading-none tracking-tight text-white">3 hrs/wk</p>
-        <p className="mt-1.5 text-xs font-semibold uppercase tracking-widest text-blue-200">Avg. time saved</p>
-        <div className="mt-3 flex items-center gap-2">
-          <div className="flex -space-x-2">
-            {['#a78bfa','#60a5fa','#34d399'].map((c, i) => (
-              <div key={i} className="h-6 w-6 rounded-full border-2 border-white/30" style={{ background: c }} />
-            ))}
-          </div>
-          <p className="text-xs font-semibold text-blue-100">1,200+ users</p>
-        </div>
+        <span className="mb-1.5 grid h-9 w-9 place-items-center rounded-full bg-white/20 text-white">
+          <Zap className="h-4 w-4" />
+        </span>
+        <p className="text-2xl font-black leading-none tracking-tight text-white">3 hrs/wk</p>
+        <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-blue-200">Avg. Time</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-blue-200">Saved</p>
+        <span className="mt-2 rounded-full bg-white/15 px-2 py-0.5 text-[10px] font-bold text-blue-100">1,200+ users</span>
       </motion.div>
     </motion.div>
   )
