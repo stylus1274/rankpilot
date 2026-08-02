@@ -239,7 +239,7 @@ function HeroVisual() {
   return (
     <motion.div
       style={{ y }}
-      className="relative mx-auto mt-14 max-w-6xl rounded-[28px] shadow-[0_20px_56px_rgba(79,100,245,0.12)]"
+      className="relative mx-auto mt-14 max-w-6xl rounded-[28px] shadow-[0_20px_56px_rgba(79,100,245,0.20)]"
       initial={{ opacity: 0, y: 44, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
