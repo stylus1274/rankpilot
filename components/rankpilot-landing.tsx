@@ -244,16 +244,37 @@ function HeroVisual() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.18, ease: 'easeOut' }}
     >
-      {/* Main dashboard screenshot */}
-      <div className="relative overflow-hidden rounded-[26px] shadow-[0_20px_56px_rgba(79,100,245,0.20)]">
-        <Image
-          src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/iLVDKuFVFZFtoRBU.webp"
-          alt="RankPilot dashboard - Articles view showing content library and article editor"
-          width={2048}
-          height={1217}
-          priority
-          className="w-full"
-        />
+      {/* Browser chrome wrapper */}
+      <div className="overflow-hidden rounded-[20px] shadow-[0_20px_56px_rgba(79,100,245,0.20)] border border-[#e2e8f0]">
+        {/* Browser top bar */}
+        <div className="flex items-center gap-3 bg-[#f1f3f5] px-4 py-3 border-b border-[#e2e8f0]">
+          {/* Traffic lights */}
+          <div className="flex items-center gap-1.5 shrink-0">
+            <div className="h-3 w-3 rounded-full bg-[#ff5f57]" />
+            <div className="h-3 w-3 rounded-full bg-[#febc2e]" />
+            <div className="h-3 w-3 rounded-full bg-[#28c840]" />
+          </div>
+          {/* Address bar */}
+          <div className="flex flex-1 items-center gap-2 rounded-md bg-white border border-[#dde1e7] px-3 py-1.5 max-w-sm mx-auto">
+            <svg className="h-3 w-3 shrink-0 text-[#94a3b8]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 11c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3zm0 0c0-1.657-1.343-3-3-3S6 9.343 6 11s1.343 3 3 3 3-1.343 3-3zm0 0v6m0-6V5" />
+            </svg>
+            <span className="text-xs text-[#64748b] font-medium truncate">app.rankpilot.cc/articles</span>
+          </div>
+          {/* Spacer to balance traffic lights */}
+          <div className="w-12 shrink-0" />
+        </div>
+        {/* Screenshot */}
+        <div className="relative">
+          <Image
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663028505829/iLVDKuFVFZFtoRBU.webp"
+            alt="RankPilot dashboard - Articles view showing content library and article editor"
+            width={2048}
+            height={1217}
+            priority
+            className="w-full block"
+          />
+        </div>
       </div>
 
       {/* Floating circle 1 — bottom-left: words generated */}
